@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+from datetime import datetime, timezone
 
 def normalizar_nombre(nombre):
     """Estandariza los nombres de los departamentos para asegurar el merge."""
@@ -44,9 +45,19 @@ def procesar_etl_ligero():
     print("3. Exportando a JSON...")
     # Usamos la llave de nombre como índice para el JSON
     datos_dict = df_final.set_index('departamento_key').to_dict(orient='index')
-    
+
+    # Timestamp propio del pipeline (no depende de la ONPE)
+    ahora_utc = datetime.now(timezone.utc)
+    meta = {
+        "_meta": {
+            "ultima_actualizacion_iso": ahora_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "ultima_actualizacion_ts": int(ahora_utc.timestamp() * 1000)  # milisegundos para JS
+        }
+    }
+    salida = {**meta, **datos_dict}
+
     with open('resultados_pivot.json', 'w', encoding='utf-8') as f:
-        json.dump(datos_dict, f, ensure_ascii=False, indent=2)
+        json.dump(salida, f, ensure_ascii=False, indent=2)
         
     print("¡ETL completado exitosamente usando nombres como llave primaria!")
 

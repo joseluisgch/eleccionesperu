@@ -511,9 +511,12 @@
             return dataGeo;
         }
 
+        // Cache-busting: fuerza al navegador y CDN a descargar siempre la versión más reciente
+        const urlResultadosFresh = urlResultados + '?v=' + Date.now();
+
         Promise.all([
             obtenerLimitesGeo(),
-            fetch(urlResultados).then(res => res.json())
+            fetch(urlResultadosFresh).then(res => res.json())
         ]).then(([geoData, onpeData]) => {
 
             let maxTimestamp = 0;
@@ -617,13 +620,15 @@
             myChart.setOption(option);
             window.addEventListener('resize', function () { myChart.resize(); });
 
-            // 3. FECHA DE ACTUALIZACIÓN
-            if (maxTimestamp > 0) {
-                let d = new Date(maxTimestamp);
-                let fechaStr = d.toLocaleDateString("es-PE", { day: '2-digit', month: '2-digit', year: 'numeric' });
-                let horaStr = d.toLocaleTimeString("es-PE", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            // 3. FECHA DE ACTUALIZACIÓN (usa timestamp del pipeline, no de la ONPE)
+            let tsActualizacion = onpeData._meta ? onpeData._meta.ultima_actualizacion_ts : maxTimestamp;
+            if (tsActualizacion > 0) {
+                // Convertir UTC a hora de Lima (UTC-5)
+                let d = new Date(tsActualizacion);
+                let fechaStr = d.toLocaleDateString("es-PE", { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'America/Lima' });
+                let horaStr = d.toLocaleTimeString("es-PE", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true, timeZone: 'America/Lima' });
                 horaStr = horaStr.replace('p.m.', 'p. m.').replace('a.m.', 'a. m.').toUpperCase();
-                document.getElementById('fecha-actualizacion').innerText = `ACTUALIZADO AL ${fechaStr} A LAS ${horaStr}`;
+                document.getElementById('fecha-actualizacion').innerText = `ACTUALIZADO AL ${fechaStr} A LAS ${horaStr} (HORA LIMA)`;
             }
 
             // 4. MAPA Y POPUPS
