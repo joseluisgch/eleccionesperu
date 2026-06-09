@@ -137,6 +137,49 @@ if datos_electorales:
 else:
     print("\nNo se pudieron extraer datos.")
 
+# ── VOTOS DEL EXTRANJERO ──────────────────────────────────────────────────
+print("\nObteniendo datos de votos del extranjero...")
+try:
+    params_ext = {
+        "idEleccion": 10,
+        "tipoFiltro": "ambito_geografico",
+        "idAmbitoGeografico": 2
+    }
+    resp_t_ext = requests.get(url_totales,       headers=headers, params=params_ext)
+    time.sleep(0.5)
+    resp_p_ext = requests.get(url_participantes, headers=headers, params=params_ext)
+
+    extranjero_data = {}
+
+    if resp_t_ext.status_code == 200:
+        j = resp_t_ext.json()
+        if j.get("success") and "data" in j:
+            extranjero_data["totales"] = j["data"]
+            print(f"  Actas extranjero: {j['data'].get('actasContabilizadas')}%  "
+                  f"({j['data'].get('contabilizadas')} / {j['data'].get('totalActas')})")
+        else:
+            print(f"  [!] Respuesta sin datos en totales extranjero.")
+    else:
+        print(f"  [!] HTTP {resp_t_ext.status_code} en totales extranjero.")
+
+    if resp_p_ext.status_code == 200:
+        j = resp_p_ext.json()
+        if j.get("success") and "data" in j:
+            extranjero_data["participantes"] = j["data"]
+            for c in j["data"]:
+                print(f"    {c.get('nombreAgrupacionPolitica')}: "
+                      f"{c.get('totalVotosValidos')} votos "
+                      f"({c.get('porcentajeVotosValidos')}%)")
+    else:
+        print(f"  [!] HTTP {resp_p_ext.status_code} en participantes extranjero.")
+
+    with open("extranjero.json", "w", encoding="utf-8") as f:
+        json.dump(extranjero_data, f, ensure_ascii=False, indent=2)
+    print("  Datos del extranjero guardados en extranjero.json")
+
+except Exception as e:
+    print(f"  [!] Error obteniendo datos del extranjero: {e}")
+
 # ── TOTALES NACIONALES (incluye votos del extranjero) ──────────────────────
 print("\nObteniendo totales nacionales (tipoFiltro=eleccion)...")
 try:

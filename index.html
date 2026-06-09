@@ -209,6 +209,232 @@
             font-weight: 700;
         }
 
+        /* ── PANEL DE PROYECCIÓN ──────────────────────────────────────── */
+        #btn-proyeccion {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            z-index: 1000;
+            background: #0f3b5e;
+            color: white;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background .2s;
+        }
+
+        #btn-proyeccion:hover {
+            background: #1e5a8a;
+        }
+
+        #panel-proyeccion {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            bottom: 10px;
+            z-index: 999;
+            width: 360px;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(6px);
+            border: 1px solid #D6D6D6;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #panel-proyeccion.visible {
+            display: flex;
+        }
+
+        .proy-header {
+            background: #0f3b5e;
+            color: white;
+            padding: 14px 18px 10px;
+            flex-shrink: 0;
+        }
+
+        .proy-header h3 {
+            margin: 0 0 2px;
+            font-size: 14px;
+            letter-spacing: .5px;
+        }
+
+        .proy-header small {
+            font-size: 10px;
+            opacity: .75;
+        }
+
+        .proy-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 14px 16px;
+        }
+
+        .proy-confianza {
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 99px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .proy-narrativa {
+            background: #f8fafc;
+            border-left: 3px solid #0f3b5e;
+            border-radius: 0 6px 6px 0;
+            padding: 10px 12px;
+            font-size: 11px;
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .proy-ganador-box {
+            background: #f0fdf4;
+            border: 2px solid #16a34a;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .proy-ganador-box.fp-winner {
+            background: #fff7ed;
+            border-color: #FF6600;
+        }
+
+        .proy-ganador-label {
+            font-size: 10px;
+            color: #6b7280;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .proy-ganador-nombre {
+            font-size: 13px;
+            font-weight: 900;
+            color: #0f3b5e;
+            margin: 4px 0;
+        }
+
+        .proy-ganador-dif {
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        .proy-barra-container {
+            margin-bottom: 14px;
+        }
+
+        .proy-barra-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .proy-barra-track {
+            height: 18px;
+            background: #FF6600;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .proy-barra-jpp {
+            height: 100%;
+            background: #009933;
+            border-radius: 4px 0 0 4px;
+            transition: width 1s ease;
+        }
+
+        .proy-barra-pcts {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 900;
+            margin-top: 4px;
+        }
+
+        .proy-seccion {
+            margin-bottom: 14px;
+        }
+
+        .proy-seccion-titulo {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #475569;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+            letter-spacing: .4px;
+        }
+
+        .proy-fila {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 11px;
+        }
+
+        .proy-fila:last-child {
+            border-bottom: none;
+        }
+
+        .proy-fila-nombre {
+            color: #374151;
+            font-weight: 600;
+            max-width: 140px;
+        }
+
+        .proy-fila-vals {
+            text-align: right;
+        }
+
+        .proy-fila-dif {
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .proy-fila-dif.jpp {
+            color: #009933;
+        }
+
+        .proy-fila-dif.fp {
+            color: #FF6600;
+        }
+
+        .proy-nota {
+            font-size: 9px;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        @media (max-width:768px) {
+            #btn-proyeccion {
+                display: none;
+            }
+
+            #panel-proyeccion {
+                display: none !important;
+            }
+        }
+
         /* NUEVO: PANEL DE RANKING DE DEPARTAMENTOS ALINEADO A LA IZQUIERDA */
         .ranking-panel {
             position: absolute;
@@ -479,6 +705,77 @@
         <div class="map-subtitle" id="fecha-actualizacion">Obteniendo fecha oficial de la ONPE...</div>
     </div>
 
+    <!-- BOTÓN Y PANEL DE PROYECCIÓN -->
+    <button id="btn-proyeccion" onclick="toggleProyeccion()">📊 PROYECCIÓN FINAL</button>
+    <div id="panel-proyeccion">
+        <div class="proy-header">
+            <h3>🔮 Proyección Electoral</h3>
+            <small id="proy-timestamp">Calculando...</small>
+        </div>
+        <div class="proy-body">
+            <div style="text-align:center;margin-bottom:8px;">
+                <span class="proy-confianza" id="proy-confianza-badge">Cargando...</span>
+            </div>
+            <div class="proy-narrativa" id="proy-narrativa" style="display:none"></div>
+            <div class="proy-ganador-box" id="proy-ganador-box">
+                <div class="proy-ganador-label">Ganador proyectado</div>
+                <div class="proy-ganador-nombre" id="proy-ganador-nombre">—</div>
+                <div class="proy-ganador-dif" id="proy-ganador-dif">—</div>
+            </div>
+            <div class="proy-barra-container">
+                <div class="proy-barra-labels">
+                    <span style="color:#009933">JPP</span>
+                    <span style="color:#FF6600">FP</span>
+                </div>
+                <div class="proy-barra-track">
+                    <div class="proy-barra-jpp" id="proy-barra-jpp" style="width:50%"></div>
+                </div>
+                <div class="proy-barra-pcts">
+                    <span style="color:#009933" id="proy-pct-jpp">--%</span>
+                    <span style="color:#FF6600" id="proy-pct-fp">--%</span>
+                </div>
+            </div>
+            <div class="proy-seccion">
+                <div class="proy-seccion-titulo">Votos finales estimados</div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre" style="color:#009933">Juntos por el Perú</span>
+                    <span class="proy-fila-vals" id="proy-votos-jpp">—</span>
+                </div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre" style="color:#FF6600">Fuerza Popular</span>
+                    <span class="proy-fila-vals" id="proy-votos-fp">—</span>
+                </div>
+            </div>
+            <div class="proy-seccion">
+                <div class="proy-seccion-titulo">🌍 Voto del extranjero</div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre">Actas contabilizadas</span>
+                    <span class="proy-fila-vals" id="ext-avance">—</span>
+                </div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre" style="color:#009933">JPP actual → proy.</span>
+                    <span class="proy-fila-vals" id="ext-jpp">—</span>
+                </div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre" style="color:#FF6600">FP actual → proy.</span>
+                    <span class="proy-fila-vals" id="ext-fp">—</span>
+                </div>
+                <div class="proy-fila">
+                    <span class="proy-fila-nombre">Diferencia proyectada</span>
+                    <span class="proy-fila-vals proy-fila-dif" id="ext-dif">—</span>
+                </div>
+            </div>
+            <div class="proy-seccion">
+                <div class="proy-seccion-titulo">🏆 Mayores aportantes al ganador</div>
+                <div id="proy-top-aportantes"></div>
+            </div>
+            <div class="proy-nota">
+                Metodología: votos pendientes estimados según promedio de votos/acta
+                y tendencia porcentual actual de cada departamento. No es un resultado oficial.
+            </div>
+        </div>
+    </div>
+
     <!-- PANEL DE RANKING DE DEPARTAMENTOS (A LA IZQUIERDA) -->
     <div class="ranking-panel">
         <div class="ranking-title">Avance de actas por dpto</div>
@@ -594,7 +891,7 @@
 
         // Cache-busting: fuerza al navegador y CDN a descargar siempre la versión más reciente
         const urlResultadosFresh = urlResultados + '?v=' + Date.now();
-        const urlNacionalFresh   = 'totales_nacionales.json?v=' + Date.now();
+        const urlNacionalFresh = 'totales_nacionales.json?v=' + Date.now();
 
         Promise.all([
             obtenerLimitesGeo(),
@@ -652,7 +949,7 @@
             });
 
             // 1. SCOREBOARD — usa totales_nacionales.json directamente (incluye extranjero)
-            const totalesNac    = nacRaw && nacRaw.totales      ? nacRaw.totales      : null;
+            const totalesNac = nacRaw && nacRaw.totales ? nacRaw.totales : null;
             const participantes = nacRaw && nacRaw.participantes ? nacRaw.participantes : [];
 
             let votosJPP, votosFP, pctJPP, pctFP;
@@ -660,30 +957,30 @@
             if (participantes.length > 0) {
                 // Datos oficiales nacionales de la ONPE (incluye extranjero)
                 const cJPP = participantes.find(c => (c.nombreAgrupacionPolitica || '').toLowerCase().includes('juntos'));
-                const cFP  = participantes.find(c => (c.nombreAgrupacionPolitica || '').toLowerCase().includes('fuerza'));
-                votosJPP = cJPP ? (cJPP.totalVotosValidos       || 0) : sumaNacionalJPP;
-                votosFP  = cFP  ? (cFP.totalVotosValidos        || 0) : sumaNacionalFP;
-                pctJPP   = cJPP ? (cJPP.porcentajeVotosValidos  || 0).toFixed(3) : "0.000";
-                pctFP    = cFP  ? (cFP.porcentajeVotosValidos   || 0).toFixed(3) : "0.000";
+                const cFP = participantes.find(c => (c.nombreAgrupacionPolitica || '').toLowerCase().includes('fuerza'));
+                votosJPP = cJPP ? (cJPP.totalVotosValidos || 0) : sumaNacionalJPP;
+                votosFP = cFP ? (cFP.totalVotosValidos || 0) : sumaNacionalFP;
+                pctJPP = cJPP ? (cJPP.porcentajeVotosValidos || 0).toFixed(3) : "0.000";
+                pctFP = cFP ? (cFP.porcentajeVotosValidos || 0).toFixed(3) : "0.000";
             } else {
                 // Fallback: suma de departamentos
                 let totalValidos = sumaNacionalFP + sumaNacionalJPP;
                 votosJPP = sumaNacionalJPP;
-                votosFP  = sumaNacionalFP;
+                votosFP = sumaNacionalFP;
                 pctJPP = totalValidos > 0 ? ((sumaNacionalJPP / totalValidos) * 100).toFixed(3) : "0.000";
-                pctFP  = totalValidos > 0 ? ((sumaNacionalFP  / totalValidos) * 100).toFixed(3) : "0.000";
+                pctFP = totalValidos > 0 ? ((sumaNacionalFP / totalValidos) * 100).toFixed(3) : "0.000";
             }
 
             document.getElementById('global-pct-jpp').innerText = pctJPP + " %";
-            document.getElementById('global-pct-fp').innerText  = pctFP  + " %";
+            document.getElementById('global-pct-fp').innerText = pctFP + " %";
             document.getElementById('global-votos-jpp').innerText = votosJPP.toLocaleString('es-PE') + " votos";
-            document.getElementById('global-votos-fp').innerText  = votosFP.toLocaleString('es-PE')  + " votos";
+            document.getElementById('global-votos-fp').innerText = votosFP.toLocaleString('es-PE') + " votos";
 
             // Barra de avance nacional (incluye extranjero si hay totalesNac)
-            let actasTotal       = totalesNac ? (totalesNac.totalActas     || actasNacionalTotal)         : actasNacionalTotal;
-            let actasCont        = totalesNac ? (totalesNac.contabilizadas || actasNacionalContabilizadas) : actasNacionalContabilizadas;
+            let actasTotal = totalesNac ? (totalesNac.totalActas || actasNacionalTotal) : actasNacionalTotal;
+            let actasCont = totalesNac ? (totalesNac.contabilizadas || actasNacionalContabilizadas) : actasNacionalContabilizadas;
             let pctActasNacional = totalesNac ? (totalesNac.actasContabilizadas || 0).toFixed(3)
-                                              : (actasTotal > 0 ? ((actasCont / actasTotal) * 100).toFixed(3) : "0.000");
+                : (actasTotal > 0 ? ((actasCont / actasTotal) * 100).toFixed(3) : "0.000");
 
             document.getElementById('global-avance-pct').innerText = pctActasNacional + " %";
             setTimeout(() => {
@@ -712,8 +1009,8 @@
             rankingDepartamentos.sort((a, b) => a.value - b.value);
             const ITEMS_VISIBLES = 12;
             const totalDepts = rankingDepartamentos.length;
-            const zoomStart  = Math.max(0, totalDepts - ITEMS_VISIBLES);
-            const zoomEnd    = totalDepts - 1;
+            const zoomStart = Math.max(0, totalDepts - ITEMS_VISIBLES);
+            const zoomEnd = totalDepts - 1;
 
             let chartDom = document.getElementById('rankingChart');
             let myChart = echarts.init(chartDom);
@@ -721,7 +1018,7 @@
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: { type: 'none' },
-                    formatter: function(params) {
+                    formatter: function (params) {
                         let d = rankingDepartamentos[params[0].dataIndex];
                         return `<b>${d.name}</b><br/>
                                 Avance: <b>${d.value.toFixed(3)}%</b><br/>
@@ -787,7 +1084,7 @@
             myChart.setOption(option);
 
             // Click en barra → resaltar departamento en el mapa y abrir popup
-            myChart.on('click', function(params) {
+            myChart.on('click', function (params) {
                 let dept = rankingDepartamentos[params.dataIndex];
                 if (!dept || !layersByDept[dept.name]) return;
 
@@ -906,6 +1203,102 @@
             console.error("Error cargando los datos:", error);
             document.getElementById('loader').innerHTML = `<h2>Error de conexión</h2><p>Revisa la consola.</p>`;
         });
+
+        // ── PROYECCIÓN ELECTORAL ────────────────────────────────────────────
+        function toggleProyeccion() {
+            const panel = document.getElementById('panel-proyeccion');
+            const legend = document.querySelector('.info.legend');
+            panel.classList.toggle('visible');
+            if (legend) legend.style.display = panel.classList.contains('visible') ? 'none' : '';
+        }
+
+        function fmtV(n) { return Math.round(n).toLocaleString('es-PE'); }
+
+        fetch('proyecciones.json?v=' + Date.now())
+            .then(r => r.json())
+            .then(p => {
+                const nac = p.proyeccion_nacional;
+                const ext = p.extranjero;
+                const esJPP = nac.ganador_key === 'JPP';
+                const cGan = esJPP ? '#009933' : '#FF6600';
+
+                // Timestamp
+                let ts = new Date(p.timestamp);
+                document.getElementById('proy-timestamp').innerText =
+                    `Calculado: ${ts.toLocaleDateString('es-PE', { timeZone: 'America/Lima' })} `
+                    + `${ts.toLocaleTimeString('es-PE', { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit' })} (Lima)`;
+
+                // Badge confianza
+                let badge = document.getElementById('proy-confianza-badge');
+                badge.innerText = `Confianza ${p.confianza} — ${p.pct_actas_procesadas}% actas`;
+                badge.style.cssText += `;background:${p.confianza_color}22;color:${p.confianza_color};border:1px solid ${p.confianza_color};border-radius:99px;padding:3px 10px;`;
+
+                // Narrativa
+                if (p.narrativa) {
+                    let el = document.getElementById('proy-narrativa');
+                    el.innerText = p.narrativa;
+                    el.style.display = 'block';
+                }
+
+                // Ganador box
+                if (!esJPP) document.getElementById('proy-ganador-box').classList.add('fp-winner');
+                document.getElementById('proy-ganador-nombre').innerText = nac.ganador_proyectado;
+                document.getElementById('proy-ganador-nombre').style.color = cGan;
+                document.getElementById('proy-ganador-dif').innerText =
+                    `Ventaja estimada: ${fmtV(nac.diferencia_proyectada)} votos`;
+
+                // Barra
+                setTimeout(() => {
+                    document.getElementById('proy-barra-jpp').style.width = nac.pct_proyectado_jpp + '%';
+                }, 200);
+                document.getElementById('proy-pct-jpp').innerText = nac.pct_proyectado_jpp.toFixed(3) + '%';
+                document.getElementById('proy-pct-fp').innerText = nac.pct_proyectado_fp.toFixed(3) + '%';
+
+                // Votos proyectados
+                document.getElementById('proy-votos-jpp').innerText = fmtV(nac.votos_proyectados_jpp) + ' votos';
+                document.getElementById('proy-votos-fp').innerText = fmtV(nac.votos_proyectados_fp) + ' votos';
+
+                // Extranjero
+                const extPct = ext.actas_contabilizadas_pct || 0;
+                document.getElementById('ext-avance').innerText =
+                    extPct > 0 ? extPct + '%' : 'Sin datos aún';
+                document.getElementById('ext-jpp').innerText = extPct > 0
+                    ? `${fmtV(ext.votos_actuales_jpp)} → ${fmtV(ext.votos_proyectados_jpp)}`
+                    : '—';
+                document.getElementById('ext-fp').innerText = extPct > 0
+                    ? `${fmtV(ext.votos_actuales_fp)} → ${fmtV(ext.votos_proyectados_fp)}`
+                    : '—';
+                let extDifEl = document.getElementById('ext-dif');
+                let extDif = ext.diferencia_proyectada;
+                if (extPct > 0) {
+                    extDifEl.innerText = (extDif >= 0 ? '+' : '') + fmtV(extDif) + ' votos (JPP)';
+                    extDifEl.className = 'proy-fila-dif ' + (extDif >= 0 ? 'jpp' : 'fp');
+                } else {
+                    extDifEl.innerText = '—';
+                    extDifEl.className = 'proy-fila-dif';
+                }
+
+                // Top aportantes
+                let cont = document.getElementById('proy-top-aportantes');
+                cont.innerHTML = '';
+                (p.top_aportantes_ganador || []).forEach((d, i) => {
+                    let cDept = d.lider_proyectado === 'JPP' ? '#009933' : '#FF6600';
+                    let dif = Math.abs(d.diferencia_proyectada);
+                    cont.innerHTML += `
+                        <div class="proy-fila">
+                            <span class="proy-fila-nombre">${i + 1}. ${d.nombre}</span>
+                            <span class="proy-fila-vals">
+                                <span class="proy-fila-dif" style="color:${cDept}">+${fmtV(dif)} votos</span><br>
+                                <span style="font-size:9px;color:#94a3b8">${d.pct_jpp.toFixed(1)}% JPP · ${d.pct_fp.toFixed(1)}% FP</span>
+                            </span>
+                        </div>`;
+                });
+            })
+            .catch(() => {
+                let b = document.getElementById('proy-confianza-badge');
+                b.innerText = 'Proyección no disponible aún';
+                b.style.cssText += ';background:#fef2f2;color:#dc2626;border:1px solid #dc2626;border-radius:99px;padding:3px 10px;';
+            });
 
         var legend = L.control({ position: 'bottomright' });
         legend.onAdd = function (map) {
