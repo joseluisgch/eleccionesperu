@@ -95,7 +95,56 @@ def procesar_etl_ligero():
 
     with open('resultados_pivot.json', 'w', encoding='utf-8') as f:
         json.dump(salida, f, ensure_ascii=False, indent=2)
-        
+
+    # ── SERIE TEMPORAL ─────────────────────────────────────────────────────
+    # Acumula un punto por ejecución para graficar la evolución del conteo
+    try:
+        nac = nacional_bloque.get("_nacional", {})
+        candidatos_nac = nac.get("candidatos", {})
+
+        clave_jpp = next((k for k in candidatos_nac if "juntos" in k), None)
+        clave_fp  = next((k for k in candidatos_nac if "fuerza" in k), None)
+
+        pct_actas  = float(nac.get("actasContabilizadas") or 0)
+        votos_jpp  = int(candidatos_nac[clave_jpp]["totalVotosValidos"])  if clave_jpp else 0
+        votos_fp   = int(candidatos_nac[clave_fp]["totalVotosValidos"])   if clave_fp  else 0
+        pct_jpp    = float(candidatos_nac[clave_jpp]["porcentajeVotosValidos"]) if clave_jpp else 0
+        pct_fp     = float(candidatos_nac[clave_fp]["porcentajeVotosValidos"])  if clave_fp  else 0
+
+        if pct_actas > 0 and (votos_jpp + votos_fp) > 0:
+            import os
+            serie = []
+            if os.path.exists("serie_temporal.json"):
+                with open("serie_temporal.json", "r", encoding="utf-8") as f:
+                    serie = json.load(f)
+
+            nuevo_punto = {
+                "ts":        ahora_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "pct_actas": round(pct_actas, 3),
+                "votos_jpp": votos_jpp,
+                "votos_fp":  votos_fp,
+                "pct_jpp":   round(pct_jpp, 3),
+                "pct_fp":    round(pct_fp,  3),
+            }
+
+            # Deduplicar por pct_actas: si ya existe ese porcentaje, actualizar
+            indice = {p["pct_actas"]: i for i, p in enumerate(serie)}
+            if pct_actas in indice:
+                serie[indice[pct_actas]] = nuevo_punto
+            else:
+                serie.append(nuevo_punto)
+
+            # Mantener ordenado por avance de actas
+            serie.sort(key=lambda p: p["pct_actas"])
+
+            with open("serie_temporal.json", "w", encoding="utf-8") as f:
+                json.dump(serie, f, ensure_ascii=False, indent=2)
+            print(f"  Serie temporal actualizada: {len(serie)} puntos (actas: {pct_actas}%)")
+        else:
+            print("  [!] Sin datos nacionales suficientes para serie temporal.")
+    except Exception as e:
+        print(f"  [!] Error actualizando serie temporal: {e}")
+
     print("¡ETL completado exitosamente usando nombres como llave primaria!")
 
 if __name__ == "__main__":

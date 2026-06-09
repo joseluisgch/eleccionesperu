@@ -209,6 +209,73 @@
             font-weight: 700;
         }
 
+        /* ── PANEL SERIE TEMPORAL ────────────────────────────────────── */
+        #btn-serie {
+            position: absolute;
+            top: 20px;
+            right: 210px;
+            z-index: 1000;
+            background: #5b21b6;
+            color: white;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background .2s;
+        }
+        #btn-serie:hover { background: #7c3aed; }
+
+        #panel-serie {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            bottom: 10px;
+            width: 560px;
+            background: rgba(255,255,255,0.97);
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+            z-index: 999;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        #panel-serie.visible { display: flex; }
+
+        .serie-header {
+            background: #5b21b6;
+            color: white;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .serie-header h3 { margin: 0; font-size: 14px; }
+        .serie-header small { font-size: 11px; opacity: 0.8; }
+
+        #serie-chart {
+            flex: 1;
+            min-height: 0;
+        }
+
+        .serie-nota {
+            padding: 8px 14px;
+            font-size: 10px;
+            color: #64748b;
+            font-style: italic;
+            border-top: 1px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+
+        @media (max-width:768px) {
+            #btn-serie { display: none; }
+            #panel-serie { display: none !important; }
+        }
+
         /* ── PANEL DE PROYECCIÓN ──────────────────────────────────────── */
         #btn-proyeccion {
             position: absolute;
@@ -703,6 +770,20 @@
     <div class="map-title-container">
         <div class="map-title">Elección de Fórmula Presidencial</div>
         <div class="map-subtitle" id="fecha-actualizacion">Obteniendo fecha oficial de la ONPE...</div>
+    </div>
+
+    <!-- BOTÓN Y PANEL DE SERIE TEMPORAL -->
+    <button id="btn-serie" onclick="toggleSerie()">📈 EVOLUCIÓN DEL CONTEO</button>
+    <div id="panel-serie">
+        <div class="serie-header">
+            <h3>📈 Evolución del conteo de votos</h3>
+            <small id="serie-puntos">cargando...</small>
+        </div>
+        <div id="serie-chart"></div>
+        <div class="serie-nota">
+            Cada punto representa una actualización automática del workflow.
+            Eje X: % de actas contabilizadas. Eje Y: votos válidos acumulados.
+        </div>
     </div>
 
     <!-- BOTÓN Y PANEL DE PROYECCIÓN -->
@@ -1213,6 +1294,117 @@
             console.error("Error cargando los datos:", error);
             document.getElementById('loader').innerHTML = `<h2>Error de conexión</h2><p>Revisa la consola.</p>`;
         });
+
+        // ── SERIE TEMPORAL ──────────────────────────────────────────────────
+        let serieChartInstance = null;
+
+        function toggleSerie() {
+            const panel = document.getElementById('panel-serie');
+            const legend = document.querySelector('.info.legend');
+            panel.classList.toggle('visible');
+            if (legend) legend.style.display = panel.classList.contains('visible') ? 'none' : '';
+            if (panel.classList.contains('visible') && !serieChartInstance) {
+                cargarSerie();
+            }
+        }
+
+        function cargarSerie() {
+            fetch('serie_temporal.json?v=' + Date.now())
+                .then(r => r.json())
+                .then(serie => {
+                    if (!serie || serie.length === 0) {
+                        document.getElementById('serie-chart').innerHTML =
+                            '<p style="text-align:center;padding:40px;color:#94a3b8">Sin datos históricos aún.<br>Se acumularán con cada ejecución del workflow.</p>';
+                        return;
+                    }
+
+                    document.getElementById('serie-puntos').innerText =
+                        `${serie.length} actualizaciones registradas`;
+
+                    const xData   = serie.map(p => p.pct_actas.toFixed(1) + '%');
+                    const yJPP    = serie.map(p => p.votos_jpp);
+                    const yFP     = serie.map(p => p.votos_fp);
+                    const pctJPP  = serie.map(p => p.pct_jpp);
+                    const pctFP   = serie.map(p => p.pct_fp);
+
+                    const dom = document.getElementById('serie-chart');
+                    serieChartInstance = echarts.init(dom);
+
+                    const option = {
+                        backgroundColor: 'transparent',
+                        tooltip: {
+                            trigger: 'axis',
+                            formatter: params => {
+                                const i = params[0].dataIndex;
+                                const p = serie[i];
+                                const ts = new Date(p.ts).toLocaleString('es-PE', {
+                                    timeZone: 'America/Lima',
+                                    day: '2-digit', month: '2-digit',
+                                    hour: '2-digit', minute: '2-digit'
+                                });
+                                return `<b>${p.pct_actas}% actas</b><br>${ts}<br>` +
+                                    `<span style="color:#009933">● JPP: ${p.votos_jpp.toLocaleString('es-PE')} votos (${p.pct_jpp}%)</span><br>` +
+                                    `<span style="color:#FF6600">● FP: &nbsp;${p.votos_fp.toLocaleString('es-PE')} votos (${p.pct_fp}%)</span>`;
+                            }
+                        },
+                        legend: {
+                            data: ['Juntos por el Perú', 'Fuerza Popular'],
+                            top: 8, right: 12,
+                            textStyle: { fontSize: 11 }
+                        },
+                        grid: { top: 50, right: 20, bottom: 60, left: 70 },
+                        xAxis: {
+                            type: 'category',
+                            data: xData,
+                            name: '% actas contabilizadas',
+                            nameLocation: 'middle',
+                            nameGap: 32,
+                            axisLabel: { fontSize: 10, rotate: 30 }
+                        },
+                        yAxis: {
+                            type: 'value',
+                            name: 'Votos válidos',
+                            nameLocation: 'middle',
+                            nameGap: 55,
+                            min: 8000000,
+                            axisLabel: {
+                                fontSize: 10,
+                                formatter: v => (v / 1e6).toFixed(1) + 'M'
+                            }
+                        },
+                        series: [
+                            {
+                                name: 'Juntos por el Perú',
+                                type: 'line',
+                                data: yJPP,
+                                smooth: true,
+                                symbol: 'circle',
+                                symbolSize: 5,
+                                lineStyle: { color: '#009933', width: 2.5 },
+                                itemStyle: { color: '#009933' },
+                                areaStyle: { color: 'rgba(0,153,51,0.08)' }
+                            },
+                            {
+                                name: 'Fuerza Popular',
+                                type: 'line',
+                                data: yFP,
+                                smooth: true,
+                                symbol: 'circle',
+                                symbolSize: 5,
+                                lineStyle: { color: '#FF6600', width: 2.5 },
+                                itemStyle: { color: '#FF6600' },
+                                areaStyle: { color: 'rgba(255,102,0,0.08)' }
+                            }
+                        ]
+                    };
+                    serieChartInstance.setOption(option);
+                    window.addEventListener('resize', () => serieChartInstance.resize());
+                })
+                .catch(() => {
+                    document.getElementById('serie-chart').innerHTML =
+                        '<p style="text-align:center;padding:40px;color:#94a3b8">serie_temporal.json no encontrado.<br>Se generará en la próxima ejecución del workflow.</p>';
+                });
+        }
 
         // ── PROYECCIÓN ELECTORAL ────────────────────────────────────────────
         function toggleProyeccion() {
