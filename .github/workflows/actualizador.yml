@@ -1,0 +1,40 @@
+name: Actualizador Electoral ONPE
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Ejecuta el script cada 15 minutos
+  workflow_dispatch: # Te permite ejecutarlo manualmente con un botón
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. Clonar el repositorio
+      uses: actions/checkout@v3
+
+    - name: 2. Configurar entorno Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: 3. Instalar librerías
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pandas
+
+    - name: 4. Extraer datos de la ONPE (Fase 1)
+      run: python fase1_onpe_regiones.py
+
+    - name: 5. Procesar ETL y generar JSON (Fase 2)
+      run: python fase2_etl_ligero.py
+
+    - name: 6. Guardar cambios y actualizar el mapa
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add resultados_onpe.csv resultados_pivot.json
+        # Esta línea verifica si hubo cambios en los votos. Si los hubo, los guarda.
+        git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Actualización automática de actas ONPE" && git push)
