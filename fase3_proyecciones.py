@@ -84,9 +84,9 @@ def generar_narrativa(proy_depts: list, proy_nac: dict, proy_ext: dict) -> str:
                f"jurisdicciones otorgaron a {nombre_per} una ventaja de {fmt(abs(dif_lc))} votos "
                f"sobre {nombre_gan}.")
     elif lima and callao and dif_lc > 0:
-        p1 += (f" Lima Metropolitana y el Callao —que concentran cerca del 40 % del "
-               f"electorado nacional— también se inclinaron por {nombre_gan} con una ventaja "
-               f"combinada de {fmt(dif_lc)} votos, consolidando la victoria.")
+        p1 += (f" Lima Metropolitana y el Callao, concentran cerca del 40 % del "
+               f"electorado nacional, también se inclinaron por {nombre_gan} aportando una ventaja "
+               f"combinada de {fmt(dif_lc)} votos para consolidar la victoria.")
     parrafos.append(p1)
 
     # ── Párrafo 2: departamentos que revirtieron el déficit ───────────────
@@ -147,7 +147,7 @@ def generar_narrativa(proy_depts: list, proy_nac: dict, proy_ext: dict) -> str:
         accion  = "sumándose" if fav_key == ganador_key else "restando"
         if abs(ext_dif) > 100:
             parrafos.append(
-                f"El voto del extranjero —con {ext_pct:.1f} % de actas contabilizadas— "
+                f"El voto del extranjero con {ext_pct:.1f} % de actas contabilizadas— "
                 f"proyecta una ventaja de {fmt(abs(ext_dif))} votos para {ext_nom}, "
                 f"{accion} al resultado final."
             )
