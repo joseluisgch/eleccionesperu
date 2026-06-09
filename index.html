@@ -594,11 +594,13 @@
 
         // Cache-busting: fuerza al navegador y CDN a descargar siempre la versión más reciente
         const urlResultadosFresh = urlResultados + '?v=' + Date.now();
+        const urlNacionalFresh   = 'totales_nacionales.json?v=' + Date.now();
 
         Promise.all([
             obtenerLimitesGeo(),
-            fetch(urlResultadosFresh).then(res => res.json())
-        ]).then(([geoData, onpeData]) => {
+            fetch(urlResultadosFresh).then(res => res.json()),
+            fetch(urlNacionalFresh).then(res => res.json()).catch(() => null)
+        ]).then(([geoData, onpeData, nacRaw]) => {
 
             let maxTimestamp = 0;
             let sumaNacionalFP = 0;
@@ -643,21 +645,22 @@
                 }
             });
 
-            // 1. SCOREBOARD — usa _nacional (incluye extranjero) si está disponible
-            let nac = onpeData._nacional || null;
+            // 1. SCOREBOARD — usa totales_nacionales.json directamente (incluye extranjero)
+            const totalesNac    = nacRaw && nacRaw.totales      ? nacRaw.totales      : null;
+            const participantes = nacRaw && nacRaw.participantes ? nacRaw.participantes : [];
 
-            // Votos por candidato: preferir _nacional, caer en suma de departamentos
             let votosJPP, votosFP, pctJPP, pctFP;
 
-            if (nac && nac.candidatos) {
-                let keyJPP = Object.keys(nac.candidatos).find(k => k.includes('juntos'));
-                let keyFP  = Object.keys(nac.candidatos).find(k => k.includes('fuerza'));
-                votosJPP = keyJPP ? (nac.candidatos[keyJPP].totalVotosValidos || 0) : sumaNacionalJPP;
-                votosFP  = keyFP  ? (nac.candidatos[keyFP].totalVotosValidos  || 0) : sumaNacionalFP;
-                pctJPP   = keyJPP ? (nac.candidatos[keyJPP].porcentajeVotosValidos || 0).toFixed(3) : "0.000";
-                pctFP    = keyFP  ? (nac.candidatos[keyFP].porcentajeVotosValidos  || 0).toFixed(3) : "0.000";
+            if (participantes.length > 0) {
+                // Datos oficiales nacionales de la ONPE (incluye extranjero)
+                const cJPP = participantes.find(c => (c.nombreAgrupacionPolitica || '').toLowerCase().includes('juntos'));
+                const cFP  = participantes.find(c => (c.nombreAgrupacionPolitica || '').toLowerCase().includes('fuerza'));
+                votosJPP = cJPP ? (cJPP.totalVotosValidos       || 0) : sumaNacionalJPP;
+                votosFP  = cFP  ? (cFP.totalVotosValidos        || 0) : sumaNacionalFP;
+                pctJPP   = cJPP ? (cJPP.porcentajeVotosValidos  || 0).toFixed(3) : "0.000";
+                pctFP    = cFP  ? (cFP.porcentajeVotosValidos   || 0).toFixed(3) : "0.000";
             } else {
-                // Fallback: suma de departamentos (sin extranjero)
+                // Fallback: suma de departamentos
                 let totalValidos = sumaNacionalFP + sumaNacionalJPP;
                 votosJPP = sumaNacionalJPP;
                 votosFP  = sumaNacionalFP;
@@ -670,11 +673,11 @@
             document.getElementById('global-votos-jpp').innerText = votosJPP.toLocaleString('es-PE') + " votos";
             document.getElementById('global-votos-fp').innerText  = votosFP.toLocaleString('es-PE')  + " votos";
 
-            // Barra de avance nacional (incluye extranjero si hay _nacional)
-            let actasTotal         = nac ? (nac.totalActas       || actasNacionalTotal)         : actasNacionalTotal;
-            let actasCont          = nac ? (nac.contabilizadas   || actasNacionalContabilizadas) : actasNacionalContabilizadas;
-            let pctActasNacional   = nac ? (nac.actasContabilizadas || 0).toFixed(3)
-                                         : (actasTotal > 0 ? ((actasCont / actasTotal) * 100).toFixed(3) : "0.000");
+            // Barra de avance nacional (incluye extranjero si hay totalesNac)
+            let actasTotal       = totalesNac ? (totalesNac.totalActas     || actasNacionalTotal)         : actasNacionalTotal;
+            let actasCont        = totalesNac ? (totalesNac.contabilizadas || actasNacionalContabilizadas) : actasNacionalContabilizadas;
+            let pctActasNacional = totalesNac ? (totalesNac.actasContabilizadas || 0).toFixed(3)
+                                              : (actasTotal > 0 ? ((actasCont / actasTotal) * 100).toFixed(3) : "0.000");
 
             document.getElementById('global-avance-pct').innerText = pctActasNacional + " %";
             setTimeout(() => {
@@ -682,7 +685,7 @@
                 if (barFill) barFill.style.width = pctActasNacional + "%";
             }, 100);
             document.getElementById('global-avance-detalle').innerText =
-                `${actasCont.toLocaleString('es-PE')} de ${actasTotal.toLocaleString('es-PE')} actas${nac ? ' (incluye extranjero)' : ''}`;
+                `${actasCont.toLocaleString('es-PE')} de ${actasTotal.toLocaleString('es-PE')} actas${totalesNac ? ' (incluye extranjero)' : ''}`;
 
             // Caja de análisis
             let diferencia = Math.abs(votosFP - votosJPP);
@@ -695,7 +698,7 @@
                 Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
                 Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
                 <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
-                    *Estimación a razón de 300 electores promedio por acta.${nac ? ' Datos incluyen votos del extranjero.' : ''}
+                    *Estimación a razón de 300 electores promedio por acta.${totalesNac ? ' Datos incluyen votos del extranjero.' : ''}
                 </div>
             `;
 
