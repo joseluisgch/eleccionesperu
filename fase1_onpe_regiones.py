@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import json
 import time
 from datetime import datetime
 
@@ -135,3 +136,33 @@ if datos_electorales:
 
 else:
     print("\nNo se pudieron extraer datos.")
+
+# ── TOTALES NACIONALES (incluye votos del extranjero) ──────────────────────
+print("\nObteniendo totales nacionales (tipoFiltro=eleccion)...")
+try:
+    params_nac = {"idEleccion": 10, "tipoFiltro": "eleccion"}
+
+    resp_t_nac = requests.get(url_totales, headers=headers, params=params_nac)
+    resp_p_nac = requests.get(url_participantes, headers=headers, params=params_nac)
+
+    nacional = {}
+
+    if resp_t_nac.status_code == 200:
+        j = resp_t_nac.json()
+        if j.get("success") and "data" in j:
+            nacional["totales"] = j["data"]
+            print(f"  Actas nacionales: {j['data'].get('actasContabilizadas')}%")
+
+    time.sleep(0.5)
+
+    if resp_p_nac.status_code == 200:
+        j = resp_p_nac.json()
+        if j.get("success") and "data" in j:
+            nacional["participantes"] = j["data"]
+
+    with open("totales_nacionales.json", "w", encoding="utf-8") as f:
+        json.dump(nacional, f, ensure_ascii=False, indent=2)
+    print("Totales nacionales guardados en totales_nacionales.json")
+
+except Exception as e:
+    print(f"  [!] Error obteniendo totales nacionales: {e}")

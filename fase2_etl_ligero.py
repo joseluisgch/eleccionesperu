@@ -43,18 +43,55 @@ def procesar_etl_ligero():
     df_final = df_avance.merge(df_pct, on='departamento_key', how='left').merge(df_abs, on='departamento_key', how='left')
     
     print("3. Exportando a JSON...")
-    # Usamos la llave de nombre como índice para el JSON
     datos_dict = df_final.set_index('departamento_key').to_dict(orient='index')
 
-    # Timestamp propio del pipeline (no depende de la ONPE)
+    # Timestamp propio del pipeline
     ahora_utc = datetime.now(timezone.utc)
     meta = {
         "_meta": {
             "ultima_actualizacion_iso": ahora_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "ultima_actualizacion_ts": int(ahora_utc.timestamp() * 1000)  # milisegundos para JS
+            "ultima_actualizacion_ts": int(ahora_utc.timestamp() * 1000)
         }
     }
-    salida = {**meta, **datos_dict}
+
+    # Totales nacionales (incluye extranjero)
+    nacional_bloque = {}
+    try:
+        import os
+        if os.path.exists("totales_nacionales.json"):
+            with open("totales_nacionales.json", "r", encoding="utf-8") as f:
+                raw = json.load(f)
+
+            totales = raw.get("totales", {})
+            participantes = raw.get("participantes", [])
+
+            # Votos por candidato a nivel nacional
+            candidatos_nac = {}
+            for c in participantes:
+                clave = c.get("nombreAgrupacionPolitica", "").replace(" ", "_").lower()
+                candidatos_nac[clave] = {
+                    "porcentajeVotosValidos": c.get("porcentajeVotosValidos"),
+                    "totalVotosValidos": c.get("totalVotosValidos"),
+                    "nombreCandidato": c.get("nombreCandidato")
+                }
+
+            nacional_bloque = {
+                "_nacional": {
+                    "actasContabilizadas": totales.get("actasContabilizadas"),
+                    "contabilizadas": totales.get("contabilizadas"),
+                    "totalActas": totales.get("totalActas"),
+                    "participacionCiudadana": totales.get("participacionCiudadana"),
+                    "totalVotosValidos": totales.get("totalVotosValidos"),
+                    "totalVotosEmitidos": totales.get("totalVotosEmitidos"),
+                    "fechaActualizacion": totales.get("fechaActualizacion"),
+                    "candidatos": candidatos_nac
+                }
+            }
+            print("  Totales nacionales integrados en el JSON.")
+    except Exception as e:
+        print(f"  [!] No se pudo integrar totales_nacionales.json: {e}")
+
+    salida = {**meta, **nacional_bloque, **datos_dict}
 
     with open('resultados_pivot.json', 'w', encoding='utf-8') as f:
         json.dump(salida, f, ensure_ascii=False, indent=2)

@@ -643,45 +643,61 @@
                 }
             });
 
-            // 1. INYECTAR SCOREBOARD Y ANÁLISIS NACIONAL
-            let totalValidos = sumaNacionalFP + sumaNacionalJPP;
-            if (totalValidos > 0) {
-                let pctJPP = ((sumaNacionalJPP / totalValidos) * 100).toFixed(3);
-                let pctFP = ((sumaNacionalFP / totalValidos) * 100).toFixed(3);
+            // 1. SCOREBOARD — usa _nacional (incluye extranjero) si está disponible
+            let nac = onpeData._nacional || null;
 
-                document.getElementById('global-pct-jpp').innerText = pctJPP + " %";
-                document.getElementById('global-pct-fp').innerText = pctFP + " %";
-                document.getElementById('global-votos-jpp').innerText = sumaNacionalJPP.toLocaleString('es-PE') + " votos";
-                document.getElementById('global-votos-fp').innerText = sumaNacionalFP.toLocaleString('es-PE') + " votos";
+            // Votos por candidato: preferir _nacional, caer en suma de departamentos
+            let votosJPP, votosFP, pctJPP, pctFP;
 
-                let diferencia = Math.abs(sumaNacionalFP - sumaNacionalJPP);
-                let lider = sumaNacionalFP > sumaNacionalJPP ? "Fuerza Popular" : (sumaNacionalJPP > sumaNacionalFP ? "Juntos por el Perú" : "Empate");
-                let colorLider = sumaNacionalFP > sumaNacionalJPP ? "#FF6600" : "#009933";
-                let actasPendientes = actasNacionalTotal - actasNacionalContabilizadas;
-                let estVotosPendientes = actasPendientes * 300;
-
-                document.getElementById('caja-analisis').innerHTML = `
-                    Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
-                    Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
-                    <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
-                        *Nota: Los votos pendientes son una estimación matemática calculada a razón de 300 electores en promedio por acta.
-                    </div>
-                `;
-
-                // Actualizar el avance general de actas en el cuadro nacional
-                let pctActasNacional = actasNacionalTotal > 0 ? ((actasNacionalContabilizadas / actasNacionalTotal) * 100).toFixed(3) : "0.000";
-                document.getElementById('global-avance-pct').innerText = pctActasNacional + " %";
-                
-                // Animación de la barra de progreso
-                setTimeout(() => {
-                    const barFill = document.getElementById('global-avance-bar');
-                    if (barFill) {
-                        barFill.style.width = pctActasNacional + "%";
-                    }
-                }, 100);
-
-                document.getElementById('global-avance-detalle').innerText = `${actasNacionalContabilizadas.toLocaleString('es-PE')} de ${actasNacionalTotal.toLocaleString('es-PE')} actas contabilizadas`;
+            if (nac && nac.candidatos) {
+                let keyJPP = Object.keys(nac.candidatos).find(k => k.includes('juntos'));
+                let keyFP  = Object.keys(nac.candidatos).find(k => k.includes('fuerza'));
+                votosJPP = keyJPP ? (nac.candidatos[keyJPP].totalVotosValidos || 0) : sumaNacionalJPP;
+                votosFP  = keyFP  ? (nac.candidatos[keyFP].totalVotosValidos  || 0) : sumaNacionalFP;
+                pctJPP   = keyJPP ? (nac.candidatos[keyJPP].porcentajeVotosValidos || 0).toFixed(3) : "0.000";
+                pctFP    = keyFP  ? (nac.candidatos[keyFP].porcentajeVotosValidos  || 0).toFixed(3) : "0.000";
+            } else {
+                // Fallback: suma de departamentos (sin extranjero)
+                let totalValidos = sumaNacionalFP + sumaNacionalJPP;
+                votosJPP = sumaNacionalJPP;
+                votosFP  = sumaNacionalFP;
+                pctJPP = totalValidos > 0 ? ((sumaNacionalJPP / totalValidos) * 100).toFixed(3) : "0.000";
+                pctFP  = totalValidos > 0 ? ((sumaNacionalFP  / totalValidos) * 100).toFixed(3) : "0.000";
             }
+
+            document.getElementById('global-pct-jpp').innerText = pctJPP + " %";
+            document.getElementById('global-pct-fp').innerText  = pctFP  + " %";
+            document.getElementById('global-votos-jpp').innerText = votosJPP.toLocaleString('es-PE') + " votos";
+            document.getElementById('global-votos-fp').innerText  = votosFP.toLocaleString('es-PE')  + " votos";
+
+            // Barra de avance nacional (incluye extranjero si hay _nacional)
+            let actasTotal         = nac ? (nac.totalActas       || actasNacionalTotal)         : actasNacionalTotal;
+            let actasCont          = nac ? (nac.contabilizadas   || actasNacionalContabilizadas) : actasNacionalContabilizadas;
+            let pctActasNacional   = nac ? (nac.actasContabilizadas || 0).toFixed(3)
+                                         : (actasTotal > 0 ? ((actasCont / actasTotal) * 100).toFixed(3) : "0.000");
+
+            document.getElementById('global-avance-pct').innerText = pctActasNacional + " %";
+            setTimeout(() => {
+                const barFill = document.getElementById('global-avance-bar');
+                if (barFill) barFill.style.width = pctActasNacional + "%";
+            }, 100);
+            document.getElementById('global-avance-detalle').innerText =
+                `${actasCont.toLocaleString('es-PE')} de ${actasTotal.toLocaleString('es-PE')} actas${nac ? ' (incluye extranjero)' : ''}`;
+
+            // Caja de análisis
+            let diferencia = Math.abs(votosFP - votosJPP);
+            let lider = votosFP > votosJPP ? "Fuerza Popular" : (votosJPP > votosFP ? "Juntos por el Perú" : "Empate");
+            let colorLider = votosFP > votosJPP ? "#FF6600" : "#009933";
+            let actasPendientes = actasTotal - actasCont;
+            let estVotosPendientes = actasPendientes * 300;
+
+            document.getElementById('caja-analisis').innerHTML = `
+                Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
+                Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
+                <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
+                    *Estimación a razón de 300 electores promedio por acta.${nac ? ' Datos incluyen votos del extranjero.' : ''}
+                </div>
+            `;
 
             // 2. INYECTAR GRÁFICO ECHARTS (CON SCROLL INTERNO)
             rankingDepartamentos.sort((a, b) => a.value - b.value);
