@@ -127,15 +127,14 @@ def procesar_etl_ligero():
                 "pct_fp":    round(pct_fp,  3),
             }
 
-            # Deduplicar por pct_actas: si ya existe ese porcentaje, actualizar
-            indice = {p["pct_actas"]: i for i, p in enumerate(serie)}
-            if pct_actas in indice:
-                serie[indice[pct_actas]] = nuevo_punto
+            # Deduplicar por votos: si el último punto tiene exactamente los mismos
+            # votos, no agregar (datos sin cambio real). Sino, siempre agregar.
+            if serie and serie[-1]["votos_jpp"] == votos_jpp and serie[-1]["votos_fp"] == votos_fp:
+                print("  [i] Votos sin cambio respecto al último punto. No se agrega.")
             else:
                 serie.append(nuevo_punto)
-
-            # Mantener ordenado por avance de actas
-            serie.sort(key=lambda p: p["pct_actas"])
+                # Mantener ordenado por avance de actas
+                serie.sort(key=lambda p: p["pct_actas"])
 
             with open("serie_temporal.json", "w", encoding="utf-8") as f:
                 json.dump(serie, f, ensure_ascii=False, indent=2)
