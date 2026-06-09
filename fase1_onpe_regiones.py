@@ -30,8 +30,7 @@ headers = {
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
     "user-agent": "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
-    # Tu cookie de sesión autorizada
-    "cookie": "_ga=GA1.1.1515976449.1780968081; _ga_THMBN2T4BS=GS2.1.s1780968081$o1$g1$t1780968090$j51$l0$h1864169427"
+    # Las cookies _ga son de Google Analytics y expiran. No son necesarias para la API de la ONPE.
 }
 
 # Los dos endpoints de la ONPE
