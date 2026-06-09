@@ -995,13 +995,16 @@
             let lider = votosFP > votosJPP ? "Fuerza Popular" : (votosJPP > votosFP ? "Juntos por el Perú" : "Empate");
             let colorLider = votosFP > votosJPP ? "#FF6600" : "#009933";
             let actasPendientes = actasTotal - actasCont;
-            let estVotosPendientes = actasPendientes * 200;
+            // Tasa real nacional: votos válidos nacionales / actas contabilizadas
+            let votosValidosNac = totalesNac ? (totalesNac.totalVotosValidos || (votosJPP + votosFP)) : (votosJPP + votosFP);
+            let vpaNac = actasCont > 0 ? votosValidosNac / actasCont : 0;
+            let estVotosPendientes = Math.round(actasPendientes * vpaNac);
 
             document.getElementById('caja-analisis').innerHTML = `
                 Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
                 Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
                 <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
-                    *Estimación a razón de 200 electores promedio por acta.${totalesNac ? ' Datos incluyen votos del extranjero.' : ''}
+                    *Estimación a razón de ${Math.round(vpaNac)} votos/acta promedio.${totalesNac ? ' Datos incluyen votos del extranjero.' : ''}
                 </div>
             `;
 
@@ -1137,7 +1140,14 @@
                     let actasTotal = parseInt(props.totalActas) || 0;
                     let actasCont = parseInt(props.contabilizadas) || 0;
                     let actasPend = actasTotal - actasCont;
-                    let votosEst = actasPend * 300;
+                    // Tasa real: votos válidos / actas contabilizadas del departamento
+                    let keyFPv = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
+                    let keyJPPv = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
+                    let votosFPDep  = keyFPv  ? (parseFloat(props[keyFPv])  || 0) : 0;
+                    let votosJPPDep = keyJPPv ? (parseFloat(props[keyJPPv]) || 0) : 0;
+                    let votosValidosDep = votosFPDep + votosJPPDep;
+                    let vpa = actasCont > 0 ? votosValidosDep / actasCont : 0;
+                    let votosEst = Math.round(actasPend * vpa);
                     let pctGanador = Math.max(fp, jpp).toFixed(3);
 
                     if (fp > 0 || jpp > 0) {
@@ -1151,7 +1161,7 @@
                             <div class="panel-avance">
                                 <strong>📊 Progreso:</strong> ${actasPct.toFixed(3)}%<br>
                                 <strong>📝 Contabilizadas:</strong> ${actasCont.toLocaleString('es-PE')} de ${actasTotal.toLocaleString('es-PE')}<br>
-                                <strong style="color: #b45309;">⏳ Pendientes:</strong> ${actasPend.toLocaleString('es-PE')} <em>(~${votosEst.toLocaleString('es-PE')} votos)</em><br>
+                                <strong style="color: #b45309;">⏳ Pendientes:</strong> ${actasPend.toLocaleString('es-PE')} <em>(~${votosEst.toLocaleString('es-PE')} votos est.)</em><br>
                                 <strong>👥 Participación:</strong> ${partCiudadana.toFixed(3)}%
                             </div>
                             <div class="partido fp">
