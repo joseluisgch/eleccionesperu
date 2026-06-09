@@ -2,13 +2,8 @@ name: Actualizador Electoral ONPE
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Respaldo por si el push-trigger falla
-  push:
-    branches:
-      - main
-    paths:
-      - 'resultados_onpe.csv' # Se auto-dispara cuando el propio workflow actualiza datos
-  workflow_dispatch: # Permite ejecución manual desde GitHub
+    - cron: '*/15 * * * *' # Respaldo por si el auto-disparo falla
+  workflow_dispatch: # Permite ejecución manual y auto-disparo via API
 
 jobs:
   update-data:
@@ -55,6 +50,29 @@ jobs:
         git config --global user.email "actions@github.com"
         git add resultados_onpe.csv resultados_pivot.json
         # Solo hace commit si hubo cambios reales en los datos
-        git diff --quiet && git diff --staged --quiet || \
-          (git commit -m "📊 Actualización automática de actas ONPE [$(date -u '+%Y-%m-%d %H:%M UTC')]" && git push)
-        echo "✅ Pipeline completado exitosamente."
+        if git diff --quiet && git diff --staged --quiet; then
+          echo "ℹ️ Sin cambios en los datos. No se hace commit."
+          echo "HUBO_CAMBIOS=false" >> $GITHUB_ENV
+        else
+          git commit -m "📊 Actualización automática de actas ONPE [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push
+          echo "✅ Datos actualizados y publicados."
+          echo "HUBO_CAMBIOS=true" >> $GITHUB_ENV
+        fi
+
+    - name: 8. Auto-disparar siguiente ejecución (mientras haya datos nuevos)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        if [ "$HUBO_CAMBIOS" = "true" ]; then
+          echo "🔄 Disparando siguiente ejecución via API..."
+          sleep 30  # Pausa de 30 segundos antes de volver a consultar la ONPE
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/actualizador.yml/dispatches \
+            -d '{"ref":"main"}'
+          echo "✅ Siguiente ejecución programada."
+        else
+          echo "⏹️ Sin cambios. El ciclo se detiene hasta el próximo cron."
+        fi
