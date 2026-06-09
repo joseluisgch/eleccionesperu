@@ -1,31 +1,31 @@
 {
-  "timestamp": "2026-06-09T23:27:15Z",
-  "pct_actas_procesadas": 96.293,
+  "timestamp": "2026-06-09T23:28:56Z",
+  "pct_actas_procesadas": 96.305,
   "confianza": "Alta",
   "confianza_color": "#2563eb",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9167991,
-    "votos_proyectados_fp": 9224431,
+    "votos_proyectados_jpp": 9168029,
+    "votos_proyectados_fp": 9224283,
     "pct_proyectado_jpp": 49.847,
     "pct_proyectado_fp": 50.153,
-    "diferencia_proyectada": 56440,
+    "diferencia_proyectada": 56254,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 56 440 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 923 466 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+157 996 votos), Piura (+144 003) y Lambayeque (+131 502).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+432 216 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 31.5 % de actas contabilizadas— proyecta una ventaja de 88 250 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 56 254 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 923 466 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+157 996 votos), Piura (+144 003) y Lambayeque (+131 502).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+432 216 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 31.7 % de actas contabilizadas— proyecta una ventaja de 88 086 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
-    "votos_actuales_jpp": 32332,
-    "votos_actuales_fp": 60164,
-    "pct_jpp": 34.955,
-    "pct_fp": 65.045,
-    "actas_pendientes": 1741,
+    "votos_actuales_jpp": 32482,
+    "votos_actuales_fp": 60366,
+    "pct_jpp": 34.984,
+    "pct_fp": 65.016,
+    "actas_pendientes": 1738,
     "votos_por_acta": 115.3,
-    "votos_pendientes_est": 200792,
-    "votos_proyectados_jpp": 102519,
-    "votos_proyectados_fp": 190769,
-    "diferencia_proyectada": -88250,
+    "votos_pendientes_est": 200459,
+    "votos_proyectados_jpp": 102611,
+    "votos_proyectados_fp": 190697,
+    "diferencia_proyectada": -88086,
     "lider_proyectado": "FP",
-    "actas_contabilizadas_pct": 31.538
+    "actas_contabilizadas_pct": 31.656
   },
   "por_departamento": [
     {
@@ -389,19 +389,19 @@
       "actas_contabilizadas_pct": 99.099
     },
     {
-      "votos_actuales_jpp": 126082,
-      "votos_actuales_fp": 139606,
-      "pct_jpp": 47.455,
-      "pct_fp": 52.545,
-      "actas_pendientes": 44,
-      "votos_por_acta": 174.8,
-      "votos_pendientes_est": 7691,
-      "votos_proyectados_jpp": 129732,
-      "votos_proyectados_fp": 143647,
-      "diferencia_proyectada": -13915,
+      "votos_actuales_jpp": 126113,
+      "votos_actuales_fp": 139624,
+      "pct_jpp": 47.458,
+      "pct_fp": 52.542,
+      "actas_pendientes": 43,
+      "votos_por_acta": 174.7,
+      "votos_pendientes_est": 7513,
+      "votos_proyectados_jpp": 129678,
+      "votos_proyectados_fp": 143571,
+      "diferencia_proyectada": -13893,
       "lider_proyectado": "FP",
       "nombre": "UCAYALI",
-      "actas_contabilizadas_pct": 97.187
+      "actas_contabilizadas_pct": 97.251
     }
   ],
   "top_aportantes_ganador": [
