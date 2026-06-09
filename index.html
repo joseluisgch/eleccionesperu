@@ -995,13 +995,13 @@
             let lider = votosFP > votosJPP ? "Fuerza Popular" : (votosJPP > votosFP ? "Juntos por el Perú" : "Empate");
             let colorLider = votosFP > votosJPP ? "#FF6600" : "#009933";
             let actasPendientes = actasTotal - actasCont;
-            let estVotosPendientes = actasPendientes * 300;
+            let estVotosPendientes = actasPendientes * 200;
 
             document.getElementById('caja-analisis').innerHTML = `
                 Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
                 Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
                 <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
-                    *Estimación a razón de 300 electores promedio por acta.${totalesNac ? ' Datos incluyen votos del extranjero.' : ''}
+                    *Estimación a razón de 200 electores promedio por acta.${totalesNac ? ' Datos incluyen votos del extranjero.' : ''}
                 </div>
             `;
 
