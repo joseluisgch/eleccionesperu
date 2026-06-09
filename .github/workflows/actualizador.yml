@@ -55,6 +55,7 @@ jobs:
         git add totales_nacionales.json 2>/dev/null || true
         git add extranjero.json       2>/dev/null || true
         git add proyecciones.json     2>/dev/null || true
+        git add serie_temporal.json   2>/dev/null || true
         # Solo hace commit si hubo cambios reales en los datos
         if git diff --quiet && git diff --staged --quiet; then
           echo "ℹ️ Sin cambios en los datos. No se hace commit."
