@@ -608,6 +608,7 @@
             let actasNacionalTotal = 0;
             let actasNacionalContabilizadas = 0;
             let rankingDepartamentos = [];
+            let layersByDept = {};  // nombre → layer de Leaflet para vinculación con el gráfico
 
             geoData.features.forEach(feature => {
                 // 1. Identificamos el nombre del departamento desde el GeoJSON (Asegúrate de que coincida con tus nombres en el JSON)
@@ -637,10 +638,15 @@
                     actasNacionalTotal += parseInt(datos.totalActas) || 0;
                     actasNacionalContabilizadas += parseInt(datos.contabilizadas) || 0;
 
-                    // 4. Llenamos el ranking
+                    // 4. Llenamos el ranking (con datos de actas para el tooltip)
                     let actasPct = parseFloat(datos.actasContabilizadas) || 0;
                     if (!rankingDepartamentos.some(d => d.name === nombreKey)) {
-                        rankingDepartamentos.push({ name: nombreKey, value: actasPct });
+                        rankingDepartamentos.push({
+                            name: nombreKey,
+                            value: actasPct,
+                            contabilizadas: parseInt(datos.contabilizadas) || 0,
+                            totalActas: parseInt(datos.totalActas) || 0
+                        });
                     }
                 }
             });
@@ -702,36 +708,98 @@
                 </div>
             `;
 
-            // 2. INYECTAR GRÁFICO ECHARTS (CON SCROLL INTERNO)
+            // 2. GRÁFICO ECHARTS — scroll mejorado, tooltip con actas, click vinculado al mapa
             rankingDepartamentos.sort((a, b) => a.value - b.value);
+            const ITEMS_VISIBLES = 12;
+            const totalDepts = rankingDepartamentos.length;
+            const zoomStart  = Math.max(0, totalDepts - ITEMS_VISIBLES);
+            const zoomEnd    = totalDepts - 1;
 
             let chartDom = document.getElementById('rankingChart');
             let myChart = echarts.init(chartDom);
             let option = {
-                grid: { left: '1%', right: '15%', bottom: '2%', top: '2%', containLabel: true },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'none' },
+                    formatter: function(params) {
+                        let d = rankingDepartamentos[params[0].dataIndex];
+                        return `<b>${d.name}</b><br/>
+                                Avance: <b>${d.value.toFixed(3)}%</b><br/>
+                                ${d.contabilizadas.toLocaleString('es-PE')} de ${d.totalActas.toLocaleString('es-PE')} actas`;
+                    }
+                },
+                grid: { left: '1%', right: '18%', bottom: '2%', top: '2%', containLabel: true },
                 xAxis: { type: 'value', max: 100, splitLine: { show: false }, axisLabel: { show: false } },
-                yAxis: { type: 'category', data: rankingDepartamentos.map(d => d.name), axisLabel: { fontSize: 10, color: '#333', fontWeight: 'bold' }, axisLine: { show: false }, axisTick: { show: false } },
-                // NUEVO: Agregamos DataZoom para hacer el gráfico escroleable sin dañar la UI general
+                yAxis: {
+                    type: 'category',
+                    data: rankingDepartamentos.map(d => d.name),
+                    axisLabel: { fontSize: 10, color: '#333', fontWeight: 'bold' },
+                    axisLine: { show: false },
+                    axisTick: { show: false }
+                },
                 dataZoom: [
-                    { type: 'inside', yAxisIndex: 0, zoomOnMouseWheel: false, moveOnMouseMove: true, moveOnMouseWheel: true },
-                    { type: 'slider', yAxisIndex: 0, right: 0, width: 8, fillerColor: 'rgba(15, 59, 94, 0.2)', borderColor: 'none', handleSize: 0, showDetail: false }
+                    {
+                        type: 'inside',
+                        yAxisIndex: 0,
+                        zoomOnMouseWheel: false,
+                        moveOnMouseWheel: true,
+                        moveOnMouseMove: false,
+                        startValue: zoomStart,
+                        endValue: zoomEnd,
+                        zoomLock: true   // Solo desplazamiento, sin zoom
+                    },
+                    {
+                        type: 'slider',
+                        yAxisIndex: 0,
+                        right: 2,
+                        width: 10,
+                        startValue: zoomStart,
+                        endValue: zoomEnd,
+                        zoomLock: true,
+                        fillerColor: 'rgba(15, 59, 94, 0.35)',
+                        borderColor: '#e5e7eb',
+                        handleStyle: { color: '#0f3b5e', borderColor: '#0f3b5e' },
+                        brushStyle: { color: 'rgba(15,59,94,0.1)' },
+                        showDetail: false
+                    }
                 ],
                 series: [{
                     type: 'bar',
-                    data: rankingDepartamentos.map(d => d.value),
-                    label: { show: true, position: 'right', formatter: '{c}%', fontSize: 10, color: '#0f3b5e', fontWeight: 'bold' },
-                    itemStyle: {
-                        color: function (params) {
-                            if (params.value >= 100) return '#003399';
-                            if (params.value >= 80) return '#3b82f6';
-                            return '#93c5fd';
-                        },
-                        borderRadius: [0, 3, 3, 0]
+                    cursor: 'pointer',
+                    data: rankingDepartamentos.map(d => ({
+                        value: d.value,
+                        itemStyle: {
+                            color: d.value >= 100 ? '#003399' : d.value >= 80 ? '#3b82f6' : '#93c5fd',
+                            borderRadius: [0, 3, 3, 0]
+                        }
+                    })),
+                    label: {
+                        show: true, position: 'right',
+                        formatter: p => p.value.toFixed(1) + '%',
+                        fontSize: 10, color: '#0f3b5e', fontWeight: 'bold'
+                    },
+                    emphasis: {
+                        itemStyle: { color: '#f59e0b' }  // Resalta en amarillo al pasar el mouse
                     },
                     barWidth: '65%'
                 }]
             };
             myChart.setOption(option);
+
+            // Click en barra → resaltar departamento en el mapa y abrir popup
+            myChart.on('click', function(params) {
+                let dept = rankingDepartamentos[params.dataIndex];
+                if (!dept || !layersByDept[dept.name]) return;
+
+                // Quitar resaltado anterior y aplicar el nuevo
+                geojsonLayer.eachLayer(l => geojsonLayer.resetStyle(l));
+                let layer = layersByDept[dept.name];
+                layer.setStyle({ weight: 4, color: '#f59e0b', fillOpacity: 0.95 });
+                layer.bringToFront();
+                map.fitBounds(layer.getBounds(), { padding: [80, 80] });
+                layer.openPopup();
+            });
+
             window.addEventListener('resize', function () { myChart.resize(); });
 
             // 3. FECHA DE ACTUALIZACIÓN (usa timestamp del pipeline, no de la ONPE)
@@ -798,6 +866,12 @@
                         </div>
                     `;
                     layer.bindPopup(popupContent);
+
+                    // Guardar referencia para vinculación con el gráfico ECharts
+                    let nombreKey2 = nombreDep.toUpperCase().trim();
+                    if (nombreKey2 === "LIMA METROPOLITANA" || nombreKey2 === "LIMA PROVINCIAS") nombreKey2 = "LIMA";
+                    layersByDept[nombreKey2] = layer;
+
                     layer.on({
                         mouseover: function (e) {
                             var l = e.target;
