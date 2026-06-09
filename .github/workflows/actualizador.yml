@@ -48,7 +48,8 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
-        git add resultados_onpe.csv resultados_pivot.json totales_nacionales.json
+        git add resultados_onpe.csv resultados_pivot.json
+        git add totales_nacionales.json 2>/dev/null || true
         # Solo hace commit si hubo cambios reales en los datos
         if git diff --quiet && git diff --staged --quiet; then
           echo "ℹ️ Sin cambios en los datos. No se hace commit."
