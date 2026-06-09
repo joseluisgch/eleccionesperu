@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-09T08:52:10Z",
-    "ultima_actualizacion_ts": 1780995130953
+    "ultima_actualizacion_iso": "2026-06-09T08:53:51Z",
+    "ultima_actualizacion_ts": 1780995231713
   },
   "AMAZONAS": {
     "actasContabilizadas": 99.687,
@@ -270,7 +270,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.187,
     "participacionCiudadana": 62.545,
-    "fechaActualizacion": 1780994760253,
+    "fechaActualizacion": 1780995120206,
     "totalActas": 1564,
     "contabilizadas": 1520,
     "fuerza_popular": 52.545,
