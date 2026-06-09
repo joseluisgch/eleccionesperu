@@ -2,7 +2,12 @@ name: Actualizador Electoral ONPE
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Ejecuta cada 15 minutos
+    - cron: '*/15 * * * *' # Respaldo por si el push-trigger falla
+  push:
+    branches:
+      - main
+    paths:
+      - 'resultados_onpe.csv' # Se auto-dispara cuando el propio workflow actualiza datos
   workflow_dispatch: # Permite ejecución manual desde GitHub
 
 jobs:
