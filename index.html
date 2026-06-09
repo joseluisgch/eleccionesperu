@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Resultados Electorales - Perú 2026</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            /* Evita scrolls indeseados en la pantalla completa */
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .map-title-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 24px;
+            border-radius: 4px;
+            border: 1px solid #D6D6D6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .map-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .map-subtitle {
+            font-size: 12px;
+            color: #666;
+            font-weight: 700;
+        }
+
+        /* PANEL NACIONAL (TOTALES) */
+        .panel-nacional {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border: 1px solid #D6D6D6;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px 15px 25px;
+            width: 380px;
+            /* Ancho fijo para mantener simetría */
+            box-sizing: border-box;
+        }
+
+        .candidatos-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .candidato-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 48%;
+        }
+
+        .candidato-card .pct {
+            font-size: 28px;
+            font-weight: 900;
+            color: #0f3b5e;
+            margin-bottom: 5px;
+        }
+
+        .candidato-card hr {
+            width: 100%;
+            border: none;
+            border-top: 4px solid #d1d5db;
+            margin: 5px 0 12px 0;
+        }
+
+        .candidato-card .nombre {
+            font-size: 12px;
+            font-weight: 800;
+            color: #0f3b5e;
+            line-height: 1.2;
+            min-height: 30px;
+            margin-bottom: 12px;
+        }
+
+        .partido-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .partido-info img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .partido-info span {
+            font-size: 10px;
+            font-weight: 700;
+            color: #777;
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        .candidato-card .votos {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f3b5e;
+        }
+
+        .divider-vertical {
+            width: 1px;
+            background-color: #d1d5db;
+            margin: 0 5px;
+        }
+
+        .analisis-box {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px dashed #a1a1aa;
+            font-size: 12px;
+            color: #3f3f46;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* NUEVO: PANEL DE RANKING DE DEPARTAMENTOS ALINEADO A LA IZQUIERDA */
+        .ranking-panel {
+            position: absolute;
+            top: 20px;
+            bottom: 330px;
+            /* Evita que choque con el panel de totales de abajo */
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border: 1px solid #D6D6D6;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            width: 380px;
+            /* Mismo ancho que el panel de abajo */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .ranking-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #0f3b5e;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            text-align: center;
+            border-bottom: 2px solid #D6D6D6;
+            padding-bottom: 8px;
+        }
+
+        #rankingChart {
+            flex: 1;
+            width: 100%;
+        }
+
+        /* COMPONENTES DEL MAPA */
+        .etiqueta-mapa {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            color: #111;
+            font-weight: 900;
+            font-size: 9.5px;
+            /* Reducimos medio punto para evitar superposiciones */
+            line-height: 1.1;
+            /* Interlineado más apretado */
+            text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
+            text-align: center;
+        }
+
+        .popup-custom {
+            min-width: 250px;
+        }
+
+        .popup-custom h3 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .panel-avance {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 11px;
+            color: #495057;
+            line-height: 1.5;
+        }
+
+        .partido {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .partido.fp {
+            background-color: rgba(255, 102, 0, 0.1);
+            border-left: 4px solid #FF6600;
+        }
+
+        .partido.jpp {
+            background-color: rgba(0, 153, 51, 0.1);
+            border-left: 4px solid #009933;
+        }
+
+        .info.legend {
+            min-width: 180px;
+            background: white;
+            padding: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .info.legend h4 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #D6D6D6;
+            padding-bottom: 4px;
+        }
+
+        .legend-section {
+            margin-bottom: 8px;
+        }
+
+        .legend-header {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            margin-bottom: 6px;
+            font-size: 13px;
+            color: #111;
+        }
+
+        .party-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            margin-right: 8px;
+            border-radius: 50%;
+            border: 1px solid #D6D6D6;
+            background: white;
+        }
+
+        .legend-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .legend-row i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ========================================================
+           RESPONSIVE DESIGN (ADAPTACIÓN A MÓVILES)
+           ======================================================== */
+        @media (max-width: 768px) {
+            .map-title-container {
+                width: 90%;
+                padding: 8px;
+                top: 10px;
+            }
+
+            .map-title {
+                font-size: 14px;
+            }
+
+            .map-subtitle {
+                font-size: 10px;
+            }
+
+            .panel-nacional {
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                padding: 12px;
+                width: auto;
+                align-items: center;
+            }
+
+            .candidatos-container {
+                gap: 5px;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .candidato-card {
+                width: 48%;
+            }
+
+            .candidato-card .pct {
+                font-size: 20px;
+            }
+
+            .candidato-card .nombre {
+                font-size: 9px;
+                min-height: 22px;
+                margin-bottom: 4px;
+            }
+
+            .candidato-card .votos {
+                font-size: 12px;
+            }
+
+            .partido-info {
+                margin-bottom: 6px;
+                gap: 4px;
+            }
+
+            .partido-info img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .partido-info span {
+                font-size: 8px;
+            }
+
+            .analisis-box {
+                font-size: 10px;
+                margin-top: 10px;
+                padding-top: 8px;
+            }
+
+            /* Ocultamos paneles secundarios en celular para dejar ver el mapa */
+            .ranking-panel {
+                display: none;
+            }
+
+            .info.legend {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <h2 id="loader-text">Cargando mapa electoral...</h2>
+    </div>
+
+    <div class="map-title-container">
+        <div class="map-title">Elección de Fórmula Presidencial</div>
+        <div class="map-subtitle" id="fecha-actualizacion">Obteniendo fecha oficial de la ONPE...</div>
+    </div>
+
+    <!-- PANEL DE RANKING DE DEPARTAMENTOS (A LA IZQUIERDA) -->
+    <div class="ranking-panel">
+        <div class="ranking-title">Avance de actas por dpto</div>
+        <div id="rankingChart"></div>
+    </div>
+
+    <!-- PANEL NACIONAL (A LA IZQUIERDA ABAJO) -->
+    <div class="panel-nacional">
+        <div class="candidatos-container">
+            <div class="candidato-card">
+                <div class="pct" id="global-pct-jpp">--.--- %</div>
+                <hr>
+                <div class="nombre">ROBERTO HELBERT<br>SANCHEZ PALOMINO</div>
+                <div class="partido-info">
+                    <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000010.png"
+                        alt="JPP">
+                    <span>JUNTOS POR EL<br>PERÚ</span>
+                </div>
+                <div class="votos" id="global-votos-jpp">-- votos</div>
+            </div>
+
+            <div class="divider-vertical"></div>
+
+            <div class="candidato-card">
+                <div class="pct" id="global-pct-fp">--.--- %</div>
+                <hr>
+                <div class="nombre">KEIKO SOFIA<br>FUJIMORI HIGUCHI</div>
+                <div class="partido-info">
+                    <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000008.png"
+                        alt="FP">
+                    <span>FUERZA<br>POPULAR</span>
+                </div>
+                <div class="votos" id="global-votos-fp">-- votos</div>
+            </div>
+        </div>
+
+        <div class="analisis-box" id="caja-analisis">
+            Calculando proyecciones matemáticas...
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Inicializamos para que el panel izquierdo no lo tape al hacer zoom
+        var map = L.map('map', {
+            zoomControl: false,
+            zoomSnap: 0.1  // <-- EL SECRETO: Permite zooms con decimales para un ajuste perfecto
+        });
+        L.control.zoom({ position: 'topright' }).addTo(map);
+        var geojsonLayer;
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap | &copy; CARTO | Datos: ONPE'
+        }).addTo(map);
+
+        function getOpacidad(porcentajeGanador) {
+            if (porcentajeGanador >= 60) return 0.9;
+            if (porcentajeGanador >= 53) return 0.65;
+            return 0.4;
+        }
+
+        const urlVivienda = "limites_departamentos.geojson";
+        const urlResultados = "resultados_pivot.json";
+        const CACHE_KEY = "geojson_limites_peru";
+
+        async function obtenerLimitesGeo() {
+            // 1. Intentamos leer de LocalStorage si existe
+            try {
+                const cacheLocal = localStorage.getItem(CACHE_KEY);
+                if (cacheLocal) {
+                    return JSON.parse(cacheLocal);
+                }
+            } catch (e) {
+                console.warn("No se pudo leer la caché local.");
+            }
+
+            // 2. Si no hay caché, descargamos los datos
+            let dataGeo;
+            try {
+                const respuesta = await fetch(urlVivienda);
+                dataGeo = await respuesta.json();
+            } catch (err) {
+                console.warn("Fallo ruta local, intentando ruta remota de Vivienda...");
+                const respuestaRemota = await fetch("https://portalgis.vivienda.gob.pe/servergis/rest/services/OGEI/Limites_Peru2/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson");
+                dataGeo = await respuestaRemota.json();
+            }
+
+            // 3. Intentamos guardarlo en LocalStorage (Manejo seguro del QuotaExceededError)
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify(dataGeo));
+            } catch (err) {
+                console.warn("El mapa es muy grande para LocalStorage (Quota Exceeded). El navegador usará su caché HTTP nativa.");
+                // El error muere aquí, no rompe la aplicación.
+            }
+
+            return dataGeo;
+        }
+
+        Promise.all([
+            obtenerLimitesGeo(),
+            fetch(urlResultados).then(res => res.json())
+        ]).then(([geoData, onpeData]) => {
+
+            let maxTimestamp = 0;
+            let sumaNacionalFP = 0;
+            let sumaNacionalJPP = 0;
+            let actasNacionalTotal = 0;
+            let actasNacionalContabilizadas = 0;
+            let rankingDepartamentos = [];
+
+            geoData.features.forEach(feature => {
+                let idDepartamento = feature.properties.ID_DPTO || feature.properties.id_dpto || feature.properties.IDDPTO || "00";
+                let ubigeo = String(idDepartamento).padStart(2, '0') + "0000";
+
+                if (onpeData[ubigeo]) {
+                    Object.assign(feature.properties, onpeData[ubigeo]);
+                    if (onpeData[ubigeo].fechaActualizacion > maxTimestamp) {
+                        maxTimestamp = onpeData[ubigeo].fechaActualizacion;
+                    }
+
+                    let keyFP_votos = Object.keys(onpeData[ubigeo]).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
+                    let keyJPP_votos = Object.keys(onpeData[ubigeo]).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
+
+                    if (keyFP_votos) sumaNacionalFP += parseFloat(onpeData[ubigeo][keyFP_votos]) || 0;
+                    if (keyJPP_votos) sumaNacionalJPP += parseFloat(onpeData[ubigeo][keyJPP_votos]) || 0;
+
+                    actasNacionalTotal += parseInt(onpeData[ubigeo].totalActas) || 0;
+                    actasNacionalContabilizadas += parseInt(onpeData[ubigeo].contabilizadas) || 0;
+
+                    let nombreDep = feature.properties.NOMBDEP || feature.properties.departamento || "ND";
+                    let actasPct = parseFloat(onpeData[ubigeo].actasContabilizadas) || 0;
+
+                    if (!rankingDepartamentos.some(d => d.name === nombreDep)) {
+                        rankingDepartamentos.push({ name: nombreDep, value: actasPct });
+                    }
+                }
+            });
+
+            // 1. INYECTAR SCOREBOARD Y ANÁLISIS NACIONAL
+            let totalValidos = sumaNacionalFP + sumaNacionalJPP;
+            if (totalValidos > 0) {
+                let pctJPP = ((sumaNacionalJPP / totalValidos) * 100).toFixed(3);
+                let pctFP = ((sumaNacionalFP / totalValidos) * 100).toFixed(3);
+
+                document.getElementById('global-pct-jpp').innerText = pctJPP + " %";
+                document.getElementById('global-pct-fp').innerText = pctFP + " %";
+                document.getElementById('global-votos-jpp').innerText = sumaNacionalJPP.toLocaleString('es-PE') + " votos";
+                document.getElementById('global-votos-fp').innerText = sumaNacionalFP.toLocaleString('es-PE') + " votos";
+
+                let diferencia = Math.abs(sumaNacionalFP - sumaNacionalJPP);
+                let lider = sumaNacionalFP > sumaNacionalJPP ? "Fuerza Popular" : (sumaNacionalJPP > sumaNacionalFP ? "Juntos por el Perú" : "Empate");
+                let colorLider = sumaNacionalFP > sumaNacionalJPP ? "#FF6600" : "#009933";
+                let actasPendientes = actasNacionalTotal - actasNacionalContabilizadas;
+                let estVotosPendientes = actasPendientes * 300;
+
+                document.getElementById('caja-analisis').innerHTML = `
+                    Diferencia: <strong style="color: ${colorLider}">${diferencia.toLocaleString('es-PE')} votos</strong> a favor de ${lider}<br>
+                    Actas por procesar: <strong>${actasPendientes.toLocaleString('es-PE')}</strong> <em>(~${estVotosPendientes.toLocaleString('es-PE')} votos est.)</em><br>
+                    <div style="margin-top: 6px; font-size: 10px; color: #64748b; font-style: italic;">
+                        *Nota: Los votos pendientes son una estimación matemática calculada a razón de 300 electores en promedio por acta.
+                    </div>
+                `;
+            }
+
+            // 2. INYECTAR GRÁFICO ECHARTS (CON SCROLL INTERNO)
+            rankingDepartamentos.sort((a, b) => a.value - b.value);
+
+            let chartDom = document.getElementById('rankingChart');
+            let myChart = echarts.init(chartDom);
+            let option = {
+                grid: { left: '1%', right: '15%', bottom: '2%', top: '2%', containLabel: true },
+                xAxis: { type: 'value', max: 100, splitLine: { show: false }, axisLabel: { show: false } },
+                yAxis: { type: 'category', data: rankingDepartamentos.map(d => d.name), axisLabel: { fontSize: 10, color: '#333', fontWeight: 'bold' }, axisLine: { show: false }, axisTick: { show: false } },
+                // NUEVO: Agregamos DataZoom para hacer el gráfico escroleable sin dañar la UI general
+                dataZoom: [
+                    { type: 'inside', yAxisIndex: 0, zoomOnMouseWheel: false, moveOnMouseMove: true, moveOnMouseWheel: true },
+                    { type: 'slider', yAxisIndex: 0, right: 0, width: 8, fillerColor: 'rgba(15, 59, 94, 0.2)', borderColor: 'none', handleSize: 0, showDetail: false }
+                ],
+                series: [{
+                    type: 'bar',
+                    data: rankingDepartamentos.map(d => d.value),
+                    label: { show: true, position: 'right', formatter: '{c}%', fontSize: 10, color: '#0f3b5e', fontWeight: 'bold' },
+                    itemStyle: {
+                        color: function (params) {
+                            if (params.value >= 100) return '#003399';
+                            if (params.value >= 80) return '#3b82f6';
+                            return '#93c5fd';
+                        },
+                        borderRadius: [0, 3, 3, 0]
+                    },
+                    barWidth: '65%'
+                }]
+            };
+            myChart.setOption(option);
+            window.addEventListener('resize', function () { myChart.resize(); });
+
+            // 3. FECHA DE ACTUALIZACIÓN
+            if (maxTimestamp > 0) {
+                let d = new Date(maxTimestamp);
+                let fechaStr = d.toLocaleDateString("es-PE", { day: '2-digit', month: '2-digit', year: 'numeric' });
+                let horaStr = d.toLocaleTimeString("es-PE", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+                horaStr = horaStr.replace('p.m.', 'p. m.').replace('a.m.', 'a. m.').toUpperCase();
+                document.getElementById('fecha-actualizacion').innerText = `ACTUALIZADO AL ${fechaStr} A LAS ${horaStr}`;
+            }
+
+            // 4. MAPA Y POPUPS
+            geojsonLayer = L.geoJson(geoData, {
+                style: function (feature) {
+                    let props = feature.properties;
+                    let actas = parseFloat(props.actasContabilizadas) || 0;
+                    let keyFP = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                    let keyJPP = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
+                    let fp = keyFP ? parseFloat(props[keyFP]) : 0;
+                    let jpp = keyJPP ? parseFloat(props[keyJPP]) : 0;
+                    let pctGanador = Math.max(fp, jpp);
+                    let colorBase = '#A9A9A9';
+                    if (fp > 0 || jpp > 0) { colorBase = fp > jpp ? '#FF6600' : '#009933'; }
+                    let is100 = actas >= 100;
+                    return { fillColor: colorBase, weight: is100 ? 2.5 : 1, opacity: 1, color: is100 ? '#003399' : '#ffffff', fillOpacity: getOpacidad(pctGanador) };
+                },
+                onEachFeature: function (feature, layer) {
+                    let props = feature.properties;
+                    let nombreDep = props.NOMBDEP || props.nombdep || props.departamento || "Departamento Desconocido";
+                    let keyFP = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                    let keyJPP = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
+                    let fp = keyFP ? parseFloat(props[keyFP]) : 0;
+                    let jpp = keyJPP ? parseFloat(props[keyJPP]) : 0;
+                    let actasPct = parseFloat(props.actasContabilizadas) || 0;
+                    let partCiudadana = parseFloat(props.participacionCiudadana) || 0;
+                    let actasTotal = parseInt(props.totalActas) || 0;
+                    let actasCont = parseInt(props.contabilizadas) || 0;
+                    let actasPend = actasTotal - actasCont;
+                    let votosEst = actasPend * 300;
+                    let pctGanador = Math.max(fp, jpp).toFixed(3);
+
+                    if (fp > 0 || jpp > 0) {
+                        let textoEtiqueta = `<div>${nombreDep}<br>${pctGanador}%</div>`;
+                        layer.bindTooltip(textoEtiqueta, { permanent: true, direction: "center", className: "etiqueta-mapa" });
+                    }
+
+                    let popupContent = `
+                        <div class="popup-custom">
+                            <h3>${nombreDep}</h3>
+                            <div class="panel-avance">
+                                <strong>📊 Progreso:</strong> ${actasPct.toFixed(3)}%<br>
+                                <strong>📝 Contabilizadas:</strong> ${actasCont.toLocaleString('es-PE')} de ${actasTotal.toLocaleString('es-PE')}<br>
+                                <strong style="color: #b45309;">⏳ Pendientes:</strong> ${actasPend.toLocaleString('es-PE')} <em>(~${votosEst.toLocaleString('es-PE')} votos)</em><br>
+                                <strong>👥 Participación:</strong> ${partCiudadana.toFixed(3)}%
+                            </div>
+                            <div class="partido fp">
+                                <span>Fuerza Popular</span><br>${fp.toFixed(3)}% Votos Válidos
+                            </div>
+                            <div class="partido jpp">
+                                <span>Juntos por el Perú</span><br>${jpp.toFixed(3)}% Votos Válidos
+                            </div>
+                        </div>
+                    `;
+                    layer.bindPopup(popupContent);
+                    layer.on({
+                        mouseover: function (e) {
+                            var l = e.target;
+                            l.setStyle({ weight: 3.5, color: '#ffffff', opacity: 1 });
+                            l.bringToFront();
+                        },
+                        mouseout: function (e) { geojsonLayer.resetStyle(e.target); }
+                    });
+                }
+            }).addTo(map);
+
+            // 5. AJUSTE DE ENCUADRE (ZOOM MÁXIMO FRACCIONARIO)
+            let isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                // En celular centramos el mapa dejando espacio abajo para el panel de totales
+                map.fitBounds(geojsonLayer.getBounds(), {
+                    paddingTopLeft: [0, 20],
+                    paddingBottomRight: [0, 350]
+                });
+            } else {
+                // En PC: Leaflet calculará el zoom exacto (ej. 5.8) empujando el mapa 380px a la derecha 
+                // para que encaje perfectamente al costado de tu ranking departamental.
+                map.fitBounds(geojsonLayer.getBounds(), {
+                    paddingTopLeft: [380, 0],
+                    paddingBottomRight: [200, 0]
+                });
+            }
+
+            document.getElementById('loader').style.display = 'none';
+
+        }).catch(error => {
+            console.error("Error cargando los datos:", error);
+            document.getElementById('loader').innerHTML = `<h2>Error de conexión</h2><p>Revisa la consola.</p>`;
+        });
+
+        var legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'info legend');
+            div.innerHTML += '<h4>Leyenda</h4>';
+            div.innerHTML += `
+                <div class="legend-section">
+                    <div class="legend-header">
+                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000008.png" class="party-logo" alt="FP"> Fuerza Popular
+                    </div>
+                    <div class="legend-row"><i style="background: #FF6600; opacity: 0.9"></i> > 60%</div>
+                    <div class="legend-row"><i style="background: #FF6600; opacity: 0.65"></i> 53% - 60%</div>
+                    <div class="legend-row"><i style="background: #FF6600; opacity: 0.4"></i> < 53%</div>
+                </div>
+                <hr style="margin:8px 0; border:0; border-top:1px solid #D6D6D6;">
+                <div class="legend-section">
+                    <div class="legend-header">
+                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000010.png" class="party-logo" alt="JPP"> Juntos por el Perú
+                    </div>
+                    <div class="legend-row"><i style="background: #009933; opacity: 0.9"></i> > 60%</div>
+                    <div class="legend-row"><i style="background: #009933; opacity: 0.65"></i> 53% - 60%</div>
+                    <div class="legend-row"><i style="background: #009933; opacity: 0.4"></i> < 53%</div>
+                </div>
+                <hr style="margin:8px 0; border:0; border-top:1px solid #D6D6D6;">
+                <div class="legend-section" style="margin-bottom: 0;">
+                    <div class="legend-row" style="font-weight: bold; color: #111;">
+                        <i style="background: transparent; border: 2.5px solid #003399; height: 14px; width: 14px;"></i> Actas al 100%
+                    </div>
+                </div>
+            `;
+            return div;
+        };
+        legend.addTo(map);
+    </script>
+</body>
+
+</html>
