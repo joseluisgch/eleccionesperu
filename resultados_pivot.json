@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-10T04:52:13Z",
-    "ultima_actualizacion_ts": 1781067133485
+    "ultima_actualizacion_iso": "2026-06-10T04:53:49Z",
+    "ultima_actualizacion_ts": 1781067229530
   },
   "_nacional": {
-    "actasContabilizadas": 96.647,
-    "contabilizadas": 89656,
+    "actasContabilizadas": 96.654,
+    "contabilizadas": 89662,
     "totalActas": 92766,
-    "participacionCiudadana": 70.031,
-    "totalVotosValidos": 17885497,
-    "totalVotosEmitidos": 19136250,
-    "fechaActualizacion": 1781066760075,
+    "participacionCiudadana": 70.034,
+    "totalVotosValidos": 17886340,
+    "totalVotosEmitidos": 19137148,
+    "fechaActualizacion": 1781067120188,
     "candidatos": {
       "fuerza_popular": {
         "porcentajeVotosValidos": 49.891,
-        "totalVotosValidos": 8923295,
+        "totalVotosValidos": 8923700,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       },
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 50.109,
-        "totalVotosValidos": 8962202,
+        "totalVotosValidos": 8962640,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       }
     }
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 99.765,
     "participacionCiudadana": 60.166,
-    "fechaActualizacion": 1781066425735,
+    "fechaActualizacion": 1781066760075,
     "totalActas": 1278,
     "contabilizadas": 1275,
     "fuerza_popular": 35.543,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 98.704,
     "participacionCiudadana": 69.21,
-    "fechaActualizacion": 1781066425735,
+    "fechaActualizacion": 1781066760075,
     "totalActas": 3472,
     "contabilizadas": 3427,
     "fuerza_popular": 43.4,
@@ -49,7 +49,7 @@
   "APURIMAC": {
     "actasContabilizadas": 99.241,
     "participacionCiudadana": 67.3,
-    "fechaActualizacion": 1781066425735,
+    "fechaActualizacion": 1781066760075,
     "totalActas": 1317,
     "contabilizadas": 1307,
     "fuerza_popular": 18.838,
