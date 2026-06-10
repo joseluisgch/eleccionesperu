@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-10T11:41:34Z",
-    "ultima_actualizacion_ts": 1781091694289
+    "ultima_actualizacion_iso": "2026-06-10T11:43:20Z",
+    "ultima_actualizacion_ts": 1781091800900
   },
   "_nacional": {
     "actasContabilizadas": 97.029,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 70.222,
     "totalVotosValidos": 17933707,
     "totalVotosEmitidos": 19188483,
-    "fechaActualizacion": 1781090718323,
+    "fechaActualizacion": 1781091325556,
     "candidatos": {
       "fuerza_popular": {
         "porcentajeVotosValidos": 49.925,
