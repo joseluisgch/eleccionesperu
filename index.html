@@ -256,6 +256,11 @@
         }
         .serie-header h3 { margin: 0; font-size: 14px; }
         .serie-header small { font-size: 11px; opacity: 0.8; }
+        .panel-movil-cerrar button { display: none; }
+        @media (max-width:768px) {
+            .panel-movil-cerrar button { display: flex; }
+            .panel-movil-cerrar { width: 100%; }
+        }
 
         #serie-chart {
             flex: 1;
@@ -273,7 +278,16 @@
 
         @media (max-width:768px) {
             #btn-serie { display: none; }
-            #panel-serie { display: none !important; }
+            #panel-serie {
+                display: none;
+                position: fixed !important;
+                top: 0 !important; left: 0 !important;
+                right: 0 !important; bottom: 0 !important;
+                width: 100% !important;
+                border-radius: 0 !important;
+                z-index: 2000;
+            }
+            #panel-serie.visible { display: flex !important; }
         }
 
         /* ── PANEL DE PROYECCIÓN ──────────────────────────────────────── */
@@ -493,12 +507,62 @@
         }
 
         @media (max-width:768px) {
-            #btn-proyeccion {
-                display: none;
-            }
-
+            #btn-proyeccion { display: none; }
             #panel-proyeccion {
-                display: none !important;
+                display: none;
+                position: fixed !important;
+                top: 0 !important; left: 0 !important;
+                right: 0 !important; bottom: 0 !important;
+                width: 100% !important;
+                border-radius: 0 !important;
+                z-index: 2000;
+            }
+            #panel-proyeccion.visible { display: flex !important; }
+        }
+
+        /* ── BARRA MÓVIL INFERIOR ─────────────────────────────────────── */
+        #barra-movil {
+            display: none;
+        }
+        @media (max-width:768px) {
+            #barra-movil {
+                display: flex;
+                position: fixed;
+                bottom: 0; left: 0; right: 0;
+                z-index: 1500;
+                background: rgba(15,30,60,0.96);
+                backdrop-filter: blur(8px);
+                padding: 10px 12px;
+                gap: 10px;
+                box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+            }
+            #barra-movil button {
+                flex: 1;
+                padding: 11px 8px;
+                border: none;
+                border-radius: 8px;
+                font-size: 12px;
+                font-weight: 800;
+                cursor: pointer;
+                letter-spacing: 0.2px;
+            }
+            #bm-serie    { background: #5b21b6; color: white; }
+            #bm-proyecc  { background: #0f3b5e; color: white; }
+            .panel-movil-cerrar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 4px 16px 4px 0;
+            }
+            .panel-movil-cerrar button {
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                font-size: 20px;
+                width: 36px; height: 36px;
+                border-radius: 50%;
+                cursor: pointer;
+                line-height: 1;
             }
         }
 
@@ -772,11 +836,20 @@
         <div class="map-subtitle" id="fecha-actualizacion">Obteniendo fecha oficial de la ONPE...</div>
     </div>
 
+    <!-- BARRA INFERIOR MÓVIL -->
+    <div id="barra-movil">
+        <button id="bm-serie"   onclick="toggleSerie()">📈 EVOLUCIÓN DEL CONTEO</button>
+        <button id="bm-proyecc" onclick="toggleProyeccion()">📊 PROYECCIÓN FINAL</button>
+    </div>
+
     <!-- BOTÓN Y PANEL DE SERIE TEMPORAL -->
     <button id="btn-serie" onclick="toggleSerie()">📈 EVOLUCIÓN DEL CONTEO</button>
     <div id="panel-serie">
         <div class="serie-header">
-            <h3>📈 Evolución del conteo de votos</h3>
+            <div class="panel-movil-cerrar">
+                <h3>📈 Evolución del conteo de votos</h3>
+                <button onclick="toggleSerie()" title="Cerrar">✕</button>
+            </div>
             <small id="serie-puntos">cargando...</small>
         </div>
         <div id="serie-chart"></div>
@@ -790,7 +863,10 @@
     <button id="btn-proyeccion" onclick="toggleProyeccion()">📊 PROYECCIÓN FINAL</button>
     <div id="panel-proyeccion">
         <div class="proy-header">
-            <h3>🔮 Proyección Electoral</h3>
+            <div class="panel-movil-cerrar">
+                <h3>🔮 Proyección Electoral</h3>
+                <button onclick="toggleProyeccion()" title="Cerrar">✕</button>
+            </div>
             <small id="proy-timestamp">Calculando...</small>
         </div>
         <div class="proy-body">
@@ -1342,9 +1418,14 @@
                                     day: '2-digit', month: '2-digit',
                                     hour: '2-digit', minute: '2-digit'
                                 });
+                                const dif = p.votos_jpp - p.votos_fp;
+                                const liderColor = dif >= 0 ? '#009933' : '#FF6600';
+                                const liderNombre = dif >= 0 ? 'JPP' : 'FP';
+                                const difTexto = `+${Math.abs(dif).toLocaleString('es-PE')} votos`;
                                 return `<b>${p.pct_actas}% actas</b><br>${ts}<br>` +
                                     `<span style="color:#009933">● JPP: ${p.votos_jpp.toLocaleString('es-PE')} votos (${p.pct_jpp}%)</span><br>` +
-                                    `<span style="color:#FF6600">● FP: &nbsp;${p.votos_fp.toLocaleString('es-PE')} votos (${p.pct_fp}%)</span>`;
+                                    `<span style="color:#FF6600">● FP: &nbsp;${p.votos_fp.toLocaleString('es-PE')} votos (${p.pct_fp}%)</span><br>` +
+                                    `<span style="color:${liderColor};font-weight:700">▲ Ventaja ${liderNombre}: ${difTexto}</span>`;
                             }
                         },
                         legend: {
