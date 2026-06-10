@@ -1,20 +1,20 @@
 {
   "totales": {
-    "actasContabilizadas": 96.942,
-    "contabilizadas": 89929,
+    "actasContabilizadas": 96.976,
+    "contabilizadas": 89961,
     "totalActas": 92766,
-    "participacionCiudadana": 70.193,
-    "actasEnviadasJee": 1.702,
-    "enviadasJee": 1579,
-    "actasPendientesJee": 1.356,
-    "pendientesJee": 1258,
-    "fechaActualizacion": 1781074680375,
+    "participacionCiudadana": 70.205,
+    "actasEnviadasJee": 1.703,
+    "enviadasJee": 1580,
+    "actasPendientesJee": 1.321,
+    "pendientesJee": 1225,
+    "fechaActualizacion": 1781074920240,
     "idUbigeoDepartamento": null,
     "idUbigeoProvincia": null,
     "idUbigeoDistrito": null,
     "idUbigeoDistritoElectoral": null,
-    "totalVotosEmitidos": 19180572,
-    "totalVotosValidos": 17926058,
+    "totalVotosEmitidos": 19183935,
+    "totalVotosValidos": 17929328,
     "porcentajeVotosEmitidos": 100,
     "porcentajeVotosValidos": 100
   },
@@ -24,18 +24,18 @@
       "codigoAgrupacionPolitica": 8,
       "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI",
       "dniCandidato": "10001088",
-      "totalVotosValidos": 8948065,
-      "porcentajeVotosValidos": 49.917,
-      "porcentajeVotosEmitidos": 46.652
+      "totalVotosValidos": 8951071,
+      "porcentajeVotosValidos": 49.924,
+      "porcentajeVotosEmitidos": 46.659
     },
     {
       "nombreAgrupacionPolitica": "JUNTOS POR EL PERÚ",
       "codigoAgrupacionPolitica": 10,
       "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO",
       "dniCandidato": "16002918",
-      "totalVotosValidos": 8977993,
-      "porcentajeVotosValidos": 50.083,
-      "porcentajeVotosEmitidos": 46.808
+      "totalVotosValidos": 8978257,
+      "porcentajeVotosValidos": 50.076,
+      "porcentajeVotosEmitidos": 46.801
     }
   ]
 }
