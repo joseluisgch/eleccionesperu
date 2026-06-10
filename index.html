@@ -1071,6 +1071,9 @@
         const urlResultadosFresh = urlResultados + '?v=' + Date.now();
         const urlNacionalFresh = 'totales_nacionales.json?v=' + Date.now();
 
+        // Declarada aquí para que toggleOrden() (fuera del Promise) pueda acceder
+        let rankingDepartamentos = [];
+
         Promise.all([
             obtenerLimitesGeo(),
             fetch(urlResultadosFresh).then(res => res.json()),
@@ -1082,7 +1085,7 @@
             let sumaNacionalJPP = 0;
             let actasNacionalTotal = 0;
             let actasNacionalContabilizadas = 0;
-            let rankingDepartamentos = [];
+            rankingDepartamentos = [];   // usa la variable del scope externo
             let layersByDept = {};  // nombre → layer de Leaflet para vinculación con el gráfico
 
             geoData.features.forEach(feature => {
@@ -1286,20 +1289,18 @@
             window._myChart = myChart;
             window._minLogActas = minLogActas;
             window._rangoLogActas = rangoLogActas;
+            // Posición actual del scroll (índice startValue) — se rastrea aquí para no
+            // depender de getOption() que devuelve start/end en %, no índices.
+            window._rankingScrollPos = zoomStart;
 
             // Scroll manual con rueda del mouse — garantiza que ECharts reciba el evento
             chartDom.addEventListener('wheel', function(e) {
                 e.preventDefault();
-                const opt = myChart.getOption();
-                const dz = opt.dataZoom[0];
                 const total = rankingDepartamentos.length;
                 const visible = ITEMS_VISIBLES;
-                let start = dz.startValue;
-                let end   = dz.endValue;
                 const delta = e.deltaY > 0 ? -1 : 1;  // scroll abajo → ver dptos menores
-                start = Math.max(0, Math.min(total - visible, start + delta));
-                end   = start + visible - 1;
-                myChart.setOption({ dataZoom: [{ startValue: start, endValue: end }] });
+                window._rankingScrollPos = Math.max(0, Math.min(total - visible, window._rankingScrollPos + delta));
+                myChart.setOption({ dataZoom: [{ startValue: window._rankingScrollPos, endValue: window._rankingScrollPos + visible - 1 }] });
             }, { passive: false });
 
             // Click en barra → resaltar departamento en el mapa y abrir popup
@@ -1437,15 +1438,17 @@
             ordenPorActas = !ordenPorActas;
             const btn = document.getElementById('btn-orden');
             btn.textContent = ordenPorActas ? '⇅ Por avance' : '⇅ Por actas';
-            if (typeof rankingDepartamentos === 'undefined' || !window._myChart) return;
-            const sorted = [...rankingDepartamentos].sort((a, b) =>
+            if (!rankingDepartamentos.length || !window._myChart) return;
+            // Reordenar el array en-lugar para que el tooltip (que usa dataIndex) sea correcto
+            rankingDepartamentos.sort((a, b) =>
                 ordenPorActas ? a.totalActas - b.totalActas : a.value - b.value
             );
-            const total = sorted.length;
+            const total = rankingDepartamentos.length;
             const sv = Math.max(0, total - 12);
+            window._rankingScrollPos = sv;
             window._myChart.setOption({
-                yAxis: { data: sorted.map(d => d.name) },
-                series: [{ data: sorted.map(d => {
+                yAxis: { data: rankingDepartamentos.map(d => d.name) },
+                series: [{ data: rankingDepartamentos.map(d => {
                     const op = 0.3 + 0.7 * ((Math.log1p(d.totalActas) - window._minLogActas) / window._rangoLogActas);
                     const cb = d.lider === 'JPP'
                         ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
