@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-10T23:22:29Z",
-    "ultima_actualizacion_ts": 1781133749392
+    "ultima_actualizacion_iso": "2026-06-10T23:24:00Z",
+    "ultima_actualizacion_ts": 1781133840689
   },
   "_nacional": {
     "actasContabilizadas": 97.916,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 70.584,
     "totalVotosValidos": 18027396,
     "totalVotosEmitidos": 19287438,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "candidatos": {
       "fuerza_popular": {
         "porcentajeVotosValidos": 49.973,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 98.921,
     "participacionCiudadana": 72.475,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 5281,
     "contabilizadas": 5224,
     "fuerza_popular": 56.975,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 99.293,
     "participacionCiudadana": 76.835,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 3397,
     "contabilizadas": 3373,
     "fuerza_popular": 13.578,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 99.448,
     "participacionCiudadana": 71.812,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 2534,
     "contabilizadas": 2520,
     "fuerza_popular": 45.376,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 98.751,
     "participacionCiudadana": 79.868,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 1041,
     "contabilizadas": 1028,
     "fuerza_popular": 28.635,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.251,
     "participacionCiudadana": 62.557,
-    "fechaActualizacion": 1781133326598,
+    "fechaActualizacion": 1781133618717,
     "totalActas": 1564,
     "contabilizadas": 1521,
     "fuerza_popular": 52.542,
