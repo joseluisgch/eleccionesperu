@@ -596,7 +596,25 @@
             text-align: center;
             border-bottom: 2px solid #D6D6D6;
             padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
         }
+        .ranking-title span { flex: 1; }
+        #btn-orden {
+            font-size: 9px;
+            font-weight: 700;
+            background: #0f3b5e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 3px 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            text-transform: none;
+        }
+        #btn-orden:hover { background: #1e5a8a; }
 
         #rankingChart {
             flex: 1;
@@ -935,7 +953,10 @@
 
     <!-- PANEL DE RANKING DE DEPARTAMENTOS (A LA IZQUIERDA) -->
     <div class="ranking-panel">
-        <div class="ranking-title">Avance de actas por dpto</div>
+        <div class="ranking-title">
+            <span>Avance de actas por dpto</span>
+            <button id="btn-orden" onclick="toggleOrden()">⇅ Por actas</button>
+        </div>
         <div id="rankingChart"></div>
     </div>
 
@@ -1095,11 +1116,23 @@
                     // 4. Llenamos el ranking (con datos de actas para el tooltip)
                     let actasPct = parseFloat(datos.actasContabilizadas) || 0;
                     if (!rankingDepartamentos.some(d => d.name === nombreKey)) {
+                        let keyFPr  = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                        let keyJPPr = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
+                        let keyFPv  = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
+                        let keyJPPv = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
+                        let pctFPr  = keyFPr  ? (parseFloat(datos[keyFPr])  || 0) : 0;
+                        let pctJPPr = keyJPPr ? (parseFloat(datos[keyJPPr]) || 0) : 0;
+                        let vFP  = keyFPv  ? (parseFloat(datos[keyFPv])  || 0) : 0;
+                        let vJPP = keyJPPv ? (parseFloat(datos[keyJPPv]) || 0) : 0;
+                        let contab = parseInt(datos.contabilizadas) || 0;
+                        let vpaR = contab > 0 ? (vFP + vJPP) / contab : 0;
                         rankingDepartamentos.push({
                             name: nombreKey,
                             value: actasPct,
-                            contabilizadas: parseInt(datos.contabilizadas) || 0,
-                            totalActas: parseInt(datos.totalActas) || 0
+                            contabilizadas: contab,
+                            totalActas: parseInt(datos.totalActas) || 0,
+                            lider: pctJPPr >= pctFPr ? 'JPP' : 'FP',
+                            vpa: vpaR
                         });
                     }
                 }
@@ -1172,6 +1205,12 @@
             const zoomStart = Math.max(0, totalDepts - ITEMS_VISIBLES);
             const zoomEnd = totalDepts - 1;
 
+            // Opacidad con escala logarítmica para neutralizar el outlier de Lima
+            const logActas = d => Math.log1p(d.totalActas);
+            const maxLogActas = Math.max(...rankingDepartamentos.map(logActas));
+            const minLogActas = Math.min(...rankingDepartamentos.map(logActas));
+            const rangoLogActas = maxLogActas - minLogActas || 1;
+
             let chartDom = document.getElementById('rankingChart');
             let myChart = echarts.init(chartDom);
             let option = {
@@ -1180,12 +1219,17 @@
                     axisPointer: { type: 'none' },
                     formatter: function (params) {
                         let d = rankingDepartamentos[params[0].dataIndex];
+                        let acPend = d.totalActas - d.contabilizadas;
+                        let liderColor = d.lider === 'JPP' ? '#009933' : '#FF6600';
+                        let liderNom   = d.lider === 'JPP' ? 'Juntos por el Perú' : 'Fuerza Popular';
                         return `<b>${d.name}</b><br/>
                                 Avance: <b>${d.value.toFixed(3)}%</b><br/>
-                                ${d.contabilizadas.toLocaleString('es-PE')} de ${d.totalActas.toLocaleString('es-PE')} actas`;
+                                Actas: ${d.contabilizadas.toLocaleString('es-PE')} de ${d.totalActas.toLocaleString('es-PE')}<br/>
+                                Pendientes: <b>${acPend.toLocaleString('es-PE')}</b> actas<br/>
+                                <span style="color:${liderColor}">● Líder: ${liderNom}</span>`;
                     }
                 },
-                grid: { left: '1%', right: '18%', bottom: '2%', top: '2%', containLabel: true },
+                grid: { left: '1%', right: '12%', bottom: '2%', top: '2%', containLabel: true },
                 xAxis: { type: 'value', max: 100, splitLine: { show: false }, axisLabel: { show: false } },
                 yAxis: {
                     type: 'category',
@@ -1200,48 +1244,63 @@
                         yAxisIndex: 0,
                         zoomOnMouseWheel: false,
                         moveOnMouseWheel: true,
-                        moveOnMouseMove: false,
-                        startValue: zoomStart,
-                        endValue: zoomEnd,
-                        zoomLock: true   // Solo desplazamiento, sin zoom
-                    },
-                    {
-                        type: 'slider',
-                        yAxisIndex: 0,
-                        right: 2,
-                        width: 10,
+                        moveOnMouseMove: true,
                         startValue: zoomStart,
                         endValue: zoomEnd,
                         zoomLock: true,
-                        fillerColor: 'rgba(15, 59, 94, 0.35)',
-                        borderColor: '#e5e7eb',
-                        handleStyle: { color: '#0f3b5e', borderColor: '#0f3b5e' },
-                        brushStyle: { color: 'rgba(15,59,94,0.1)' },
-                        showDetail: false
+                        sensitivity: 1
                     }
                 ],
                 series: [{
                     type: 'bar',
                     cursor: 'pointer',
-                    data: rankingDepartamentos.map(d => ({
-                        value: d.value,
-                        itemStyle: {
-                            color: d.value >= 100 ? '#003399' : d.value >= 80 ? '#3b82f6' : '#93c5fd',
-                            borderRadius: [0, 3, 3, 0]
-                        }
-                    })),
+                    data: rankingDepartamentos.map(d => {
+                        // Opacidad logarítmica — reduce el impacto del outlier Lima
+                        const opacity = 0.3 + 0.7 * ((logActas(d) - minLogActas) / rangoLogActas);
+                        const colorBase = d.lider === 'JPP'
+                            ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
+                            : (d.value >= 100 ? '#b34400' : d.value >= 80 ? '#FF6600' : '#ffb380');
+                        const colorEmphasis = d.lider === 'JPP' ? '#005c1a' : '#b34400';
+                        return {
+                            value: d.value,
+                            itemStyle: {
+                                color: colorBase,
+                                opacity: opacity,
+                                borderRadius: [0, 3, 3, 0]
+                            },
+                            emphasis: {
+                                itemStyle: { color: colorEmphasis, opacity: 1 }
+                            }
+                        };
+                    }),
                     label: {
                         show: true, position: 'right',
                         formatter: p => p.value.toFixed(1) + '%',
                         fontSize: 10, color: '#0f3b5e', fontWeight: 'bold'
                     },
-                    emphasis: {
-                        itemStyle: { color: '#f59e0b' }  // Resalta en amarillo al pasar el mouse
-                    },
+                    emphasis: { disabled: false },
                     barWidth: '65%'
                 }]
             };
             myChart.setOption(option);
+            window._myChart = myChart;
+            window._minLogActas = minLogActas;
+            window._rangoLogActas = rangoLogActas;
+
+            // Scroll manual con rueda del mouse — garantiza que ECharts reciba el evento
+            chartDom.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                const opt = myChart.getOption();
+                const dz = opt.dataZoom[0];
+                const total = rankingDepartamentos.length;
+                const visible = ITEMS_VISIBLES;
+                let start = dz.startValue;
+                let end   = dz.endValue;
+                const delta = e.deltaY > 0 ? -1 : 1;  // scroll abajo → ver dptos menores
+                start = Math.max(0, Math.min(total - visible, start + delta));
+                end   = start + visible - 1;
+                myChart.setOption({ dataZoom: [{ startValue: start, endValue: end }] });
+            }, { passive: false });
 
             // Click en barra → resaltar departamento en el mapa y abrir popup
             myChart.on('click', function (params) {
@@ -1372,6 +1431,33 @@
         });
 
         // ── SERIE TEMPORAL ──────────────────────────────────────────────────
+        // ── ORDEN DEL RANKING ───────────────────────────────────────────────
+        let ordenPorActas = false;
+        function toggleOrden() {
+            ordenPorActas = !ordenPorActas;
+            const btn = document.getElementById('btn-orden');
+            btn.textContent = ordenPorActas ? '⇅ Por avance' : '⇅ Por actas';
+            if (typeof rankingDepartamentos === 'undefined' || !window._myChart) return;
+            const sorted = [...rankingDepartamentos].sort((a, b) =>
+                ordenPorActas ? a.totalActas - b.totalActas : a.value - b.value
+            );
+            const total = sorted.length;
+            const sv = Math.max(0, total - 12);
+            window._myChart.setOption({
+                yAxis: { data: sorted.map(d => d.name) },
+                series: [{ data: sorted.map(d => {
+                    const op = 0.3 + 0.7 * ((Math.log1p(d.totalActas) - window._minLogActas) / window._rangoLogActas);
+                    const cb = d.lider === 'JPP'
+                        ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
+                        : (d.value >= 100 ? '#b34400' : d.value >= 80 ? '#FF6600' : '#ffb380');
+                    return { value: d.value,
+                             itemStyle: { color: cb, opacity: op, borderRadius: [0,3,3,0] },
+                             emphasis: { itemStyle: { color: d.lider==='JPP'?'#005c1a':'#b34400', opacity:1 } } };
+                })}],
+                dataZoom: [{ startValue: sv, endValue: sv + 11 }]
+            });
+        }
+
         let serieChartInstance = null;
 
         function toggleSerie() {
