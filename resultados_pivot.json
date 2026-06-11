@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-11T17:12:20Z",
-    "ultima_actualizacion_ts": 1781197940590
+    "ultima_actualizacion_iso": "2026-06-11T17:14:04Z",
+    "ultima_actualizacion_ts": 1781198044450
   },
   "_nacional": {
-    "actasContabilizadas": 98.226,
-    "contabilizadas": 91120,
+    "actasContabilizadas": 98.228,
+    "contabilizadas": 91122,
     "totalActas": 92766,
-    "participacionCiudadana": 70.735,
-    "totalVotosValidos": 18065543,
-    "totalVotosEmitidos": 19328715,
-    "fechaActualizacion": 1781197560075,
+    "participacionCiudadana": 70.737,
+    "totalVotosValidos": 18065906,
+    "totalVotosEmitidos": 19329110,
+    "fechaActualizacion": 1781197920072,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.998,
-        "totalVotosValidos": 9032383,
+        "totalVotosValidos": 9032523,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
         "porcentajeVotosValidos": 50.002,
-        "totalVotosValidos": 9033160,
+        "totalVotosValidos": 9033383,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 99.014,
     "participacionCiudadana": 67.548,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 507,
     "contabilizadas": 502,
     "fuerza_popular": 30.794,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 99.654,
     "participacionCiudadana": 78.292,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 578,
     "contabilizadas": 576,
     "fuerza_popular": 27.431,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 98.254,
     "participacionCiudadana": 61.891,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 802,
     "contabilizadas": 788,
     "fuerza_popular": 39.236,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 98.921,
     "participacionCiudadana": 72.475,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 5281,
     "contabilizadas": 5224,
     "fuerza_popular": 56.975,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 99.293,
     "participacionCiudadana": 76.835,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 3397,
     "contabilizadas": 3373,
     "fuerza_popular": 13.578,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 99.448,
     "participacionCiudadana": 71.812,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 2534,
     "contabilizadas": 2520,
     "fuerza_popular": 45.376,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 98.751,
     "participacionCiudadana": 79.868,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 1041,
     "contabilizadas": 1028,
     "fuerza_popular": 28.635,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.698,
     "participacionCiudadana": 62.656,
-    "fechaActualizacion": 1781197680074,
+    "fechaActualizacion": 1781197920072,
     "totalActas": 1564,
     "contabilizadas": 1528,
     "fuerza_popular": 52.559,
