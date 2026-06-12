@@ -1464,11 +1464,21 @@
         let serieChartInstance = null;
 
         function toggleSerie() {
-            const panel = document.getElementById('panel-serie');
+            const panelSerie = document.getElementById('panel-serie');
+            const panelProyeccion = document.getElementById('panel-proyeccion');
             const legend = document.querySelector('.info.legend');
-            panel.classList.toggle('visible');
-            if (legend) legend.style.display = panel.classList.contains('visible') ? 'none' : '';
-            if (panel.classList.contains('visible') && !serieChartInstance) {
+            
+            const isVisible = panelSerie.classList.toggle('visible');
+            if (isVisible) {
+                panelProyeccion.classList.remove('visible');
+            }
+            
+            if (legend) {
+                const anyVisible = panelSerie.classList.contains('visible') || panelProyeccion.classList.contains('visible');
+                legend.style.display = anyVisible ? 'none' : '';
+            }
+            
+            if (isVisible && !serieChartInstance) {
                 cargarSerie();
             }
         }
@@ -1578,10 +1588,19 @@
 
         // ── PROYECCIÓN ELECTORAL ────────────────────────────────────────────
         function toggleProyeccion() {
-            const panel = document.getElementById('panel-proyeccion');
+            const panelSerie = document.getElementById('panel-serie');
+            const panelProyeccion = document.getElementById('panel-proyeccion');
             const legend = document.querySelector('.info.legend');
-            panel.classList.toggle('visible');
-            if (legend) legend.style.display = panel.classList.contains('visible') ? 'none' : '';
+            
+            const isVisible = panelProyeccion.classList.toggle('visible');
+            if (isVisible) {
+                panelSerie.classList.remove('visible');
+            }
+            
+            if (legend) {
+                const anyVisible = panelSerie.classList.contains('visible') || panelProyeccion.classList.contains('visible');
+                legend.style.display = anyVisible ? 'none' : '';
+            }
         }
 
         function fmtV(n) { return Math.round(n).toLocaleString('es-PE'); }
