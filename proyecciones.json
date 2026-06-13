@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-13T22:19:31Z",
-  "pct_actas_procesadas": 98.516,
+  "timestamp": "2026-06-13T22:21:08Z",
+  "pct_actas_procesadas": 98.521,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9171216,
-    "votos_proyectados_fp": 9222990,
-    "pct_proyectado_jpp": 49.859,
-    "pct_proyectado_fp": 50.141,
-    "diferencia_proyectada": 51774,
+    "votos_proyectados_jpp": 9171047,
+    "votos_proyectados_fp": 9223131,
+    "pct_proyectado_jpp": 49.858,
+    "pct_proyectado_fp": 50.142,
+    "diferencia_proyectada": 52084,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 51 774 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 928 732 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 343 votos), Piura (+144 354) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 52 084 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 048 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 343 votos), Piura (+144 354) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 107253,
     "votos_actuales_fp": 185687,
@@ -29,19 +29,19 @@
   },
   "por_departamento": [
     {
-      "votos_actuales_jpp": 2276347,
-      "votos_actuales_fp": 3967822,
-      "pct_jpp": 36.456,
-      "pct_fp": 63.544,
-      "actas_pendientes": 766,
+      "votos_actuales_jpp": 2276512,
+      "votos_actuales_fp": 3968531,
+      "pct_jpp": 36.453,
+      "pct_fp": 63.547,
+      "actas_pendientes": 762,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 167938,
-      "votos_proyectados_jpp": 2337570,
-      "votos_proyectados_fp": 4074536,
-      "diferencia_proyectada": -1736966,
+      "votos_pendientes_est": 167061,
+      "votos_proyectados_jpp": 2337411,
+      "votos_proyectados_fp": 4074693,
+      "diferencia_proyectada": -1737282,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.381
+      "actas_contabilizadas_pct": 97.395
     },
     {
       "votos_actuales_jpp": 608930,
@@ -164,19 +164,19 @@
       "actas_contabilizadas_pct": 98.921
     },
     {
-      "votos_actuales_jpp": 186016,
-      "votos_actuales_fp": 43175,
-      "pct_jpp": 81.162,
-      "pct_fp": 18.838,
-      "actas_pendientes": 9,
+      "votos_actuales_jpp": 186148,
+      "votos_actuales_fp": 43192,
+      "pct_jpp": 81.167,
+      "pct_fp": 18.833,
+      "actas_pendientes": 8,
       "votos_por_acta": 175.2,
-      "votos_pendientes_est": 1577,
-      "votos_proyectados_jpp": 187296,
-      "votos_proyectados_fp": 43472,
-      "diferencia_proyectada": 143824,
+      "votos_pendientes_est": 1402,
+      "votos_proyectados_jpp": 187286,
+      "votos_proyectados_fp": 43456,
+      "diferencia_proyectada": 143830,
       "lider_proyectado": "JPP",
       "nombre": "APURIMAC",
-      "actas_contabilizadas_pct": 99.317
+      "actas_contabilizadas_pct": 99.393
     },
     {
       "votos_actuales_jpp": 304999,
@@ -406,19 +406,19 @@
   ],
   "top_aportantes_ganador": [
     {
-      "votos_actuales_jpp": 2276347,
-      "votos_actuales_fp": 3967822,
-      "pct_jpp": 36.456,
-      "pct_fp": 63.544,
-      "actas_pendientes": 766,
+      "votos_actuales_jpp": 2276512,
+      "votos_actuales_fp": 3968531,
+      "pct_jpp": 36.453,
+      "pct_fp": 63.547,
+      "actas_pendientes": 762,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 167938,
-      "votos_proyectados_jpp": 2337570,
-      "votos_proyectados_fp": 4074536,
-      "diferencia_proyectada": -1736966,
+      "votos_pendientes_est": 167061,
+      "votos_proyectados_jpp": 2337411,
+      "votos_proyectados_fp": 4074693,
+      "diferencia_proyectada": -1737282,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.381
+      "actas_contabilizadas_pct": 97.395
     },
     {
       "votos_actuales_jpp": 208925,
