@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-13T21:59:48Z",
-  "pct_actas_procesadas": 98.482,
+  "timestamp": "2026-06-13T22:01:35Z",
+  "pct_actas_procesadas": 98.493,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9171842,
-    "votos_proyectados_fp": 9222794,
-    "pct_proyectado_jpp": 49.862,
-    "pct_proyectado_fp": 50.138,
-    "diferencia_proyectada": 50952,
+    "votos_proyectados_jpp": 9171729,
+    "votos_proyectados_fp": 9222845,
+    "pct_proyectado_jpp": 49.861,
+    "pct_proyectado_fp": 50.139,
+    "diferencia_proyectada": 51116,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 50 952 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 928 033 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 343 votos), Piura (+144 354) y Lambayeque (+131 484).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 51 116 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 928 157 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 343 votos), Piura (+144 354) y Lambayeque (+131 470).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 107253,
     "votos_actuales_fp": 185687,
@@ -29,19 +29,19 @@
   },
   "por_departamento": [
     {
-      "votos_actuales_jpp": 2275395,
-      "votos_actuales_fp": 3965238,
-      "pct_jpp": 36.461,
-      "pct_fp": 63.539,
-      "actas_pendientes": 782,
+      "votos_actuales_jpp": 2275720,
+      "votos_actuales_fp": 3965981,
+      "pct_jpp": 36.46,
+      "pct_fp": 63.54,
+      "actas_pendientes": 777,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 171445,
-      "votos_proyectados_jpp": 2337905,
-      "votos_proyectados_fp": 4074172,
-      "diferencia_proyectada": -1736267,
+      "votos_pendientes_est": 170348,
+      "votos_proyectados_jpp": 2337829,
+      "votos_proyectados_fp": 4074220,
+      "diferencia_proyectada": -1736391,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.326
+      "actas_contabilizadas_pct": 97.343
     },
     {
       "votos_actuales_jpp": 608930,
@@ -179,19 +179,19 @@
       "actas_contabilizadas_pct": 99.241
     },
     {
-      "votos_actuales_jpp": 304796,
-      "votos_actuales_fp": 435840,
-      "pct_jpp": 41.153,
-      "pct_fp": 58.847,
-      "actas_pendientes": 12,
+      "votos_actuales_jpp": 304903,
+      "votos_actuales_fp": 435970,
+      "pct_jpp": 41.155,
+      "pct_fp": 58.845,
+      "actas_pendientes": 11,
       "votos_por_acta": 207.0,
-      "votos_pendientes_est": 2484,
-      "votos_proyectados_jpp": 305818,
-      "votos_proyectados_fp": 437302,
-      "diferencia_proyectada": -131484,
+      "votos_pendientes_est": 2277,
+      "votos_proyectados_jpp": 305840,
+      "votos_proyectados_fp": 437310,
+      "diferencia_proyectada": -131470,
       "lider_proyectado": "FP",
       "nombre": "LAMBAYEQUE",
-      "actas_contabilizadas_pct": 99.666
+      "actas_contabilizadas_pct": 99.694
     },
     {
       "votos_actuales_jpp": 160659,
@@ -239,19 +239,19 @@
       "actas_contabilizadas_pct": 98.751
     },
     {
-      "votos_actuales_jpp": 349267,
-      "votos_actuales_fp": 267863,
-      "pct_jpp": 56.595,
-      "pct_fp": 43.405,
-      "actas_pendientes": 45,
+      "votos_actuales_jpp": 349616,
+      "votos_actuales_fp": 268170,
+      "pct_jpp": 56.592,
+      "pct_fp": 43.408,
+      "actas_pendientes": 41,
       "votos_por_acta": 180.1,
-      "votos_pendientes_est": 8104,
-      "votos_proyectados_jpp": 353853,
-      "votos_proyectados_fp": 271380,
-      "diferencia_proyectada": 82473,
+      "votos_pendientes_est": 7382,
+      "votos_proyectados_jpp": 353794,
+      "votos_proyectados_fp": 271375,
+      "diferencia_proyectada": 82419,
       "lider_proyectado": "JPP",
       "nombre": "ANCASH",
-      "actas_contabilizadas_pct": 98.704
+      "actas_contabilizadas_pct": 98.819
     },
     {
       "votos_actuales_jpp": 393226,
@@ -406,19 +406,19 @@
   ],
   "top_aportantes_ganador": [
     {
-      "votos_actuales_jpp": 2275395,
-      "votos_actuales_fp": 3965238,
-      "pct_jpp": 36.461,
-      "pct_fp": 63.539,
-      "actas_pendientes": 782,
+      "votos_actuales_jpp": 2275720,
+      "votos_actuales_fp": 3965981,
+      "pct_jpp": 36.46,
+      "pct_fp": 63.54,
+      "actas_pendientes": 777,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 171445,
-      "votos_proyectados_jpp": 2337905,
-      "votos_proyectados_fp": 4074172,
-      "diferencia_proyectada": -1736267,
+      "votos_pendientes_est": 170348,
+      "votos_proyectados_jpp": 2337829,
+      "votos_proyectados_fp": 4074220,
+      "diferencia_proyectada": -1736391,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.326
+      "actas_contabilizadas_pct": 97.343
     },
     {
       "votos_actuales_jpp": 208925,
@@ -466,19 +466,19 @@
       "actas_contabilizadas_pct": 98.921
     },
     {
-      "votos_actuales_jpp": 304796,
-      "votos_actuales_fp": 435840,
-      "pct_jpp": 41.153,
-      "pct_fp": 58.847,
-      "actas_pendientes": 12,
+      "votos_actuales_jpp": 304903,
+      "votos_actuales_fp": 435970,
+      "pct_jpp": 41.155,
+      "pct_fp": 58.845,
+      "actas_pendientes": 11,
       "votos_por_acta": 207.0,
-      "votos_pendientes_est": 2484,
-      "votos_proyectados_jpp": 305818,
-      "votos_proyectados_fp": 437302,
-      "diferencia_proyectada": -131484,
+      "votos_pendientes_est": 2277,
+      "votos_proyectados_jpp": 305840,
+      "votos_proyectados_fp": 437310,
+      "diferencia_proyectada": -131470,
       "lider_proyectado": "FP",
       "nombre": "LAMBAYEQUE",
-      "actas_contabilizadas_pct": 99.666
+      "actas_contabilizadas_pct": 99.694
     }
   ]
 }
