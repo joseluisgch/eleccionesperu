@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T23:31:19Z",
-    "ultima_actualizacion_ts": 1781393479503
+    "ultima_actualizacion_iso": "2026-06-13T23:33:11Z",
+    "ultima_actualizacion_ts": 1781393591498
   },
   "_nacional": {
     "actasContabilizadas": 98.529,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 99.293,
     "participacionCiudadana": 76.835,
-    "fechaActualizacion": 1781393125421,
+    "fechaActualizacion": 1781393520085,
     "totalActas": 3397,
     "contabilizadas": 3373,
     "fuerza_popular": 13.578,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 99.448,
     "participacionCiudadana": 71.812,
-    "fechaActualizacion": 1781393125421,
+    "fechaActualizacion": 1781393520085,
     "totalActas": 2534,
     "contabilizadas": 2520,
     "fuerza_popular": 45.376,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 98.751,
     "participacionCiudadana": 79.868,
-    "fechaActualizacion": 1781393125421,
+    "fechaActualizacion": 1781393520085,
     "totalActas": 1041,
     "contabilizadas": 1028,
     "fuerza_popular": 28.635,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781393125421,
+    "fechaActualizacion": 1781393520085,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.698,
     "participacionCiudadana": 62.656,
-    "fechaActualizacion": 1781393125421,
+    "fechaActualizacion": 1781393520085,
     "totalActas": 1564,
     "contabilizadas": 1528,
     "fuerza_popular": 52.559,
