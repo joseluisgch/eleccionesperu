@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T15:31:28Z",
-    "ultima_actualizacion_ts": 1781364688841
+    "ultima_actualizacion_iso": "2026-06-13T15:33:11Z",
+    "ultima_actualizacion_ts": 1781364791807
   },
   "_nacional": {
     "actasContabilizadas": 98.332,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 99.448,
     "participacionCiudadana": 71.812,
-    "fechaActualizacion": 1781364318433,
+    "fechaActualizacion": 1781364625361,
     "totalActas": 2534,
     "contabilizadas": 2520,
     "fuerza_popular": 45.376,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781364318433,
+    "fechaActualizacion": 1781364625361,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
