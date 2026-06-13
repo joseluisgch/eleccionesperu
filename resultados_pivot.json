@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T10:14:32Z",
-    "ultima_actualizacion_ts": 1781345672627
+    "ultima_actualizacion_iso": "2026-06-13T10:16:08Z",
+    "ultima_actualizacion_ts": 1781345768179
   },
   "_nacional": {
     "actasContabilizadas": 98.327,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 99.844,
     "participacionCiudadana": 60.208,
-    "fechaActualizacion": 1781344819094,
+    "fechaActualizacion": 1781345504098,
     "totalActas": 1278,
     "contabilizadas": 1276,
     "fuerza_popular": 35.539,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 98.704,
     "participacionCiudadana": 69.21,
-    "fechaActualizacion": 1781344819094,
+    "fechaActualizacion": 1781345504098,
     "totalActas": 3472,
     "contabilizadas": 3427,
     "fuerza_popular": 43.4,
@@ -49,7 +49,7 @@
   "APURIMAC": {
     "actasContabilizadas": 99.241,
     "participacionCiudadana": 67.3,
-    "fechaActualizacion": 1781344819094,
+    "fechaActualizacion": 1781345504098,
     "totalActas": 1317,
     "contabilizadas": 1307,
     "fuerza_popular": 18.838,
@@ -60,7 +60,7 @@
   "AREQUIPA": {
     "actasContabilizadas": 99.383,
     "participacionCiudadana": 79.322,
-    "fechaActualizacion": 1781344819094,
+    "fechaActualizacion": 1781345504098,
     "totalActas": 4215,
     "contabilizadas": 4189,
     "fuerza_popular": 36.406,
