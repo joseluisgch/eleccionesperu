@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T22:01:34Z",
-    "ultima_actualizacion_ts": 1781388094942
+    "ultima_actualizacion_iso": "2026-06-13T22:03:17Z",
+    "ultima_actualizacion_ts": 1781388197467
   },
   "_nacional": {
     "actasContabilizadas": 98.493,
@@ -41,10 +41,10 @@
     "fechaActualizacion": 1781387760099,
     "totalActas": 3472,
     "contabilizadas": 3431,
-    "fuerza_popular": 43.408,
-    "juntos_por_el_peru": 56.592,
-    "fuerza_popular_votos": 268170,
-    "juntos_por_el_peru_votos": 349616
+    "fuerza_popular": 43.405,
+    "juntos_por_el_peru": 56.595,
+    "fuerza_popular_votos": 267863,
+    "juntos_por_el_peru_votos": 349267
   },
   "APURIMAC": {
     "actasContabilizadas": 99.241,
