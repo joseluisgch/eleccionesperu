@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T10:26:38Z",
-    "ultima_actualizacion_ts": 1781346398213
+    "ultima_actualizacion_iso": "2026-06-13T10:28:14Z",
+    "ultima_actualizacion_ts": 1781346494722
   },
   "_nacional": {
     "actasContabilizadas": 98.327,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 98.13,
     "participacionCiudadana": 61.825,
-    "fechaActualizacion": 1781346025857,
+    "fechaActualizacion": 1781346318036,
     "totalActas": 802,
     "contabilizadas": 787,
     "fuerza_popular": 39.204,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 99.293,
     "participacionCiudadana": 76.835,
-    "fechaActualizacion": 1781346025857,
+    "fechaActualizacion": 1781346318036,
     "totalActas": 3397,
     "contabilizadas": 3373,
     "fuerza_popular": 13.578,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 98.751,
     "participacionCiudadana": 79.868,
-    "fechaActualizacion": 1781346025857,
+    "fechaActualizacion": 1781346318036,
     "totalActas": 1041,
     "contabilizadas": 1028,
     "fuerza_popular": 28.635,
