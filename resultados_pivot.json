@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T22:56:46Z",
-    "ultima_actualizacion_ts": 1781391406858
+    "ultima_actualizacion_iso": "2026-06-13T22:58:31Z",
+    "ultima_actualizacion_ts": 1781391511003
   },
   "_nacional": {
     "actasContabilizadas": 98.525,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 99.648,
     "participacionCiudadana": 72.051,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 3691,
     "contabilizadas": 3678,
     "fuerza_popular": 45.065,
@@ -159,7 +159,7 @@
   "LA LIBERTAD": {
     "actasContabilizadas": 99.528,
     "participacionCiudadana": 72.864,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 5302,
     "contabilizadas": 5277,
     "fuerza_popular": 57.541,
@@ -170,7 +170,7 @@
   "LAMBAYEQUE": {
     "actasContabilizadas": 99.721,
     "participacionCiudadana": 76.258,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 3590,
     "contabilizadas": 3580,
     "fuerza_popular": 58.845,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 98.776,
     "participacionCiudadana": 55.208,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 2697,
     "contabilizadas": 2664,
     "fuerza_popular": 52.96,
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 99.014,
     "participacionCiudadana": 67.548,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 507,
     "contabilizadas": 502,
     "fuerza_popular": 30.794,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 99.654,
     "participacionCiudadana": 78.292,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 578,
     "contabilizadas": 576,
     "fuerza_popular": 27.431,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 98.13,
     "participacionCiudadana": 61.825,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 802,
     "contabilizadas": 787,
     "fuerza_popular": 39.204,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 98.921,
     "participacionCiudadana": 72.475,
-    "fechaActualizacion": 1781391120081,
+    "fechaActualizacion": 1781391325416,
     "totalActas": 5281,
     "contabilizadas": 5224,
     "fuerza_popular": 56.975,
