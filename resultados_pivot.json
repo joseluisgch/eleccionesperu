@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T03:05:09Z",
-    "ultima_actualizacion_ts": 1781319909417
+    "ultima_actualizacion_iso": "2026-06-13T03:06:52Z",
+    "ultima_actualizacion_ts": 1781320012022
   },
   "_nacional": {
     "actasContabilizadas": 98.325,
@@ -96,10 +96,10 @@
     "fechaActualizacion": 1781319720092,
     "totalActas": 2898,
     "contabilizadas": 2849,
-    "fuerza_popular": 65.578,
-    "juntos_por_el_peru": 34.422,
-    "fuerza_popular_votos": 396896,
-    "juntos_por_el_peru_votos": 208332
+    "fuerza_popular": 65.576,
+    "juntos_por_el_peru": 34.424,
+    "fuerza_popular_votos": 397037,
+    "juntos_por_el_peru_votos": 208424
   },
   "CUSCO": {
     "actasContabilizadas": 98.619,
