@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T05:45:43Z",
-    "ultima_actualizacion_ts": 1781329543731
+    "ultima_actualizacion_iso": "2026-06-13T05:47:22Z",
+    "ultima_actualizacion_ts": 1781329642788
   },
   "_nacional": {
     "actasContabilizadas": 98.327,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 99.844,
     "participacionCiudadana": 60.208,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 1278,
     "contabilizadas": 1276,
     "fuerza_popular": 35.539,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 98.704,
     "participacionCiudadana": 69.21,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 3472,
     "contabilizadas": 3427,
     "fuerza_popular": 43.4,
@@ -49,7 +49,7 @@
   "APURIMAC": {
     "actasContabilizadas": 99.241,
     "participacionCiudadana": 67.3,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 1317,
     "contabilizadas": 1307,
     "fuerza_popular": 18.838,
@@ -60,7 +60,7 @@
   "AREQUIPA": {
     "actasContabilizadas": 99.383,
     "participacionCiudadana": 79.322,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 4215,
     "contabilizadas": 4189,
     "fuerza_popular": 36.406,
@@ -71,7 +71,7 @@
   "AYACUCHO": {
     "actasContabilizadas": 99.211,
     "participacionCiudadana": 65.614,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 1900,
     "contabilizadas": 1885,
     "fuerza_popular": 20.683,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 99.458,
     "participacionCiudadana": 66.243,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 4240,
     "contabilizadas": 4217,
     "fuerza_popular": 33.234,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 98.378,
     "participacionCiudadana": 75.7,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 2898,
     "contabilizadas": 2851,
     "fuerza_popular": 65.572,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 98.619,
     "participacionCiudadana": 70.979,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 3983,
     "contabilizadas": 3928,
     "fuerza_popular": 21.865,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.136,
     "participacionCiudadana": 61.483,
-    "fechaActualizacion": 1781328918595,
+    "fechaActualizacion": 1781329226833,
     "totalActas": 1273,
     "contabilizadas": 1262,
     "fuerza_popular": 18.598,
