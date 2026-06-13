@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-13T11:07:04Z",
-    "ultima_actualizacion_ts": 1781348824549
+    "ultima_actualizacion_iso": "2026-06-13T11:08:49Z",
+    "ultima_actualizacion_ts": 1781348929976
   },
   "_nacional": {
     "actasContabilizadas": 98.327,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 70.805,
     "totalVotosValidos": 18083349,
     "totalVotosEmitidos": 19347720,
-    "fechaActualizacion": 1781348425656,
+    "fechaActualizacion": 1781348725053,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.988,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 98.13,
     "participacionCiudadana": 61.825,
-    "fechaActualizacion": 1781348425656,
+    "fechaActualizacion": 1781348725053,
     "totalActas": 802,
     "contabilizadas": 787,
     "fuerza_popular": 39.204,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 99.293,
     "participacionCiudadana": 76.835,
-    "fechaActualizacion": 1781348425656,
+    "fechaActualizacion": 1781348725053,
     "totalActas": 3397,
     "contabilizadas": 3373,
     "fuerza_popular": 13.578,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 98.751,
     "participacionCiudadana": 79.868,
-    "fechaActualizacion": 1781348425656,
+    "fechaActualizacion": 1781348725053,
     "totalActas": 1041,
     "contabilizadas": 1028,
     "fuerza_popular": 28.635,
