@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-14T15:39:18Z",
-  "pct_actas_procesadas": 98.552,
+  "timestamp": "2026-06-14T15:41:03Z",
+  "pct_actas_procesadas": 98.553,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9170705,
-    "votos_proyectados_fp": 9223351,
+    "votos_proyectados_jpp": 9170682,
+    "votos_proyectados_fp": 9223393,
     "pct_proyectado_jpp": 49.857,
     "pct_proyectado_fp": 50.143,
-    "diferencia_proyectada": 52646,
+    "diferencia_proyectada": 52711,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 52 646 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 458 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 455 votos), Piura (+144 354) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 52 711 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 458 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 455 votos), Piura (+144 354) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 95.1 % de actas contabilizadas— proyecta una ventaja de 82 454 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 107253,
     "votos_actuales_fp": 185687,
@@ -299,19 +299,19 @@
       "actas_contabilizadas_pct": 99.654
     },
     {
-      "votos_actuales_jpp": 262583,
-      "votos_actuales_fp": 218127,
-      "pct_jpp": 54.624,
-      "pct_fp": 45.376,
-      "actas_pendientes": 14,
+      "votos_actuales_jpp": 262665,
+      "votos_actuales_fp": 218256,
+      "pct_jpp": 54.617,
+      "pct_fp": 45.383,
+      "actas_pendientes": 13,
       "votos_por_acta": 190.8,
-      "votos_pendientes_est": 2671,
-      "votos_proyectados_jpp": 264042,
-      "votos_proyectados_fp": 219339,
-      "diferencia_proyectada": 44703,
+      "votos_pendientes_est": 2480,
+      "votos_proyectados_jpp": 264019,
+      "votos_proyectados_fp": 219381,
+      "diferencia_proyectada": 44638,
       "lider_proyectado": "JPP",
       "nombre": "SAN MARTIN",
-      "actas_contabilizadas_pct": 99.448
+      "actas_contabilizadas_pct": 99.487
     },
     {
       "votos_actuales_jpp": 65432,
