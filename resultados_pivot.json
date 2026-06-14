@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-14T17:24:04Z",
-    "ultima_actualizacion_ts": 1781457844611
+    "ultima_actualizacion_iso": "2026-06-14T17:25:49Z",
+    "ultima_actualizacion_ts": 1781457949401
   },
   "_nacional": {
     "actasContabilizadas": 98.558,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 97.415,
     "participacionCiudadana": 76.915,
-    "fechaActualizacion": 1781457318558,
+    "fechaActualizacion": 1781457625712,
     "totalActas": 29247,
     "contabilizadas": 28491,
     "fuerza_popular": 63.549,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 98.851,
     "participacionCiudadana": 55.232,
-    "fechaActualizacion": 1781457318558,
+    "fechaActualizacion": 1781457625712,
     "totalActas": 2697,
     "contabilizadas": 2666,
     "fuerza_popular": 52.966,
@@ -261,10 +261,10 @@
     "fechaActualizacion": 1781457625712,
     "totalActas": 2534,
     "contabilizadas": 2525,
-    "fuerza_popular": 45.378,
-    "juntos_por_el_peru": 54.622,
-    "fuerza_popular_votos": 218576,
-    "juntos_por_el_peru_votos": 263099
+    "fuerza_popular": 45.382,
+    "juntos_por_el_peru": 54.618,
+    "fuerza_popular_votos": 218675,
+    "juntos_por_el_peru_votos": 263179
   },
   "TACNA": {
     "actasContabilizadas": 98.751,
