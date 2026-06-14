@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-14T22:26:21Z",
-    "ultima_actualizacion_ts": 1781475981562
+    "ultima_actualizacion_iso": "2026-06-14T22:28:16Z",
+    "ultima_actualizacion_ts": 1781476096463
   },
   "_nacional": {
     "actasContabilizadas": 98.593,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 98.921,
     "participacionCiudadana": 72.475,
-    "fechaActualizacion": 1781475618474,
+    "fechaActualizacion": 1781475926900,
     "totalActas": 5281,
     "contabilizadas": 5224,
     "fuerza_popular": 56.975,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.698,
     "participacionCiudadana": 62.656,
-    "fechaActualizacion": 1781475618474,
+    "fechaActualizacion": 1781475926900,
     "totalActas": 1564,
     "contabilizadas": 1528,
     "fuerza_popular": 52.559,
