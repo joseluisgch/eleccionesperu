@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-15T22:17:03Z",
-  "pct_actas_procesadas": 98.842,
+  "timestamp": "2026-06-15T22:18:43Z",
+  "pct_actas_procesadas": 98.843,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9170667,
-    "votos_proyectados_fp": 9224383,
+    "votos_proyectados_jpp": 9170630,
+    "votos_proyectados_fp": 9224415,
     "pct_proyectado_jpp": 49.854,
     "pct_proyectado_fp": 50.146,
-    "diferencia_proyectada": 53716,
+    "diferencia_proyectada": 53785,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 53 716 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 930 527 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 775 votos), Piura (+144 377) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 97.3 % de actas contabilizadas— proyecta una ventaja de 81 971 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 53 785 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 930 595 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 775 votos), Piura (+144 377) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 97.3 % de actas contabilizadas— proyecta una ventaja de 81 971 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 110254,
     "votos_actuales_fp": 190033,
@@ -29,19 +29,19 @@
   },
   "por_departamento": [
     {
-      "votos_actuales_jpp": 2283705,
-      "votos_actuales_fp": 3982775,
+      "votos_actuales_jpp": 2283748,
+      "votos_actuales_fp": 3982946,
       "pct_jpp": 36.443,
       "pct_fp": 63.557,
-      "actas_pendientes": 665,
+      "actas_pendientes": 664,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 145798,
-      "votos_proyectados_jpp": 2336838,
-      "votos_proyectados_fp": 4075440,
-      "diferencia_proyectada": -1738602,
+      "votos_pendientes_est": 145579,
+      "votos_proyectados_jpp": 2336801,
+      "votos_proyectados_fp": 4075472,
+      "diferencia_proyectada": -1738670,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.726
+      "actas_contabilizadas_pct": 97.73
     },
     {
       "votos_actuales_jpp": 608930,
@@ -406,19 +406,19 @@
   ],
   "top_aportantes_ganador": [
     {
-      "votos_actuales_jpp": 2283705,
-      "votos_actuales_fp": 3982775,
+      "votos_actuales_jpp": 2283748,
+      "votos_actuales_fp": 3982946,
       "pct_jpp": 36.443,
       "pct_fp": 63.557,
-      "actas_pendientes": 665,
+      "actas_pendientes": 664,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 145798,
-      "votos_proyectados_jpp": 2336838,
-      "votos_proyectados_fp": 4075440,
-      "diferencia_proyectada": -1738602,
+      "votos_pendientes_est": 145579,
+      "votos_proyectados_jpp": 2336801,
+      "votos_proyectados_fp": 4075472,
+      "diferencia_proyectada": -1738670,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.726
+      "actas_contabilizadas_pct": 97.73
     },
     {
       "votos_actuales_jpp": 209876,
