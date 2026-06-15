@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-15T15:55:48Z",
-    "ultima_actualizacion_ts": 1781538948014
+    "ultima_actualizacion_iso": "2026-06-15T15:57:26Z",
+    "ultima_actualizacion_ts": 1781539046093
   },
   "_nacional": {
     "actasContabilizadas": 98.598,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.068,
     "participacionCiudadana": 76.227,
-    "fechaActualizacion": 1781538325206,
+    "fechaActualizacion": 1781538626198,
     "totalActas": 2898,
     "contabilizadas": 2871,
     "fuerza_popular": 65.588,
