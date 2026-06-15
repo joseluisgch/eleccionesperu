@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-15T23:47:16Z",
-    "ultima_actualizacion_ts": 1781567236813
+    "ultima_actualizacion_iso": "2026-06-15T23:48:54Z",
+    "ultima_actualizacion_ts": 1781567334373
   },
   "_nacional": {
-    "actasContabilizadas": 98.936,
-    "contabilizadas": 91779,
+    "actasContabilizadas": 98.941,
+    "contabilizadas": 91784,
     "totalActas": 92766,
-    "participacionCiudadana": 71.238,
-    "totalVotosValidos": 18193989,
-    "totalVotosEmitidos": 19466136,
-    "fechaActualizacion": 1781566825487,
+    "participacionCiudadana": 71.243,
+    "totalVotosValidos": 18195100,
+    "totalVotosEmitidos": 19467334,
+    "fechaActualizacion": 1781567160076,
     "candidatos": {
       "juntos_por_el_perú": {
-        "porcentajeVotosValidos": 49.921,
-        "totalVotosValidos": 9082651,
+        "porcentajeVotosValidos": 49.923,
+        "totalVotosValidos": 9083510,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
-        "porcentajeVotosValidos": 50.079,
-        "totalVotosValidos": 9111338,
+        "porcentajeVotosValidos": 50.077,
+        "totalVotosValidos": 9111590,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1781566680078,
+    "fechaActualizacion": 1781566825487,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781566825487,
+    "fechaActualizacion": 1781567280072,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.698,
     "participacionCiudadana": 62.656,
-    "fechaActualizacion": 1781566825487,
+    "fechaActualizacion": 1781567280072,
     "totalActas": 1564,
     "contabilizadas": 1528,
     "fuerza_popular": 52.559,
