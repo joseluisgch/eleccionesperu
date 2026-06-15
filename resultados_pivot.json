@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-15T05:16:58Z",
-    "ultima_actualizacion_ts": 1781500618772
+    "ultima_actualizacion_iso": "2026-06-15T05:18:42Z",
+    "ultima_actualizacion_ts": 1781500722310
   },
   "_nacional": {
     "actasContabilizadas": 98.593,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 99.844,
     "participacionCiudadana": 60.208,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 1278,
     "contabilizadas": 1276,
     "fuerza_popular": 35.539,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.05,
     "participacionCiudadana": 69.487,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 3472,
     "contabilizadas": 3439,
     "fuerza_popular": 43.412,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 98.619,
     "participacionCiudadana": 70.979,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 3983,
     "contabilizadas": 3928,
     "fuerza_popular": 21.865,
@@ -137,7 +137,7 @@
   "ICA": {
     "actasContabilizadas": 99.386,
     "participacionCiudadana": 80.199,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 2443,
     "contabilizadas": 2428,
     "fuerza_popular": 51.917,
@@ -159,7 +159,7 @@
   "LA LIBERTAD": {
     "actasContabilizadas": 99.661,
     "participacionCiudadana": 72.957,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 5302,
     "contabilizadas": 5284,
     "fuerza_popular": 57.546,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 97.415,
     "participacionCiudadana": 76.915,
-    "fechaActualizacion": 1781499926656,
+    "fechaActualizacion": 1781500218922,
     "totalActas": 29247,
     "contabilizadas": 28491,
     "fuerza_popular": 63.549,
