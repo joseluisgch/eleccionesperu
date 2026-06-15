@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-15T21:56:04Z",
-    "ultima_actualizacion_ts": 1781560564393
+    "ultima_actualizacion_iso": "2026-06-15T21:57:53Z",
+    "ultima_actualizacion_ts": 1781560673850
   },
   "_nacional": {
     "actasContabilizadas": 98.83,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1781560080086,
+    "fechaActualizacion": 1781560320144,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -217,10 +217,10 @@
     "fechaActualizacion": 1781560320144,
     "totalActas": 578,
     "contabilizadas": 577,
-    "fuerza_popular": 27.444,
-    "juntos_por_el_peru": 72.556,
-    "fuerza_popular_votos": 33430,
-    "juntos_por_el_peru_votos": 88382
+    "fuerza_popular": 27.443,
+    "juntos_por_el_peru": 72.557,
+    "fuerza_popular_votos": 33495,
+    "juntos_por_el_peru_votos": 88558
   },
   "PASCO": {
     "actasContabilizadas": 99.002,
