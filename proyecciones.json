@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-15T20:10:21Z",
-  "pct_actas_procesadas": 98.701,
+  "timestamp": "2026-06-15T20:12:09Z",
+  "pct_actas_procesadas": 98.704,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9170872,
-    "votos_proyectados_fp": 9223848,
+    "votos_proyectados_jpp": 9170860,
+    "votos_proyectados_fp": 9223913,
     "pct_proyectado_jpp": 49.856,
     "pct_proyectado_fp": 50.144,
-    "diferencia_proyectada": 52976,
+    "diferencia_proyectada": 53053,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 52 976 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 774 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 719 votos), Piura (+144 662) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 96.2 % de actas contabilizadas— proyecta una ventaja de 82 117 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 53 053 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 861 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 775 votos), Piura (+144 662) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 908 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 96.2 % de actas contabilizadas— proyecta una ventaja de 82 117 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 108712,
     "votos_actuales_fp": 187697,
@@ -29,19 +29,19 @@
   },
   "por_departamento": [
     {
-      "votos_actuales_jpp": 2279195,
-      "votos_actuales_fp": 3973905,
-      "pct_jpp": 36.449,
-      "pct_fp": 63.551,
-      "actas_pendientes": 726,
+      "votos_actuales_jpp": 2279241,
+      "votos_actuales_fp": 3974094,
+      "pct_jpp": 36.448,
+      "pct_fp": 63.552,
+      "actas_pendientes": 725,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 159172,
-      "votos_proyectados_jpp": 2337212,
-      "votos_proyectados_fp": 4075061,
-      "diferencia_proyectada": -1737849,
+      "votos_pendientes_est": 158953,
+      "votos_proyectados_jpp": 2337176,
+      "votos_proyectados_fp": 4075112,
+      "diferencia_proyectada": -1737936,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.518
+      "actas_contabilizadas_pct": 97.521
     },
     {
       "votos_actuales_jpp": 608930,
@@ -134,19 +134,19 @@
       "actas_contabilizadas_pct": 99.421
     },
     {
-      "votos_actuales_jpp": 444716,
-      "votos_actuales_fp": 603106,
-      "pct_jpp": 42.442,
-      "pct_fp": 57.558,
-      "actas_pendientes": 11,
+      "votos_actuales_jpp": 444862,
+      "votos_actuales_fp": 603367,
+      "pct_jpp": 42.439,
+      "pct_fp": 57.561,
+      "actas_pendientes": 9,
       "votos_por_acta": 198.0,
-      "votos_pendientes_est": 2178,
-      "votos_proyectados_jpp": 445641,
-      "votos_proyectados_fp": 604360,
-      "diferencia_proyectada": -158719,
+      "votos_pendientes_est": 1782,
+      "votos_proyectados_jpp": 445618,
+      "votos_proyectados_fp": 604393,
+      "diferencia_proyectada": -158775,
       "lider_proyectado": "FP",
       "nombre": "LA LIBERTAD",
-      "actas_contabilizadas_pct": 99.793
+      "actas_contabilizadas_pct": 99.83
     },
     {
       "votos_actuales_jpp": 441413,
@@ -254,19 +254,19 @@
       "actas_contabilizadas_pct": 99.107
     },
     {
-      "votos_actuales_jpp": 394352,
-      "votos_actuales_fp": 323582,
-      "pct_jpp": 54.929,
-      "pct_fp": 45.071,
-      "actas_pendientes": 3,
+      "votos_actuales_jpp": 394720,
+      "votos_actuales_fp": 323826,
+      "pct_jpp": 54.933,
+      "pct_fp": 45.067,
+      "actas_pendientes": 0,
       "votos_por_acta": 194.7,
-      "votos_pendientes_est": 584,
-      "votos_proyectados_jpp": 394673,
-      "votos_proyectados_fp": 323845,
-      "diferencia_proyectada": 70828,
+      "votos_pendientes_est": 0,
+      "votos_proyectados_jpp": 394720,
+      "votos_proyectados_fp": 323826,
+      "diferencia_proyectada": 70894,
       "lider_proyectado": "JPP",
       "nombre": "JUNIN",
-      "actas_contabilizadas_pct": 99.919
+      "actas_contabilizadas_pct": 100.0
     },
     {
       "votos_actuales_jpp": 125555,
@@ -406,19 +406,19 @@
   ],
   "top_aportantes_ganador": [
     {
-      "votos_actuales_jpp": 2279195,
-      "votos_actuales_fp": 3973905,
-      "pct_jpp": 36.449,
-      "pct_fp": 63.551,
-      "actas_pendientes": 726,
+      "votos_actuales_jpp": 2279241,
+      "votos_actuales_fp": 3974094,
+      "pct_jpp": 36.448,
+      "pct_fp": 63.552,
+      "actas_pendientes": 725,
       "votos_por_acta": 219.2,
-      "votos_pendientes_est": 159172,
-      "votos_proyectados_jpp": 2337212,
-      "votos_proyectados_fp": 4075061,
-      "diferencia_proyectada": -1737849,
+      "votos_pendientes_est": 158953,
+      "votos_proyectados_jpp": 2337176,
+      "votos_proyectados_fp": 4075112,
+      "diferencia_proyectada": -1737936,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 97.518
+      "actas_contabilizadas_pct": 97.521
     },
     {
       "votos_actuales_jpp": 209876,
@@ -436,19 +436,19 @@
       "actas_contabilizadas_pct": 99.068
     },
     {
-      "votos_actuales_jpp": 444716,
-      "votos_actuales_fp": 603106,
-      "pct_jpp": 42.442,
-      "pct_fp": 57.558,
-      "actas_pendientes": 11,
+      "votos_actuales_jpp": 444862,
+      "votos_actuales_fp": 603367,
+      "pct_jpp": 42.439,
+      "pct_fp": 57.561,
+      "actas_pendientes": 9,
       "votos_por_acta": 198.0,
-      "votos_pendientes_est": 2178,
-      "votos_proyectados_jpp": 445641,
-      "votos_proyectados_fp": 604360,
-      "diferencia_proyectada": -158719,
+      "votos_pendientes_est": 1782,
+      "votos_proyectados_jpp": 445618,
+      "votos_proyectados_fp": 604393,
+      "diferencia_proyectada": -158775,
       "lider_proyectado": "FP",
       "nombre": "LA LIBERTAD",
-      "actas_contabilizadas_pct": 99.793
+      "actas_contabilizadas_pct": 99.83
     },
     {
       "votos_actuales_jpp": 441413,
