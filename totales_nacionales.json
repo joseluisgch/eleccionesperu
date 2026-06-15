@@ -1,20 +1,20 @@
 {
   "totales": {
-    "actasContabilizadas": 98.746,
-    "contabilizadas": 91603,
+    "actasContabilizadas": 98.754,
+    "contabilizadas": 91610,
     "totalActas": 92766,
-    "participacionCiudadana": 71.106,
-    "actasEnviadasJee": 1.254,
-    "enviadasJee": 1163,
+    "participacionCiudadana": 71.112,
+    "actasEnviadasJee": 1.246,
+    "enviadasJee": 1156,
     "actasPendientesJee": 0.0,
     "pendientesJee": 0,
-    "fechaActualizacion": 1781556360103,
+    "fechaActualizacion": 1781556720096,
     "idUbigeoDepartamento": null,
     "idUbigeoProvincia": null,
     "idUbigeoDistrito": null,
     "idUbigeoDistritoElectoral": null,
-    "totalVotosEmitidos": 19430054,
-    "totalVotosValidos": 18160409,
+    "totalVotosEmitidos": 19431772,
+    "totalVotosValidos": 18162023,
     "porcentajeVotosEmitidos": 100,
     "porcentajeVotosValidos": 100
   },
@@ -24,18 +24,18 @@
       "codigoAgrupacionPolitica": 10,
       "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO",
       "dniCandidato": "16002918",
-      "totalVotosValidos": 9069491,
-      "porcentajeVotosValidos": 49.941,
-      "porcentajeVotosEmitidos": 46.678
+      "totalVotosValidos": 9070028,
+      "porcentajeVotosValidos": 49.94,
+      "porcentajeVotosEmitidos": 46.676
     },
     {
       "nombreAgrupacionPolitica": "FUERZA POPULAR",
       "codigoAgrupacionPolitica": 8,
       "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI",
       "dniCandidato": "10001088",
-      "totalVotosValidos": 9090918,
-      "porcentajeVotosValidos": 50.059,
-      "porcentajeVotosEmitidos": 46.788
+      "totalVotosValidos": 9091995,
+      "porcentajeVotosValidos": 50.06,
+      "porcentajeVotosEmitidos": 46.789
     }
   ]
 }
