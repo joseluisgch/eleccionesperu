@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T08:10:44Z",
-    "ultima_actualizacion_ts": 1781597444776
+    "ultima_actualizacion_iso": "2026-06-16T08:12:29Z",
+    "ultima_actualizacion_ts": 1781597549288
   },
   "_nacional": {
     "actasContabilizadas": 99.033,
@@ -71,7 +71,7 @@
   "AYACUCHO": {
     "actasContabilizadas": 99.526,
     "participacionCiudadana": 65.813,
-    "fechaActualizacion": 1781596826085,
+    "fechaActualizacion": 1781597118487,
     "totalActas": 1900,
     "contabilizadas": 1891,
     "fuerza_popular": 20.691,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 99.976,
     "participacionCiudadana": 66.559,
-    "fechaActualizacion": 1781596826085,
+    "fechaActualizacion": 1781597118487,
     "totalActas": 4240,
     "contabilizadas": 4239,
     "fuerza_popular": 33.24,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.241,
     "participacionCiudadana": 76.369,
-    "fechaActualizacion": 1781596826085,
+    "fechaActualizacion": 1781597118487,
     "totalActas": 2898,
     "contabilizadas": 2876,
     "fuerza_popular": 65.589,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 98.619,
     "participacionCiudadana": 70.979,
-    "fechaActualizacion": 1781596826085,
+    "fechaActualizacion": 1781597118487,
     "totalActas": 3983,
     "contabilizadas": 3928,
     "fuerza_popular": 21.865,
