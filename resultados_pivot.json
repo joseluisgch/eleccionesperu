@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T00:02:11Z",
-    "ultima_actualizacion_ts": 1781568131289
+    "ultima_actualizacion_iso": "2026-06-16T00:03:54Z",
+    "ultima_actualizacion_ts": 1781568234396
   },
   "_nacional": {
-    "actasContabilizadas": 98.946,
-    "contabilizadas": 91788,
+    "actasContabilizadas": 98.95,
+    "contabilizadas": 91792,
     "totalActas": 92766,
-    "participacionCiudadana": 71.246,
-    "totalVotosValidos": 18195925,
-    "totalVotosEmitidos": 19468228,
-    "fechaActualizacion": 1781567760074,
+    "participacionCiudadana": 71.249,
+    "totalVotosValidos": 18196799,
+    "totalVotosEmitidos": 19469144,
+    "fechaActualizacion": 1781568019343,
     "candidatos": {
       "juntos_por_el_perú": {
-        "porcentajeVotosValidos": 49.922,
-        "totalVotosValidos": 9083827,
+        "porcentajeVotosValidos": 49.923,
+        "totalVotosValidos": 9084382,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
-        "porcentajeVotosValidos": 50.078,
-        "totalVotosValidos": 9112098,
+        "porcentajeVotosValidos": 50.077,
+        "totalVotosValidos": 9112417,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 99.039,
     "participacionCiudadana": 80.108,
-    "fechaActualizacion": 1781567760074,
+    "fechaActualizacion": 1781568019343,
     "totalActas": 1041,
     "contabilizadas": 1031,
     "fuerza_popular": 28.622,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781567760074,
+    "fechaActualizacion": 1781568019343,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 97.698,
     "participacionCiudadana": 62.656,
-    "fechaActualizacion": 1781567760074,
+    "fechaActualizacion": 1781568019343,
     "totalActas": 1564,
     "contabilizadas": 1528,
     "fuerza_popular": 52.559,
