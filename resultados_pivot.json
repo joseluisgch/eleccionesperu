@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T15:26:30Z",
-    "ultima_actualizacion_ts": 1781623590283
+    "ultima_actualizacion_iso": "2026-06-16T15:28:22Z",
+    "ultima_actualizacion_ts": 1781623702303
   },
   "_nacional": {
     "actasContabilizadas": 99.056,
@@ -14,12 +14,12 @@
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.907,
-        "totalVotosValidos": 9092162,
+        "totalVotosValidos": 9092113,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
         "porcentajeVotosValidos": 50.093,
-        "totalVotosValidos": 9125981,
+        "totalVotosValidos": 9125824,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -186,8 +186,8 @@
     "contabilizadas": 28735,
     "fuerza_popular": 63.564,
     "juntos_por_el_peru": 36.436,
-    "fuerza_popular_votos": 4004457,
-    "juntos_por_el_peru_votos": 2295419
+    "fuerza_popular_votos": 4004614,
+    "juntos_por_el_peru_votos": 2295468
   },
   "LORETO": {
     "actasContabilizadas": 99.963,
