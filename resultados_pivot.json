@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T22:46:13Z",
-    "ultima_actualizacion_ts": 1781649973041
+    "ultima_actualizacion_iso": "2026-06-16T22:47:54Z",
+    "ultima_actualizacion_ts": 1781650074367
   },
   "_nacional": {
     "actasContabilizadas": 99.111,
@@ -63,10 +63,10 @@
     "fechaActualizacion": 1781649720069,
     "totalActas": 4215,
     "contabilizadas": 4199,
-    "fuerza_popular": 36.416,
-    "juntos_por_el_peru": 63.584,
-    "fuerza_popular_votos": 333196,
-    "juntos_por_el_peru_votos": 581765
+    "fuerza_popular": 36.413,
+    "juntos_por_el_peru": 63.587,
+    "fuerza_popular_votos": 333269,
+    "juntos_por_el_peru_votos": 581975
   },
   "AYACUCHO": {
     "actasContabilizadas": 99.526,
