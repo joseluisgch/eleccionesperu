@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-16T17:18:11Z",
-  "pct_actas_procesadas": 99.077,
+  "timestamp": "2026-06-16T17:19:58Z",
+  "pct_actas_procesadas": 99.082,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9169896,
-    "votos_proyectados_fp": 9225487,
+    "votos_proyectados_jpp": 9169844,
+    "votos_proyectados_fp": 9225501,
     "pct_proyectado_jpp": 49.849,
     "pct_proyectado_fp": 50.151,
-    "diferencia_proyectada": 55591,
+    "diferencia_proyectada": 55657,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 55 591 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 931 892 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 775 votos), Piura (+144 587) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 657 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 97.3 % de actas contabilizadas— proyecta una ventaja de 81 971 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 55 657 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 931 892 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 789 votos), Piura (+144 587) y Lambayeque (+131 474).\n\nPor su parte, Puno (+516 657 votos) y Cusco (+429 837 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 97.3 % de actas contabilizadas— proyecta una ventaja de 81 971 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 110254,
     "votos_actuales_fp": 190033,
@@ -134,19 +134,19 @@
       "actas_contabilizadas_pct": 99.526
     },
     {
-      "votos_actuales_jpp": 444862,
-      "votos_actuales_fp": 603367,
+      "votos_actuales_jpp": 445026,
+      "votos_actuales_fp": 603605,
       "pct_jpp": 42.439,
       "pct_fp": 57.561,
-      "actas_pendientes": 9,
+      "actas_pendientes": 7,
       "votos_por_acta": 198.0,
-      "votos_pendientes_est": 1782,
-      "votos_proyectados_jpp": 445618,
-      "votos_proyectados_fp": 604393,
-      "diferencia_proyectada": -158775,
+      "votos_pendientes_est": 1386,
+      "votos_proyectados_jpp": 445614,
+      "votos_proyectados_fp": 604403,
+      "diferencia_proyectada": -158789,
       "lider_proyectado": "FP",
       "nombre": "LA LIBERTAD",
-      "actas_contabilizadas_pct": 99.83
+      "actas_contabilizadas_pct": 99.868
     },
     {
       "votos_actuales_jpp": 442249,
@@ -314,21 +314,6 @@
       "actas_contabilizadas_pct": 99.763
     },
     {
-      "votos_actuales_jpp": 65587,
-      "votos_actuales_fp": 29179,
-      "pct_jpp": 69.209,
-      "pct_fp": 30.791,
-      "actas_pendientes": 4,
-      "votos_por_acta": 188.4,
-      "votos_pendientes_est": 754,
-      "votos_proyectados_jpp": 66109,
-      "votos_proyectados_fp": 29411,
-      "diferencia_proyectada": 36698,
-      "lider_proyectado": "JPP",
-      "nombre": "MADRE DE DIOS",
-      "actas_contabilizadas_pct": 99.211
-    },
-    {
       "votos_actuales_jpp": 45427,
       "votos_actuales_fp": 81960,
       "pct_jpp": 35.661,
@@ -342,6 +327,21 @@
       "lider_proyectado": "FP",
       "nombre": "TUMBES",
       "actas_contabilizadas_pct": 99.684
+    },
+    {
+      "votos_actuales_jpp": 65800,
+      "votos_actuales_fp": 29299,
+      "pct_jpp": 69.191,
+      "pct_fp": 30.809,
+      "actas_pendientes": 2,
+      "votos_por_acta": 188.3,
+      "votos_pendientes_est": 377,
+      "votos_proyectados_jpp": 66061,
+      "votos_proyectados_fp": 29415,
+      "diferencia_proyectada": 36646,
+      "lider_proyectado": "JPP",
+      "nombre": "MADRE DE DIOS",
+      "actas_contabilizadas_pct": 99.606
     },
     {
       "votos_actuales_jpp": 79433,
@@ -436,19 +436,19 @@
       "actas_contabilizadas_pct": 99.31
     },
     {
-      "votos_actuales_jpp": 444862,
-      "votos_actuales_fp": 603367,
+      "votos_actuales_jpp": 445026,
+      "votos_actuales_fp": 603605,
       "pct_jpp": 42.439,
       "pct_fp": 57.561,
-      "actas_pendientes": 9,
+      "actas_pendientes": 7,
       "votos_por_acta": 198.0,
-      "votos_pendientes_est": 1782,
-      "votos_proyectados_jpp": 445618,
-      "votos_proyectados_fp": 604393,
-      "diferencia_proyectada": -158775,
+      "votos_pendientes_est": 1386,
+      "votos_proyectados_jpp": 445614,
+      "votos_proyectados_fp": 604403,
+      "diferencia_proyectada": -158789,
       "lider_proyectado": "FP",
       "nombre": "LA LIBERTAD",
-      "actas_contabilizadas_pct": 99.83
+      "actas_contabilizadas_pct": 99.868
     },
     {
       "votos_actuales_jpp": 442249,
