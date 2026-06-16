@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T17:02:03Z",
-    "ultima_actualizacion_ts": 1781629323887
+    "ultima_actualizacion_iso": "2026-06-16T17:03:53Z",
+    "ultima_actualizacion_ts": 1781629433336
   },
   "_nacional": {
-    "actasContabilizadas": 99.075,
-    "contabilizadas": 91908,
+    "actasContabilizadas": 99.077,
+    "contabilizadas": 91910,
     "totalActas": 92766,
-    "participacionCiudadana": 71.347,
-    "totalVotosValidos": 18221853,
-    "totalVotosEmitidos": 19495842,
-    "fechaActualizacion": 1781628960085,
+    "participacionCiudadana": 71.349,
+    "totalVotosValidos": 18222373,
+    "totalVotosEmitidos": 19496393,
+    "fechaActualizacion": 1781629225990,
     "candidatos": {
       "juntos_por_el_perú": {
-        "porcentajeVotosValidos": 49.903,
-        "totalVotosValidos": 9093254,
+        "porcentajeVotosValidos": 49.902,
+        "totalVotosValidos": 9093415,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
-        "porcentajeVotosValidos": 50.097,
-        "totalVotosValidos": 9128599,
+        "porcentajeVotosValidos": 50.098,
+        "totalVotosValidos": 9128958,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781628960085,
+    "fechaActualizacion": 1781629225990,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 98.529,
     "participacionCiudadana": 63.245,
-    "fechaActualizacion": 1781628960085,
+    "fechaActualizacion": 1781629225990,
     "totalActas": 1564,
     "contabilizadas": 1541,
     "fuerza_popular": 52.578,
