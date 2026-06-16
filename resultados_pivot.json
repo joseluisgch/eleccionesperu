@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T18:36:17Z",
-    "ultima_actualizacion_ts": 1781634977915
+    "ultima_actualizacion_iso": "2026-06-16T18:38:06Z",
+    "ultima_actualizacion_ts": 1781635086341
   },
   "_nacional": {
     "actasContabilizadas": 99.082,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 76.178,
-    "fechaActualizacion": 1781634625563,
+    "fechaActualizacion": 1781634925516,
     "totalActas": 632,
     "contabilizadas": 630,
     "fuerza_popular": 64.339,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 98.529,
     "participacionCiudadana": 63.245,
-    "fechaActualizacion": 1781634625563,
+    "fechaActualizacion": 1781634925516,
     "totalActas": 1564,
     "contabilizadas": 1541,
     "fuerza_popular": 52.578,
