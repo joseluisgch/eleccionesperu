@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-16T17:42:09Z",
-    "ultima_actualizacion_ts": 1781631729167
+    "ultima_actualizacion_iso": "2026-06-16T17:43:51Z",
+    "ultima_actualizacion_ts": 1781631831467
   },
   "_nacional": {
     "actasContabilizadas": 99.082,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.352,
     "totalVotosValidos": 18223108,
     "totalVotosEmitidos": 19497165,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.903,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.317,
     "participacionCiudadana": 63.762,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 2341,
     "contabilizadas": 2325,
     "fuerza_popular": 35.85,
@@ -137,7 +137,7 @@
   "ICA": {
     "actasContabilizadas": 99.345,
     "participacionCiudadana": 80.167,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 2443,
     "contabilizadas": 2427,
     "fuerza_popular": 51.919,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.332,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 3691,
     "contabilizadas": 3691,
     "fuerza_popular": 45.067,
@@ -159,7 +159,7 @@
   "LA LIBERTAD": {
     "actasContabilizadas": 99.868,
     "participacionCiudadana": 73.117,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 5302,
     "contabilizadas": 5295,
     "fuerza_popular": 57.561,
@@ -170,7 +170,7 @@
   "LAMBAYEQUE": {
     "actasContabilizadas": 99.721,
     "participacionCiudadana": 76.258,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 3590,
     "contabilizadas": 3580,
     "fuerza_popular": 58.845,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 98.529,
     "participacionCiudadana": 63.245,
-    "fechaActualizacion": 1781631325530,
+    "fechaActualizacion": 1781631618467,
     "totalActas": 1564,
     "contabilizadas": 1541,
     "fuerza_popular": 52.578,
