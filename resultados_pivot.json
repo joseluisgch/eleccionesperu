@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-17T20:39:20Z",
-    "ultima_actualizacion_ts": 1781728760643
+    "ultima_actualizacion_iso": "2026-06-17T20:41:13Z",
+    "ultima_actualizacion_ts": 1781728873188
   },
   "_nacional": {
     "actasContabilizadas": 99.204,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.741,
     "participacionCiudadana": 69.982,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 3472,
     "contabilizadas": 3463,
     "fuerza_popular": 43.404,
@@ -47,20 +47,20 @@
     "juntos_por_el_peru_votos": 352703
   },
   "APURIMAC": {
-    "actasContabilizadas": 99.848,
-    "participacionCiudadana": 67.736,
-    "fechaActualizacion": 1781728320085,
+    "actasContabilizadas": 99.924,
+    "participacionCiudadana": 67.775,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 1317,
-    "contabilizadas": 1315,
-    "fuerza_popular": 18.823,
-    "juntos_por_el_peru": 81.177,
-    "fuerza_popular_votos": 43371,
-    "juntos_por_el_peru_votos": 187044
+    "contabilizadas": 1316,
+    "fuerza_popular": 18.818,
+    "juntos_por_el_peru": 81.182,
+    "fuerza_popular_votos": 43413,
+    "juntos_por_el_peru_votos": 187285
   },
   "AREQUIPA": {
     "actasContabilizadas": 99.668,
     "participacionCiudadana": 79.544,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 4215,
     "contabilizadas": 4201,
     "fuerza_popular": 36.413,
@@ -71,7 +71,7 @@
   "AYACUCHO": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 65.936,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 1900,
     "contabilizadas": 1894,
     "fuerza_popular": 20.699,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 66.579,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 4240,
     "contabilizadas": 4240,
     "fuerza_popular": 33.242,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.482,
     "participacionCiudadana": 76.55,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 2898,
     "contabilizadas": 2883,
     "fuerza_popular": 65.589,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 98.669,
     "participacionCiudadana": 71.016,
-    "fechaActualizacion": 1781728320085,
+    "fechaActualizacion": 1781728526666,
     "totalActas": 3983,
     "contabilizadas": 3930,
     "fuerza_popular": 21.86,
