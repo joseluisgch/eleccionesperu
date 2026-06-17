@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-17T05:51:58Z",
-    "ultima_actualizacion_ts": 1781675518151
+    "ultima_actualizacion_iso": "2026-06-17T05:53:42Z",
+    "ultima_actualizacion_ts": 1781675622996
   },
   "_nacional": {
     "actasContabilizadas": 99.152,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 99.763,
     "participacionCiudadana": 72.042,
-    "fechaActualizacion": 1781675118725,
+    "fechaActualizacion": 1781675425462,
     "totalActas": 2534,
     "contabilizadas": 2528,
     "fuerza_popular": 45.369,
