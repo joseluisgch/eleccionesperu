@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-17T03:46:49Z",
-    "ultima_actualizacion_ts": 1781668009397
+    "ultima_actualizacion_iso": "2026-06-17T03:48:24Z",
+    "ultima_actualizacion_ts": 1781668104760
   },
   "_nacional": {
     "actasContabilizadas": 99.152,
@@ -49,7 +49,7 @@
   "APURIMAC": {
     "actasContabilizadas": 99.544,
     "participacionCiudadana": 67.535,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 1317,
     "contabilizadas": 1311,
     "fuerza_popular": 18.856,
@@ -60,7 +60,7 @@
   "AREQUIPA": {
     "actasContabilizadas": 99.668,
     "participacionCiudadana": 79.544,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 4215,
     "contabilizadas": 4201,
     "fuerza_popular": 36.413,
@@ -71,7 +71,7 @@
   "AYACUCHO": {
     "actasContabilizadas": 99.684,
     "participacionCiudadana": 65.936,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 1900,
     "contabilizadas": 1894,
     "fuerza_popular": 20.699,
@@ -159,7 +159,7 @@
   "LA LIBERTAD": {
     "actasContabilizadas": 99.868,
     "participacionCiudadana": 73.117,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 5302,
     "contabilizadas": 5295,
     "fuerza_popular": 57.561,
@@ -170,7 +170,7 @@
   "LAMBAYEQUE": {
     "actasContabilizadas": 99.916,
     "participacionCiudadana": 76.416,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 3590,
     "contabilizadas": 3587,
     "fuerza_popular": 58.843,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 98.417,
     "participacionCiudadana": 77.71,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 29247,
     "contabilizadas": 28784,
     "fuerza_popular": 63.57,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 99.963,
     "participacionCiudadana": 55.888,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 2697,
     "contabilizadas": 2696,
     "fuerza_popular": 53.011,
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 99.606,
     "participacionCiudadana": 67.932,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 507,
     "contabilizadas": 505,
     "fuerza_popular": 30.809,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 78.586,
-    "fechaActualizacion": 1781667318863,
+    "fechaActualizacion": 1781667625177,
     "totalActas": 578,
     "contabilizadas": 578,
     "fuerza_popular": 27.443,
