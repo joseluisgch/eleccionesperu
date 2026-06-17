@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-17T16:02:00Z",
-    "ultima_actualizacion_ts": 1781712120664
+    "ultima_actualizacion_iso": "2026-06-17T16:03:51Z",
+    "ultima_actualizacion_ts": 1781712231347
   },
   "_nacional": {
     "actasContabilizadas": 99.169,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.418,
     "totalVotosValidos": 18239916,
     "totalVotosEmitidos": 19515283,
-    "fechaActualizacion": 1781711760180,
+    "fechaActualizacion": 1781712026903,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.898,
