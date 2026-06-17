@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-17T20:41:13Z",
-    "ultima_actualizacion_ts": 1781728873188
+    "ultima_actualizacion_iso": "2026-06-17T20:42:54Z",
+    "ultima_actualizacion_ts": 1781728974416
   },
   "_nacional": {
     "actasContabilizadas": 99.204,
@@ -52,10 +52,10 @@
     "fechaActualizacion": 1781728526666,
     "totalActas": 1317,
     "contabilizadas": 1316,
-    "fuerza_popular": 18.818,
-    "juntos_por_el_peru": 81.182,
-    "fuerza_popular_votos": 43413,
-    "juntos_por_el_peru_votos": 187285
+    "fuerza_popular": 18.823,
+    "juntos_por_el_peru": 81.177,
+    "fuerza_popular_votos": 43394,
+    "juntos_por_el_peru_votos": 187148
   },
   "AREQUIPA": {
     "actasContabilizadas": 99.668,
