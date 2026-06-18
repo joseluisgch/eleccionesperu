@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-18T17:06:53Z",
-    "ultima_actualizacion_ts": 1781802413107
+    "ultima_actualizacion_iso": "2026-06-18T17:08:36Z",
+    "ultima_actualizacion_ts": 1781802516811
   },
   "_nacional": {
     "actasContabilizadas": 99.386,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 66.579,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 4240,
     "contabilizadas": 4240,
     "fuerza_popular": 33.242,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.529,
     "participacionCiudadana": 61.733,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 1273,
     "contabilizadas": 1267,
     "fuerza_popular": 18.576,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.658,
     "participacionCiudadana": 63.979,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 2341,
     "contabilizadas": 2333,
     "fuerza_popular": 35.805,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.332,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 3691,
     "contabilizadas": 3691,
     "fuerza_popular": 45.067,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 55.91,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 2697,
     "contabilizadas": 2697,
     "fuerza_popular": 53.003,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 78.586,
-    "fechaActualizacion": 1781802019412,
+    "fechaActualizacion": 1781802360085,
     "totalActas": 578,
     "contabilizadas": 578,
     "fuerza_popular": 27.443,
