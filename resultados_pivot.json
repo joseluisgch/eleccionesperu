@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-18T06:06:51Z",
-    "ultima_actualizacion_ts": 1781762811607
+    "ultima_actualizacion_iso": "2026-06-18T06:08:37Z",
+    "ultima_actualizacion_ts": 1781762917409
   },
   "_nacional": {
     "actasContabilizadas": 99.383,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.658,
     "participacionCiudadana": 63.979,
-    "fechaActualizacion": 1781762126463,
+    "fechaActualizacion": 1781762420448,
     "totalActas": 2341,
     "contabilizadas": 2333,
     "fuerza_popular": 35.805,
@@ -137,7 +137,7 @@
   "ICA": {
     "actasContabilizadas": 99.959,
     "participacionCiudadana": 80.687,
-    "fechaActualizacion": 1781762126463,
+    "fechaActualizacion": 1781762420448,
     "totalActas": 2443,
     "contabilizadas": 2442,
     "fuerza_popular": 51.94,
