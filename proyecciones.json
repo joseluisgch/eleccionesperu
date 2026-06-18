@@ -1,31 +1,31 @@
 {
-  "timestamp": "2026-06-18T00:42:59Z",
-  "pct_actas_procesadas": 99.329,
+  "timestamp": "2026-06-18T00:44:43Z",
+  "pct_actas_procesadas": 99.346,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9170010,
-    "votos_proyectados_fp": 9225263,
+    "votos_proyectados_jpp": 9170195,
+    "votos_proyectados_fp": 9225309,
     "pct_proyectado_jpp": 49.85,
     "pct_proyectado_fp": 50.15,
-    "diferencia_proyectada": 55253,
+    "diferencia_proyectada": 55114,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 55 253 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 932 386 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 789 votos), Piura (+144 509) y Lambayeque (+131 446).\n\nPor su parte, Puno (+516 677 votos) y Cusco (+429 892 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 98.3 % de actas contabilizadas— proyecta una ventaja de 81 691 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 55 114 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 932 386 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 789 votos), Piura (+144 458) y Lambayeque (+131 446).\n\nPor su parte, Puno (+516 677 votos) y Cusco (+429 892 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 98.7 % de actas contabilizadas— proyecta una ventaja de 81 634 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
-    "votos_actuales_jpp": 111718,
-    "votos_actuales_fp": 192060,
-    "pct_jpp": 36.776,
-    "pct_fp": 63.224,
-    "actas_pendientes": 42,
+    "votos_actuales_jpp": 112224,
+    "votos_actuales_fp": 192799,
+    "pct_jpp": 36.792,
+    "pct_fp": 63.208,
+    "actas_pendientes": 33,
     "votos_por_acta": 121.5,
-    "votos_pendientes_est": 5101,
-    "votos_proyectados_jpp": 113594,
-    "votos_proyectados_fp": 195285,
-    "diferencia_proyectada": -81691,
+    "votos_pendientes_est": 4010,
+    "votos_proyectados_jpp": 113699,
+    "votos_proyectados_fp": 195334,
+    "diferencia_proyectada": -81634,
     "lider_proyectado": "FP",
-    "actas_contabilizadas_pct": 98.348
+    "actas_contabilizadas_pct": 98.702
   },
   "por_departamento": [
     {
@@ -149,19 +149,19 @@
       "actas_contabilizadas_pct": 99.868
     },
     {
-      "votos_actuales_jpp": 442452,
-      "votos_actuales_fp": 586058,
-      "pct_jpp": 43.019,
-      "pct_fp": 56.981,
-      "actas_pendientes": 33,
+      "votos_actuales_jpp": 442762,
+      "votos_actuales_fp": 586399,
+      "pct_jpp": 43.022,
+      "pct_fp": 56.978,
+      "actas_pendientes": 30,
       "votos_por_acta": 196.0,
-      "votos_pendientes_est": 6467,
-      "votos_proyectados_jpp": 445234,
-      "votos_proyectados_fp": 589743,
-      "diferencia_proyectada": -144509,
+      "votos_pendientes_est": 5880,
+      "votos_proyectados_jpp": 445292,
+      "votos_proyectados_fp": 589749,
+      "diferencia_proyectada": -144458,
       "lider_proyectado": "FP",
       "nombre": "PIURA",
-      "actas_contabilizadas_pct": 99.375
+      "actas_contabilizadas_pct": 99.432
     },
     {
       "votos_actuales_jpp": 187285,
@@ -194,19 +194,19 @@
       "actas_contabilizadas_pct": 99.916
     },
     {
-      "votos_actuales_jpp": 160936,
-      "votos_actuales_fp": 36754,
-      "pct_jpp": 81.408,
-      "pct_fp": 18.592,
-      "actas_pendientes": 9,
+      "votos_actuales_jpp": 161085,
+      "votos_actuales_fp": 36770,
+      "pct_jpp": 81.416,
+      "pct_fp": 18.584,
+      "actas_pendientes": 8,
       "votos_por_acta": 156.4,
-      "votos_pendientes_est": 1408,
-      "votos_proyectados_jpp": 162082,
-      "votos_proyectados_fp": 37016,
-      "diferencia_proyectada": 125066,
+      "votos_pendientes_est": 1251,
+      "votos_proyectados_jpp": 162104,
+      "votos_proyectados_fp": 37003,
+      "diferencia_proyectada": 125101,
       "lider_proyectado": "JPP",
       "nombre": "HUANCAVELICA",
-      "actas_contabilizadas_pct": 99.293
+      "actas_contabilizadas_pct": 99.372
     },
     {
       "votos_actuales_jpp": 251476,
@@ -374,19 +374,19 @@
       "actas_contabilizadas_pct": 100.0
     },
     {
-      "votos_actuales_jpp": 260774,
-      "votos_actuales_fp": 281659,
+      "votos_actuales_jpp": 260988,
+      "votos_actuales_fp": 281894,
       "pct_jpp": 48.075,
       "pct_fp": 51.925,
-      "actas_pendientes": 6,
+      "actas_pendientes": 4,
       "votos_por_acta": 222.6,
-      "votos_pendientes_est": 1335,
+      "votos_pendientes_est": 890,
       "votos_proyectados_jpp": 261416,
-      "votos_proyectados_fp": 282352,
-      "diferencia_proyectada": -20936,
+      "votos_proyectados_fp": 282356,
+      "diferencia_proyectada": -20940,
       "lider_proyectado": "FP",
       "nombre": "ICA",
-      "actas_contabilizadas_pct": 99.754
+      "actas_contabilizadas_pct": 99.836
     },
     {
       "votos_actuales_jpp": 127705,
@@ -451,19 +451,19 @@
       "actas_contabilizadas_pct": 99.868
     },
     {
-      "votos_actuales_jpp": 442452,
-      "votos_actuales_fp": 586058,
-      "pct_jpp": 43.019,
-      "pct_fp": 56.981,
-      "actas_pendientes": 33,
+      "votos_actuales_jpp": 442762,
+      "votos_actuales_fp": 586399,
+      "pct_jpp": 43.022,
+      "pct_fp": 56.978,
+      "actas_pendientes": 30,
       "votos_por_acta": 196.0,
-      "votos_pendientes_est": 6467,
-      "votos_proyectados_jpp": 445234,
-      "votos_proyectados_fp": 589743,
-      "diferencia_proyectada": -144509,
+      "votos_pendientes_est": 5880,
+      "votos_proyectados_jpp": 445292,
+      "votos_proyectados_fp": 589749,
+      "diferencia_proyectada": -144458,
       "lider_proyectado": "FP",
       "nombre": "PIURA",
-      "actas_contabilizadas_pct": 99.375
+      "actas_contabilizadas_pct": 99.432
     },
     {
       "votos_actuales_jpp": 305637,
