@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-18T00:46:07Z",
-    "ultima_actualizacion_ts": 1781743567041
+    "ultima_actualizacion_iso": "2026-06-18T00:47:56Z",
+    "ultima_actualizacion_ts": 1781743676544
   },
   "_nacional": {
     "actasContabilizadas": 99.346,
@@ -74,10 +74,10 @@
     "fechaActualizacion": 1781743320272,
     "totalActas": 1900,
     "contabilizadas": 1894,
-    "fuerza_popular": 20.699,
-    "juntos_por_el_peru": 79.301,
-    "fuerza_popular_votos": 67234,
-    "juntos_por_el_peru_votos": 257585
+    "fuerza_popular": 20.7,
+    "juntos_por_el_peru": 79.3,
+    "fuerza_popular_votos": 67266,
+    "juntos_por_el_peru_votos": 257695
   },
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
