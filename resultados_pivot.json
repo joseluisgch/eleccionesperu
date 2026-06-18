@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-18T05:52:05Z",
-    "ultima_actualizacion_ts": 1781761925188
+    "ultima_actualizacion_iso": "2026-06-18T05:53:51Z",
+    "ultima_actualizacion_ts": 1781762031246
   },
   "_nacional": {
     "actasContabilizadas": 99.383,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.56,
     "totalVotosValidos": 18276147,
     "totalVotosEmitidos": 19553984,
-    "fechaActualizacion": 1781761526064,
+    "fechaActualizacion": 1781761819027,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.893,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.758,
     "participacionCiudadana": 76.755,
-    "fechaActualizacion": 1781761225625,
+    "fechaActualizacion": 1781761526064,
     "totalActas": 2898,
     "contabilizadas": 2891,
     "fuerza_popular": 65.597,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 99.096,
     "participacionCiudadana": 71.268,
-    "fechaActualizacion": 1781761225625,
+    "fechaActualizacion": 1781761526064,
     "totalActas": 3983,
     "contabilizadas": 3947,
     "fuerza_popular": 21.84,
