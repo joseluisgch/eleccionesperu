@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-19T20:41:51Z",
-    "ultima_actualizacion_ts": 1781901711237
+    "ultima_actualizacion_iso": "2026-06-19T20:43:27Z",
+    "ultima_actualizacion_ts": 1781901807373
   },
   "_nacional": {
     "actasContabilizadas": 99.548,
@@ -250,10 +250,10 @@
     "fechaActualizacion": 1781901480077,
     "totalActas": 3397,
     "contabilizadas": 3391,
-    "fuerza_popular": 13.593,
-    "juntos_por_el_peru": 86.407,
-    "fuerza_popular_votos": 96330,
-    "juntos_por_el_peru_votos": 612340
+    "fuerza_popular": 13.595,
+    "juntos_por_el_peru": 86.405,
+    "fuerza_popular_votos": 96314,
+    "juntos_por_el_peru_votos": 612116
   },
   "SAN MARTIN": {
     "actasContabilizadas": 99.763,
