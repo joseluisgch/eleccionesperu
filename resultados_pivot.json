@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-19T20:35:45Z",
-    "ultima_actualizacion_ts": 1781901345045
+    "ultima_actualizacion_iso": "2026-06-19T20:37:21Z",
+    "ultima_actualizacion_ts": 1781901441604
   },
   "_nacional": {
     "actasContabilizadas": 99.548,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.741,
     "participacionCiudadana": 69.982,
-    "fechaActualizacion": 1781900760079,
+    "fechaActualizacion": 1781901026941,
     "totalActas": 3472,
     "contabilizadas": 3463,
     "fuerza_popular": 43.404,
@@ -60,7 +60,7 @@
   "AREQUIPA": {
     "actasContabilizadas": 99.668,
     "participacionCiudadana": 79.544,
-    "fechaActualizacion": 1781900760079,
+    "fechaActualizacion": 1781901026941,
     "totalActas": 4215,
     "contabilizadas": 4201,
     "fuerza_popular": 36.413,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 66.579,
-    "fechaActualizacion": 1781900760079,
+    "fechaActualizacion": 1781901026941,
     "totalActas": 4240,
     "contabilizadas": 4240,
     "fuerza_popular": 33.242,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.827,
     "participacionCiudadana": 76.808,
-    "fechaActualizacion": 1781900760079,
+    "fechaActualizacion": 1781901026941,
     "totalActas": 2898,
     "contabilizadas": 2893,
     "fuerza_popular": 65.597,
