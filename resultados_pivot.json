@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-19T20:46:28Z",
-    "ultima_actualizacion_ts": 1781901988377
+    "ultima_actualizacion_iso": "2026-06-19T20:48:10Z",
+    "ultima_actualizacion_ts": 1781902090368
   },
   "_nacional": {
     "actasContabilizadas": 99.549,
@@ -184,10 +184,10 @@
     "fechaActualizacion": 1781901625343,
     "totalActas": 29247,
     "contabilizadas": 28985,
-    "fuerza_popular": 63.555,
-    "juntos_por_el_peru": 36.445,
-    "fuerza_popular_votos": 4038936,
-    "juntos_por_el_peru_votos": 2316094
+    "fuerza_popular": 63.554,
+    "juntos_por_el_peru": 36.446,
+    "fuerza_popular_votos": 4039154,
+    "juntos_por_el_peru_votos": 2316284
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
@@ -228,10 +228,10 @@
     "fechaActualizacion": 1781901625343,
     "totalActas": 802,
     "contabilizadas": 800,
-    "fuerza_popular": 39.221,
-    "juntos_por_el_peru": 60.779,
-    "fuerza_popular_votos": 51511,
-    "juntos_por_el_peru_votos": 79825
+    "fuerza_popular": 39.267,
+    "juntos_por_el_peru": 60.733,
+    "fuerza_popular_votos": 51654,
+    "juntos_por_el_peru_votos": 79890
   },
   "PIURA": {
     "actasContabilizadas": 99.432,
