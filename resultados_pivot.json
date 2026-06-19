@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-19T23:09:57Z",
-    "ultima_actualizacion_ts": 1781910597166
+    "ultima_actualizacion_iso": "2026-06-19T23:11:39Z",
+    "ultima_actualizacion_ts": 1781910699422
   },
   "_nacional": {
     "actasContabilizadas": 99.584,
@@ -107,10 +107,10 @@
     "fechaActualizacion": 1781910360079,
     "totalActas": 3983,
     "contabilizadas": 3959,
-    "fuerza_popular": 21.831,
-    "juntos_por_el_peru": 78.169,
-    "fuerza_popular_votos": 165627,
-    "juntos_por_el_peru_votos": 593067
+    "fuerza_popular": 21.837,
+    "juntos_por_el_peru": 78.163,
+    "fuerza_popular_votos": 165821,
+    "juntos_por_el_peru_votos": 593526
   },
   "HUANCAVELICA": {
     "actasContabilizadas": 99.529,
