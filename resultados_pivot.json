@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-19T23:35:03Z",
-    "ultima_actualizacion_ts": 1781912103468
+    "ultima_actualizacion_iso": "2026-06-19T23:36:41Z",
+    "ultima_actualizacion_ts": 1781912201691
   },
   "_nacional": {
     "actasContabilizadas": 99.602,
@@ -13,13 +13,13 @@
     "fechaActualizacion": 1781911920081,
     "candidatos": {
       "juntos_por_el_perú": {
-        "porcentajeVotosValidos": 49.886,
-        "totalVotosValidos": 9139027,
+        "porcentajeVotosValidos": 49.885,
+        "totalVotosValidos": 9139500,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
-        "porcentajeVotosValidos": 50.114,
-        "totalVotosValidos": 9180928,
+        "porcentajeVotosValidos": 50.115,
+        "totalVotosValidos": 9181542,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -107,10 +107,10 @@
     "fechaActualizacion": 1781911920081,
     "totalActas": 3983,
     "contabilizadas": 3976,
-    "fuerza_popular": 21.882,
-    "juntos_por_el_peru": 78.118,
-    "fuerza_popular_votos": 166827,
-    "juntos_por_el_peru_votos": 595564
+    "fuerza_popular": 21.886,
+    "juntos_por_el_peru": 78.114,
+    "fuerza_popular_votos": 166904,
+    "juntos_por_el_peru_votos": 595710
   },
   "HUANCAVELICA": {
     "actasContabilizadas": 99.529,
