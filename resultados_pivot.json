@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-20T18:31:54Z",
-    "ultima_actualizacion_ts": 1781980314451
+    "ultima_actualizacion_iso": "2026-06-20T18:33:33Z",
+    "ultima_actualizacion_ts": 1781980413659
   },
   "_nacional": {
     "actasContabilizadas": 99.645,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.332,
-    "fechaActualizacion": 1781980080098,
+    "fechaActualizacion": 1781980320071,
     "totalActas": 3691,
     "contabilizadas": 3691,
     "fuerza_popular": 45.067,
@@ -170,7 +170,7 @@
   "LAMBAYEQUE": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 76.479,
-    "fechaActualizacion": 1781980080098,
+    "fechaActualizacion": 1781980320071,
     "totalActas": 3590,
     "contabilizadas": 3590,
     "fuerza_popular": 58.846,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 55.91,
-    "fechaActualizacion": 1781980080098,
+    "fechaActualizacion": 1781980320071,
     "totalActas": 2697,
     "contabilizadas": 2697,
     "fuerza_popular": 53.003,
@@ -289,11 +289,11 @@
     "juntos_por_el_peru_votos": 45495
   },
   "UCAYALI": {
-    "actasContabilizadas": 98.913,
-    "participacionCiudadana": 63.437,
-    "fechaActualizacion": 1781980080098,
+    "actasContabilizadas": 99.361,
+    "participacionCiudadana": 63.748,
+    "fechaActualizacion": 1781980320071,
     "totalActas": 1564,
-    "contabilizadas": 1547,
+    "contabilizadas": 1554,
     "fuerza_popular": 52.562,
     "juntos_por_el_peru": 47.438,
     "fuerza_popular_votos": 142347,
