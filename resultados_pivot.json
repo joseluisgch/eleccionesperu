@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-20T21:40:47Z",
-    "ultima_actualizacion_ts": 1781991647850
+    "ultima_actualizacion_iso": "2026-06-20T21:42:32Z",
+    "ultima_actualizacion_ts": 1781991752403
   },
   "_nacional": {
     "actasContabilizadas": 99.671,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1781991120190,
+    "fechaActualizacion": 1781991480082,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.77,
     "participacionCiudadana": 69.998,
-    "fechaActualizacion": 1781991120190,
+    "fechaActualizacion": 1781991480082,
     "totalActas": 3472,
     "contabilizadas": 3464,
     "fuerza_popular": 43.398,
@@ -58,15 +58,15 @@
     "juntos_por_el_peru_votos": 187285
   },
   "AREQUIPA": {
-    "actasContabilizadas": 99.881,
-    "participacionCiudadana": 79.712,
-    "fechaActualizacion": 1781991120190,
+    "actasContabilizadas": 99.953,
+    "participacionCiudadana": 79.768,
+    "fechaActualizacion": 1781991480082,
     "totalActas": 4215,
-    "contabilizadas": 4210,
-    "fuerza_popular": 36.404,
-    "juntos_por_el_peru": 63.596,
-    "fuerza_popular_votos": 334137,
-    "juntos_por_el_peru_votos": 583717
+    "contabilizadas": 4213,
+    "fuerza_popular": 36.402,
+    "juntos_por_el_peru": 63.598,
+    "fuerza_popular_votos": 334264,
+    "juntos_por_el_peru_votos": 584000
   },
   "AYACUCHO": {
     "actasContabilizadas": 100.0,
