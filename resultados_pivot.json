@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-20T18:22:18Z",
-    "ultima_actualizacion_ts": 1781979738296
+    "ultima_actualizacion_iso": "2026-06-20T18:23:52Z",
+    "ultima_actualizacion_ts": 1781979832261
   },
   "_nacional": {
-    "actasContabilizadas": 99.642,
-    "contabilizadas": 92434,
+    "actasContabilizadas": 99.643,
+    "contabilizadas": 92435,
     "totalActas": 92766,
-    "participacionCiudadana": 71.761,
-    "totalVotosValidos": 18327746,
-    "totalVotosEmitidos": 19609004,
-    "fechaActualizacion": 1781979325333,
+    "participacionCiudadana": 71.762,
+    "totalVotosValidos": 18327965,
+    "totalVotosEmitidos": 19609235,
+    "fechaActualizacion": 1781979626004,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.886,
-        "totalVotosValidos": 9143070,
+        "totalVotosValidos": 9143122,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
         "porcentajeVotosValidos": 50.114,
-        "totalVotosValidos": 9184676,
+        "totalVotosValidos": 9184843,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -184,10 +184,10 @@
     "fechaActualizacion": 1781979325333,
     "totalActas": 29247,
     "contabilizadas": 29023,
-    "fuerza_popular": 63.55,
-    "juntos_por_el_peru": 36.45,
-    "fuerza_popular_votos": 4044129,
-    "juntos_por_el_peru_votos": 2319597
+    "fuerza_popular": 63.549,
+    "juntos_por_el_peru": 36.451,
+    "fuerza_popular_votos": 4043962,
+    "juntos_por_el_peru_votos": 2319545
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1781979480082,
+    "fechaActualizacion": 1781979626004,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 98.785,
     "participacionCiudadana": 63.379,
-    "fechaActualizacion": 1781979480082,
+    "fechaActualizacion": 1781979626004,
     "totalActas": 1564,
     "contabilizadas": 1545,
     "fuerza_popular": 52.566,
