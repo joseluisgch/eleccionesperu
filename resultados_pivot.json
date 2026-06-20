@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-20T22:44:33Z",
-    "ultima_actualizacion_ts": 1781995473281
+    "ultima_actualizacion_iso": "2026-06-20T22:46:14Z",
+    "ultima_actualizacion_ts": 1781995574997
   },
   "_nacional": {
     "actasContabilizadas": 99.681,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1781994926031,
+    "fechaActualizacion": 1781995219397,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.77,
     "participacionCiudadana": 69.998,
-    "fechaActualizacion": 1781994926031,
+    "fechaActualizacion": 1781995219397,
     "totalActas": 3472,
     "contabilizadas": 3464,
     "fuerza_popular": 43.398,
