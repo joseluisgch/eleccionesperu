@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-06-20T16:43:54Z",
-  "pct_actas_procesadas": 99.635,
+  "timestamp": "2026-06-20T16:45:41Z",
+  "pct_actas_procesadas": 99.636,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9171841,
-    "votos_proyectados_fp": 9225136,
+    "votos_proyectados_jpp": 9171844,
+    "votos_proyectados_fp": 9225124,
     "pct_proyectado_jpp": 49.855,
     "pct_proyectado_fp": 50.145,
-    "diferencia_proyectada": 53295,
+    "diferencia_proyectada": 53280,
     "ganador_proyectado": "FUERZA POPULAR",
     "ganador_key": "FP"
   },
-  "narrativa": "Con una diferencia estimada de 53 295 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 754 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 789 votos), Piura (+144 395) y Lambayeque (+131 495).\n\nPor su parte, Puno (+516 798 votos) y Cusco (+429 379 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 99.6 % de actas contabilizadas— proyecta una ventaja de 81 607 votos para Fuerza Popular, sumándose al resultado final.",
+  "narrativa": "Con una diferencia estimada de 53 280 votos, FUERZA POPULAR se perfila como ganador de la segunda vuelta presidencial. Lima Metropolitana y el Callao, concentran cerca del 40 % del electorado nacional, también se inclinaron por FUERZA POPULAR aportando una ventaja combinada de 1 929 740 votos para consolidar la victoria.\n\nLos mayores aportantes a la victoria del norte del país fueron La Libertad (+158 789 votos), Piura (+144 395) y Lambayeque (+131 495).\n\nPor su parte, Puno (+516 798 votos) y Cusco (+429 379 votos) se consolidaron como los principales bastiones electorales de JUNTOS POR EL PERÚ, evidenciando una marcada diferenciación territorial del voto entre la capital y gran parte del interior del país.\n\nEl voto del extranjero con 99.6 % de actas contabilizadas— proyecta una ventaja de 81 607 votos para Fuerza Popular, sumándose al resultado final.",
   "extranjero": {
     "votos_actuales_jpp": 113307,
     "votos_actuales_fp": 194625,
@@ -104,19 +104,19 @@
       "actas_contabilizadas_pct": 100.0
     },
     {
-      "votos_actuales_jpp": 211418,
-      "votos_actuales_fp": 403115,
-      "pct_jpp": 34.403,
-      "pct_fp": 65.597,
-      "actas_pendientes": 5,
+      "votos_actuales_jpp": 211494,
+      "votos_actuales_fp": 403243,
+      "pct_jpp": 34.404,
+      "pct_fp": 65.596,
+      "actas_pendientes": 4,
       "votos_por_acta": 212.4,
-      "votos_pendientes_est": 1062,
-      "votos_proyectados_jpp": 211783,
-      "votos_proyectados_fp": 403812,
-      "diferencia_proyectada": -192028,
+      "votos_pendientes_est": 850,
+      "votos_proyectados_jpp": 211786,
+      "votos_proyectados_fp": 403800,
+      "diferencia_proyectada": -192014,
       "lider_proyectado": "FP",
       "nombre": "CALLAO",
-      "actas_contabilizadas_pct": 99.827
+      "actas_contabilizadas_pct": 99.862
     },
     {
       "votos_actuales_jpp": 258505,
@@ -421,19 +421,19 @@
       "actas_contabilizadas_pct": 99.234
     },
     {
-      "votos_actuales_jpp": 211418,
-      "votos_actuales_fp": 403115,
-      "pct_jpp": 34.403,
-      "pct_fp": 65.597,
-      "actas_pendientes": 5,
+      "votos_actuales_jpp": 211494,
+      "votos_actuales_fp": 403243,
+      "pct_jpp": 34.404,
+      "pct_fp": 65.596,
+      "actas_pendientes": 4,
       "votos_por_acta": 212.4,
-      "votos_pendientes_est": 1062,
-      "votos_proyectados_jpp": 211783,
-      "votos_proyectados_fp": 403812,
-      "diferencia_proyectada": -192028,
+      "votos_pendientes_est": 850,
+      "votos_proyectados_jpp": 211786,
+      "votos_proyectados_fp": 403800,
+      "diferencia_proyectada": -192014,
       "lider_proyectado": "FP",
       "nombre": "CALLAO",
-      "actas_contabilizadas_pct": 99.827
+      "actas_contabilizadas_pct": 99.862
     },
     {
       "votos_actuales_jpp": 445026,
