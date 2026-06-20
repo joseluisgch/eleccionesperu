@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-20T09:15:19Z",
-    "ultima_actualizacion_ts": 1781946919249
+    "ultima_actualizacion_iso": "2026-06-20T09:17:03Z",
+    "ultima_actualizacion_ts": 1781947023442
   },
   "_nacional": {
     "actasContabilizadas": 99.627,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.77,
     "participacionCiudadana": 69.998,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 3472,
     "contabilizadas": 3464,
     "fuerza_popular": 43.398,
@@ -60,7 +60,7 @@
   "AREQUIPA": {
     "actasContabilizadas": 99.668,
     "participacionCiudadana": 79.544,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 4215,
     "contabilizadas": 4201,
     "fuerza_popular": 36.413,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 99.975,
     "participacionCiudadana": 71.954,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 3983,
     "contabilizadas": 3982,
     "fuerza_popular": 21.894,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.529,
     "participacionCiudadana": 61.733,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 1273,
     "contabilizadas": 1267,
     "fuerza_popular": 18.576,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.701,
     "participacionCiudadana": 64.007,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 2341,
     "contabilizadas": 2334,
     "fuerza_popular": 35.809,
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 99.803,
     "participacionCiudadana": 68.075,
-    "fechaActualizacion": 1781946325966,
+    "fechaActualizacion": 1781946625946,
     "totalActas": 507,
     "contabilizadas": 506,
     "fuerza_popular": 30.833,
