@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-21T02:49:18Z",
-    "ultima_actualizacion_ts": 1782010158318
+    "ultima_actualizacion_iso": "2026-06-21T02:50:55Z",
+    "ultima_actualizacion_ts": 1782010255471
   },
   "_nacional": {
     "actasContabilizadas": 99.688,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 66.579,
-    "fechaActualizacion": 1782009618977,
+    "fechaActualizacion": 1782009918981,
     "totalActas": 4240,
     "contabilizadas": 4240,
     "fuerza_popular": 33.242,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.931,
     "participacionCiudadana": 76.891,
-    "fechaActualizacion": 1782009618977,
+    "fechaActualizacion": 1782009918981,
     "totalActas": 2898,
     "contabilizadas": 2896,
     "fuerza_popular": 65.595,
