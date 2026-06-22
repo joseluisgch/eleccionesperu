@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-22T21:54:29Z",
-    "ultima_actualizacion_ts": 1782165269391
+    "ultima_actualizacion_iso": "2026-06-22T21:56:10Z",
+    "ultima_actualizacion_ts": 1782165370002
   },
   "_nacional": {
     "actasContabilizadas": 99.707,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1782164880070,
+    "fechaActualizacion": 1782165019632,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782164880070,
+    "fechaActualizacion": 1782165019632,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -186,8 +186,8 @@
     "contabilizadas": 29037,
     "fuerza_popular": 63.551,
     "juntos_por_el_peru": 36.449,
-    "fuerza_popular_votos": 4046143,
-    "juntos_por_el_peru_votos": 2320579
+    "fuerza_popular_votos": 4046276,
+    "juntos_por_el_peru_votos": 2320674
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
@@ -206,10 +206,10 @@
     "fechaActualizacion": 1782165019632,
     "totalActas": 507,
     "contabilizadas": 506,
-    "fuerza_popular": 30.833,
-    "juntos_por_el_peru": 69.167,
-    "fuerza_popular_votos": 29384,
-    "juntos_por_el_peru_votos": 65917
+    "fuerza_popular": 30.8,
+    "juntos_por_el_peru": 69.2,
+    "fuerza_popular_votos": 29401,
+    "juntos_por_el_peru_votos": 66058
   },
   "MOQUEGUA": {
     "actasContabilizadas": 100.0,
