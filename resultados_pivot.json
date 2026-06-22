@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-22T17:25:59Z",
-    "ultima_actualizacion_ts": 1782149159465
+    "ultima_actualizacion_iso": "2026-06-22T17:27:38Z",
+    "ultima_actualizacion_ts": 1782149258146
   },
   "_nacional": {
     "actasContabilizadas": 99.693,
@@ -162,10 +162,10 @@
     "fechaActualizacion": 1782148920081,
     "totalActas": 5302,
     "contabilizadas": 5295,
-    "fuerza_popular": 57.56,
-    "juntos_por_el_peru": 42.44,
-    "fuerza_popular_votos": 603679,
-    "juntos_por_el_peru_votos": 445106
+    "fuerza_popular": 57.561,
+    "juntos_por_el_peru": 42.439,
+    "fuerza_popular_votos": 603605,
+    "juntos_por_el_peru_votos": 445026
   },
   "LAMBAYEQUE": {
     "actasContabilizadas": 100.0,
