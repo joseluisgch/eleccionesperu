@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-22T08:48:43Z",
-    "ultima_actualizacion_ts": 1782118123180
+    "ultima_actualizacion_iso": "2026-06-22T08:50:26Z",
+    "ultima_actualizacion_ts": 1782118226244
   },
   "_nacional": {
     "actasContabilizadas": 99.691,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.795,
     "totalVotosValidos": 18336590,
     "totalVotosEmitidos": 19618424,
-    "fechaActualizacion": 1782117619368,
+    "fechaActualizacion": 1782117925333,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.889,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1782117619368,
+    "fechaActualizacion": 1782117925333,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
