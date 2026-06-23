@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T20:07:05Z",
-    "ultima_actualizacion_ts": 1782245225742
+    "ultima_actualizacion_iso": "2026-06-23T20:08:54Z",
+    "ultima_actualizacion_ts": 1782245334263
   },
   "_nacional": {
     "actasContabilizadas": 99.737,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.827,
     "totalVotosValidos": 18344664,
     "totalVotosEmitidos": 19627086,
-    "fechaActualizacion": 1782244819572,
+    "fechaActualizacion": 1782245118611,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.888,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1782244819572,
+    "fechaActualizacion": 1782245118611,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 99.744,
     "participacionCiudadana": 63.933,
-    "fechaActualizacion": 1782244819572,
+    "fechaActualizacion": 1782245118611,
     "totalActas": 1564,
     "contabilizadas": 1560,
     "fuerza_popular": 52.552,
