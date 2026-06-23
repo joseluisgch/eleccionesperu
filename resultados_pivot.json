@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T21:44:04Z",
-    "ultima_actualizacion_ts": 1782251044709
+    "ultima_actualizacion_iso": "2026-06-23T21:45:37Z",
+    "ultima_actualizacion_ts": 1782251137045
   },
   "_nacional": {
     "actasContabilizadas": 99.741,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.931,
     "participacionCiudadana": 76.891,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 2898,
     "contabilizadas": 2896,
     "fuerza_popular": 65.595,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 71.971,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 3983,
     "contabilizadas": 3983,
     "fuerza_popular": 21.892,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.829,
     "participacionCiudadana": 64.079,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 2341,
     "contabilizadas": 2337,
     "fuerza_popular": 35.824,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 99.323,
     "participacionCiudadana": 78.431,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 29247,
     "contabilizadas": 29049,
     "fuerza_popular": 63.55,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 99.875,
     "participacionCiudadana": 63.0,
-    "fechaActualizacion": 1782250518555,
+    "fechaActualizacion": 1782250825329,
     "totalActas": 802,
     "contabilizadas": 801,
     "fuerza_popular": 39.267,
