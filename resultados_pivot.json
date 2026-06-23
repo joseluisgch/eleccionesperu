@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T19:30:08Z",
-    "ultima_actualizacion_ts": 1782243008922
+    "ultima_actualizacion_iso": "2026-06-23T19:31:45Z",
+    "ultima_actualizacion_ts": 1782243105553
   },
   "_nacional": {
     "actasContabilizadas": 99.732,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 71.823,
     "totalVotosValidos": 18343573,
     "totalVotosEmitidos": 19625914,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.889,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 71.971,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 3983,
     "contabilizadas": 3983,
     "fuerza_popular": 21.892,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.829,
     "participacionCiudadana": 64.079,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 2341,
     "contabilizadas": 2337,
     "fuerza_popular": 35.824,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 99.313,
     "participacionCiudadana": 78.423,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 29247,
     "contabilizadas": 29046,
     "fuerza_popular": 63.551,
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 68.183,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 507,
     "contabilizadas": 507,
     "fuerza_popular": 30.8,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 78.586,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 578,
     "contabilizadas": 578,
     "fuerza_popular": 27.443,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 99.875,
     "participacionCiudadana": 63.0,
-    "fechaActualizacion": 1782242426358,
+    "fechaActualizacion": 1782242718284,
     "totalActas": 802,
     "contabilizadas": 801,
     "fuerza_popular": 39.267,
