@@ -1,25 +1,25 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T16:22:07Z",
-    "ultima_actualizacion_ts": 1782231727639
+    "ultima_actualizacion_iso": "2026-06-23T16:23:53Z",
+    "ultima_actualizacion_ts": 1782231833710
   },
   "_nacional": {
-    "actasContabilizadas": 99.718,
-    "contabilizadas": 92504,
+    "actasContabilizadas": 99.719,
+    "contabilizadas": 92505,
     "totalActas": 92766,
-    "participacionCiudadana": 71.814,
-    "totalVotosValidos": 18341348,
-    "totalVotosEmitidos": 19623508,
-    "fechaActualizacion": 1782231318371,
+    "participacionCiudadana": 71.815,
+    "totalVotosValidos": 18341554,
+    "totalVotosEmitidos": 19623731,
+    "fechaActualizacion": 1782231625444,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.89,
-        "totalVotosValidos": 9150440,
+        "totalVotosValidos": 9150535,
         "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO"
       },
       "fuerza_popular": {
         "porcentajeVotosValidos": 50.11,
-        "totalVotosValidos": 9190908,
+        "totalVotosValidos": 9191019,
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
@@ -186,8 +186,8 @@
     "contabilizadas": 29039,
     "fuerza_popular": 63.551,
     "juntos_por_el_peru": 36.449,
-    "fuerza_popular_votos": 4046537,
-    "juntos_por_el_peru_votos": 2320855
+    "fuerza_popular_votos": 4046426,
+    "juntos_por_el_peru_votos": 2320760
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 80.912,
-    "fechaActualizacion": 1782231318371,
+    "fechaActualizacion": 1782231625444,
     "totalActas": 1041,
     "contabilizadas": 1041,
     "fuerza_popular": 28.667,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1782231318371,
+    "fechaActualizacion": 1782231625444,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 99.361,
     "participacionCiudadana": 63.748,
-    "fechaActualizacion": 1782231318371,
+    "fechaActualizacion": 1782231625444,
     "totalActas": 1564,
     "contabilizadas": 1554,
     "fuerza_popular": 52.562,
