@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T21:32:05Z",
-    "ultima_actualizacion_ts": 1782250325402
+    "ultima_actualizacion_iso": "2026-06-23T21:33:49Z",
+    "ultima_actualizacion_ts": 1782250429869
   },
   "_nacional": {
     "actasContabilizadas": 99.741,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782249618103,
+    "fechaActualizacion": 1782249926726,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
