@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T13:43:56Z",
-    "ultima_actualizacion_ts": 1782222236838
+    "ultima_actualizacion_iso": "2026-06-23T13:45:45Z",
+    "ultima_actualizacion_ts": 1782222345524
   },
   "_nacional": {
     "actasContabilizadas": 99.716,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 99.931,
     "participacionCiudadana": 76.891,
-    "fechaActualizacion": 1782221725516,
+    "fechaActualizacion": 1782222026427,
     "totalActas": 2898,
     "contabilizadas": 2896,
     "fuerza_popular": 65.595,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 99.975,
     "participacionCiudadana": 71.954,
-    "fechaActualizacion": 1782221725516,
+    "fechaActualizacion": 1782222026427,
     "totalActas": 3983,
     "contabilizadas": 3982,
     "fuerza_popular": 21.894,
@@ -137,7 +137,7 @@
   "ICA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 80.718,
-    "fechaActualizacion": 1782221725516,
+    "fechaActualizacion": 1782222026427,
     "totalActas": 2443,
     "contabilizadas": 2443,
     "fuerza_popular": 51.938,
