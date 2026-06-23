@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-23T22:39:32Z",
-    "ultima_actualizacion_ts": 1782254372441
+    "ultima_actualizacion_iso": "2026-06-23T22:41:05Z",
+    "ultima_actualizacion_ts": 1782254465787
   },
   "_nacional": {
     "actasContabilizadas": 99.741,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1782253920081,
+    "fechaActualizacion": 1782254118534,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782253920081,
+    "fechaActualizacion": 1782254118534,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -186,8 +186,8 @@
     "contabilizadas": 29049,
     "fuerza_popular": 63.55,
     "juntos_por_el_peru": 36.45,
-    "fuerza_popular_votos": 4047745,
-    "juntos_por_el_peru_votos": 2321606
+    "fuerza_popular_votos": 4048097,
+    "juntos_por_el_peru_votos": 2321891
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
