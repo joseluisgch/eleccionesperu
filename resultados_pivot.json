@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-24T18:06:44Z",
-    "ultima_actualizacion_ts": 1782324404586
+    "ultima_actualizacion_iso": "2026-06-24T18:08:21Z",
+    "ultima_actualizacion_ts": 1782324501520
   },
   "_nacional": {
     "actasContabilizadas": 99.864,
@@ -186,8 +186,8 @@
     "contabilizadas": 29151,
     "fuerza_popular": 63.519,
     "juntos_por_el_peru": 36.481,
-    "fuerza_popular_votos": 4060377,
-    "juntos_por_el_peru_votos": 2331963
+    "fuerza_popular_votos": 4059845,
+    "juntos_por_el_peru_votos": 2331697
   },
   "LORETO": {
     "actasContabilizadas": 100.0,
