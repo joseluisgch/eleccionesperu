@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-24T15:51:20Z",
-    "ultima_actualizacion_ts": 1782316280179
+    "ultima_actualizacion_iso": "2026-06-24T15:53:07Z",
+    "ultima_actualizacion_ts": 1782316387707
   },
   "_nacional": {
     "actasContabilizadas": 99.859,
@@ -23,6 +23,28 @@
         "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI"
       }
     }
+  },
+  "AMAZONAS": {
+    "actasContabilizadas": 100.0,
+    "participacionCiudadana": 60.261,
+    "fechaActualizacion": 1782315918757,
+    "totalActas": 1278,
+    "contabilizadas": 1278,
+    "fuerza_popular": 35.538,
+    "juntos_por_el_peru": 64.462,
+    "fuerza_popular_votos": 69220,
+    "juntos_por_el_peru_votos": 125555
+  },
+  "ANCASH": {
+    "actasContabilizadas": 99.971,
+    "participacionCiudadana": 70.092,
+    "fechaActualizacion": 1782315918757,
+    "totalActas": 3472,
+    "contabilizadas": 3471,
+    "fuerza_popular": 43.372,
+    "juntos_por_el_peru": 56.628,
+    "fuerza_popular_votos": 270722,
+    "juntos_por_el_peru_votos": 353463
   },
   "APURIMAC": {
     "actasContabilizadas": 100.0,
