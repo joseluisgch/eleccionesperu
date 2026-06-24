@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-24T17:05:41Z",
-    "ultima_actualizacion_ts": 1782320741403
+    "ultima_actualizacion_iso": "2026-06-24T17:07:19Z",
+    "ultima_actualizacion_ts": 1782320839846
   },
   "_nacional": {
     "actasContabilizadas": 99.863,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782320125749,
+    "fechaActualizacion": 1782320426360,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 76.947,
-    "fechaActualizacion": 1782320125749,
+    "fechaActualizacion": 1782320426360,
     "totalActas": 2898,
     "contabilizadas": 2898,
     "fuerza_popular": 65.597,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782320125749,
+    "fechaActualizacion": 1782320426360,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.957,
     "participacionCiudadana": 64.169,
-    "fechaActualizacion": 1782320125749,
+    "fechaActualizacion": 1782320426360,
     "totalActas": 2341,
     "contabilizadas": 2340,
     "fuerza_popular": 35.831,
