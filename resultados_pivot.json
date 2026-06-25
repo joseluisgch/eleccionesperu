@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-25T02:59:17Z",
-    "ultima_actualizacion_ts": 1782356357784
+    "ultima_actualizacion_iso": "2026-06-25T03:00:55Z",
+    "ultima_actualizacion_ts": 1782356455666
   },
   "_nacional": {
     "actasContabilizadas": 99.877,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782355818552,
+    "fechaActualizacion": 1782356126766,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
