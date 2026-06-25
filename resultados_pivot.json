@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-25T11:36:26Z",
-    "ultima_actualizacion_ts": 1782387386247
+    "ultima_actualizacion_iso": "2026-06-25T11:38:08Z",
+    "ultima_actualizacion_ts": 1782387488948
   },
   "_nacional": {
     "actasContabilizadas": 99.877,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 80.912,
-    "fechaActualizacion": 1782387018755,
+    "fechaActualizacion": 1782387325988,
     "totalActas": 1041,
     "contabilizadas": 1041,
     "fuerza_popular": 28.667,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1782387018755,
+    "fechaActualizacion": 1782387325988,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 99.744,
     "participacionCiudadana": 63.933,
-    "fechaActualizacion": 1782387018755,
+    "fechaActualizacion": 1782387325988,
     "totalActas": 1564,
     "contabilizadas": 1560,
     "fuerza_popular": 52.552,
