@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-25T18:28:51Z",
-    "ultima_actualizacion_ts": 1782412131916
+    "ultima_actualizacion_iso": "2026-06-25T18:30:27Z",
+    "ultima_actualizacion_ts": 1782412227418
   },
   "_nacional": {
     "actasContabilizadas": 99.877,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -93,7 +93,7 @@
   "CALLAO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 76.947,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 2898,
     "contabilizadas": 2898,
     "fuerza_popular": 65.597,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.957,
     "participacionCiudadana": 64.169,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 2341,
     "contabilizadas": 2340,
     "fuerza_popular": 35.831,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 99.709,
     "participacionCiudadana": 78.734,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 29247,
     "contabilizadas": 29162,
     "fuerza_popular": 63.519,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 55.91,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 2697,
     "contabilizadas": 2697,
     "fuerza_popular": 53.003,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 99.875,
     "participacionCiudadana": 63.0,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 802,
     "contabilizadas": 801,
     "fuerza_popular": 39.267,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 99.773,
     "participacionCiudadana": 73.124,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 5281,
     "contabilizadas": 5269,
     "fuerza_popular": 56.996,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 99.744,
     "participacionCiudadana": 63.933,
-    "fechaActualizacion": 1782411625802,
+    "fechaActualizacion": 1782411925826,
     "totalActas": 1564,
     "contabilizadas": 1560,
     "fuerza_popular": 52.552,
