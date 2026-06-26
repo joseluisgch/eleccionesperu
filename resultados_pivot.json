@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-26T05:08:58Z",
-    "ultima_actualizacion_ts": 1782450538528
+    "ultima_actualizacion_iso": "2026-06-26T05:10:37Z",
+    "ultima_actualizacion_ts": 1782450637501
   },
   "_nacional": {
     "actasContabilizadas": 99.88,
@@ -38,7 +38,7 @@
   "ANCASH": {
     "actasContabilizadas": 99.971,
     "participacionCiudadana": 70.092,
-    "fechaActualizacion": 1782450020317,
+    "fechaActualizacion": 1782450318524,
     "totalActas": 3472,
     "contabilizadas": 3471,
     "fuerza_popular": 43.372,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782450020317,
+    "fechaActualizacion": 1782450318524,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.957,
     "participacionCiudadana": 64.169,
-    "fechaActualizacion": 1782450020317,
+    "fechaActualizacion": 1782450318524,
     "totalActas": 2341,
     "contabilizadas": 2340,
     "fuerza_popular": 35.831,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 99.875,
     "participacionCiudadana": 63.0,
-    "fechaActualizacion": 1782450020317,
+    "fechaActualizacion": 1782450318524,
     "totalActas": 802,
     "contabilizadas": 801,
     "fuerza_popular": 39.267,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 99.773,
     "participacionCiudadana": 73.124,
-    "fechaActualizacion": 1782450020317,
+    "fechaActualizacion": 1782450318524,
     "totalActas": 5281,
     "contabilizadas": 5269,
     "fuerza_popular": 56.996,
