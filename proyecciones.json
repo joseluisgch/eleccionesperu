@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-27T05:43:11Z",
-  "pct_actas_procesadas": 99.905,
+  "timestamp": "2026-06-27T05:44:53Z",
+  "pct_actas_procesadas": 99.906,
   "confianza": "Muy Alta",
   "confianza_color": "#16a34a",
   "proyeccion_nacional": {
-    "votos_proyectados_jpp": 9173048,
-    "votos_proyectados_fp": 9223464,
+    "votos_proyectados_jpp": 9173039,
+    "votos_proyectados_fp": 9223455,
     "pct_proyectado_jpp": 49.863,
     "pct_proyectado_fp": 50.137,
     "diferencia_proyectada": 50416,
@@ -29,19 +29,19 @@
   },
   "por_departamento": [
     {
-      "votos_actuales_jpp": 2333899,
-      "votos_actuales_fp": 4064301,
+      "votos_actuales_jpp": 2333970,
+      "votos_actuales_fp": 4064431,
       "pct_jpp": 36.477,
       "pct_fp": 63.523,
-      "actas_pendientes": 66,
+      "actas_pendientes": 65,
       "votos_por_acta": 219.3,
-      "votos_pendientes_est": 14471,
-      "votos_proyectados_jpp": 2339178,
-      "votos_proyectados_fp": 4073493,
+      "votos_pendientes_est": 14252,
+      "votos_proyectados_jpp": 2339169,
+      "votos_proyectados_fp": 4073484,
       "diferencia_proyectada": -1734316,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 99.774
+      "actas_contabilizadas_pct": 99.778
     },
     {
       "votos_actuales_jpp": 613281,
@@ -406,19 +406,19 @@
   ],
   "top_aportantes_ganador": [
     {
-      "votos_actuales_jpp": 2333899,
-      "votos_actuales_fp": 4064301,
+      "votos_actuales_jpp": 2333970,
+      "votos_actuales_fp": 4064431,
       "pct_jpp": 36.477,
       "pct_fp": 63.523,
-      "actas_pendientes": 66,
+      "actas_pendientes": 65,
       "votos_por_acta": 219.3,
-      "votos_pendientes_est": 14471,
-      "votos_proyectados_jpp": 2339178,
-      "votos_proyectados_fp": 4073493,
+      "votos_pendientes_est": 14252,
+      "votos_proyectados_jpp": 2339169,
+      "votos_proyectados_fp": 4073484,
       "diferencia_proyectada": -1734316,
       "lider_proyectado": "FP",
       "nombre": "LIMA",
-      "actas_contabilizadas_pct": 99.774
+      "actas_contabilizadas_pct": 99.778
     },
     {
       "votos_actuales_jpp": 211803,
