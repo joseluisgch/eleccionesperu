@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-27T14:00:59Z",
-    "ultima_actualizacion_ts": 1782568859763
+    "ultima_actualizacion_iso": "2026-06-27T14:02:42Z",
+    "ultima_actualizacion_ts": 1782568962757
   },
   "_nacional": {
     "actasContabilizadas": 99.975,
@@ -27,7 +27,7 @@
   "AMAZONAS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 60.261,
-    "fechaActualizacion": 1782568218954,
+    "fechaActualizacion": 1782568525630,
     "totalActas": 1278,
     "contabilizadas": 1278,
     "fuerza_popular": 35.538,
