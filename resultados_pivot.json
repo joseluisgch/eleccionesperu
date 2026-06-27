@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-27T20:26:37Z",
-    "ultima_actualizacion_ts": 1782591997091
+    "ultima_actualizacion_iso": "2026-06-27T20:28:21Z",
+    "ultima_actualizacion_ts": 1782592101400
   },
   "_nacional": {
     "actasContabilizadas": 99.977,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 99.773,
     "participacionCiudadana": 73.124,
-    "fechaActualizacion": 1782591618819,
+    "fechaActualizacion": 1782591925248,
     "totalActas": 5281,
     "contabilizadas": 5269,
     "fuerza_popular": 56.996,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.218,
-    "fechaActualizacion": 1782591618819,
+    "fechaActualizacion": 1782591925248,
     "totalActas": 2534,
     "contabilizadas": 2534,
     "fuerza_popular": 45.363,
