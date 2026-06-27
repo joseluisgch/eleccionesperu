@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-27T13:37:01Z",
-    "ultima_actualizacion_ts": 1782567421489
+    "ultima_actualizacion_iso": "2026-06-27T13:38:40Z",
+    "ultima_actualizacion_ts": 1782567520830
   },
   "_nacional": {
     "actasContabilizadas": 99.975,
@@ -82,7 +82,7 @@
   "CAJAMARCA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 66.579,
-    "fechaActualizacion": 1782567019136,
+    "fechaActualizacion": 1782567325679,
     "totalActas": 4240,
     "contabilizadas": 4240,
     "fuerza_popular": 33.242,
@@ -104,7 +104,7 @@
   "CUSCO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 71.971,
-    "fechaActualizacion": 1782567019136,
+    "fechaActualizacion": 1782567325679,
     "totalActas": 3983,
     "contabilizadas": 3983,
     "fuerza_popular": 21.892,
@@ -115,7 +115,7 @@
   "HUANCAVELICA": {
     "actasContabilizadas": 99.843,
     "participacionCiudadana": 61.898,
-    "fechaActualizacion": 1782567019136,
+    "fechaActualizacion": 1782567325679,
     "totalActas": 1273,
     "contabilizadas": 1271,
     "fuerza_popular": 18.597,
@@ -126,7 +126,7 @@
   "HUANUCO": {
     "actasContabilizadas": 99.957,
     "participacionCiudadana": 64.169,
-    "fechaActualizacion": 1782567019136,
+    "fechaActualizacion": 1782567325679,
     "totalActas": 2341,
     "contabilizadas": 2340,
     "fuerza_popular": 35.831,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.332,
-    "fechaActualizacion": 1782567019136,
+    "fechaActualizacion": 1782567325679,
     "totalActas": 3691,
     "contabilizadas": 3691,
     "fuerza_popular": 45.067,
