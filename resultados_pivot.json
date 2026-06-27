@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-27T18:07:27Z",
-    "ultima_actualizacion_ts": 1782583647598
+    "ultima_actualizacion_iso": "2026-06-27T18:09:10Z",
+    "ultima_actualizacion_ts": 1782583750146
   },
   "_nacional": {
     "actasContabilizadas": 99.976,
@@ -10,7 +10,7 @@
     "participacionCiudadana": 72.015,
     "totalVotosValidos": 18392648,
     "totalVotosEmitidos": 19678538,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "candidatos": {
       "juntos_por_el_perú": {
         "porcentajeVotosValidos": 49.868,
@@ -181,7 +181,7 @@
   "LIMA": {
     "actasContabilizadas": 99.997,
     "participacionCiudadana": 78.964,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 29247,
     "contabilizadas": 29246,
     "fuerza_popular": 63.51,
@@ -192,7 +192,7 @@
   "LORETO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 55.91,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 2697,
     "contabilizadas": 2697,
     "fuerza_popular": 53.003,
@@ -203,7 +203,7 @@
   "MADRE DE DIOS": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 68.183,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 507,
     "contabilizadas": 507,
     "fuerza_popular": 30.8,
@@ -214,7 +214,7 @@
   "MOQUEGUA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 78.586,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 578,
     "contabilizadas": 578,
     "fuerza_popular": 27.443,
@@ -225,7 +225,7 @@
   "PASCO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 63.065,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 802,
     "contabilizadas": 802,
     "fuerza_popular": 39.298,
@@ -236,7 +236,7 @@
   "PIURA": {
     "actasContabilizadas": 99.773,
     "participacionCiudadana": 73.124,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 5281,
     "contabilizadas": 5269,
     "fuerza_popular": 56.996,
@@ -247,7 +247,7 @@
   "PUNO": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 77.406,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 3397,
     "contabilizadas": 3397,
     "fuerza_popular": 13.594,
@@ -258,7 +258,7 @@
   "SAN MARTIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.218,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 2534,
     "contabilizadas": 2534,
     "fuerza_popular": 45.363,
@@ -269,7 +269,7 @@
   "TACNA": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 80.912,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 1041,
     "contabilizadas": 1041,
     "fuerza_popular": 28.667,
@@ -280,7 +280,7 @@
   "TUMBES": {
     "actasContabilizadas": 99.842,
     "participacionCiudadana": 76.311,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 632,
     "contabilizadas": 631,
     "fuerza_popular": 64.351,
@@ -291,7 +291,7 @@
   "UCAYALI": {
     "actasContabilizadas": 99.744,
     "participacionCiudadana": 63.933,
-    "fechaActualizacion": 1782583227002,
+    "fechaActualizacion": 1782583518475,
     "totalActas": 1564,
     "contabilizadas": 1560,
     "fuerza_popular": 52.552,
