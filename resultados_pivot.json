@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-06-27T20:20:32Z",
-    "ultima_actualizacion_ts": 1782591632182
+    "ultima_actualizacion_iso": "2026-06-27T20:22:13Z",
+    "ultima_actualizacion_ts": 1782591733856
   },
   "_nacional": {
     "actasContabilizadas": 99.977,
@@ -148,7 +148,7 @@
   "JUNIN": {
     "actasContabilizadas": 100.0,
     "participacionCiudadana": 72.332,
-    "fechaActualizacion": 1782591026158,
+    "fechaActualizacion": 1782591319027,
     "totalActas": 3691,
     "contabilizadas": 3691,
     "fuerza_popular": 45.067,
