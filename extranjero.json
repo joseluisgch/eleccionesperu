@@ -24,18 +24,18 @@
       "codigoAgrupacionPolitica": 10,
       "nombreCandidato": "ROBERTO HELBERT SANCHEZ PALOMINO",
       "dniCandidato": "16002918",
-      "totalVotosValidos": 113683,
-      "porcentajeVotosValidos": 36.791,
-      "porcentajeVotosEmitidos": 34.51
+      "totalVotosValidos": 113733,
+      "porcentajeVotosValidos": 36.792,
+      "porcentajeVotosEmitidos": 34.511
     },
     {
       "nombreAgrupacionPolitica": "FUERZA POPULAR",
       "codigoAgrupacionPolitica": 8,
       "nombreCandidato": "KEIKO SOFIA FUJIMORI HIGUCHI",
       "dniCandidato": "10001088",
-      "totalVotosValidos": 195312,
-      "porcentajeVotosValidos": 63.209,
-      "porcentajeVotosEmitidos": 59.29
+      "totalVotosValidos": 195388,
+      "porcentajeVotosValidos": 63.208,
+      "porcentajeVotosEmitidos": 59.289
     }
   ]
 }
