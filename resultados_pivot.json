@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "ultima_actualizacion_iso": "2026-07-09T18:43:38Z",
-    "ultima_actualizacion_ts": 1783622618941
+    "ultima_actualizacion_iso": "2026-07-09T18:47:05Z",
+    "ultima_actualizacion_ts": 1783622825668
   },
   "_nacional": {
     "actasContabilizadas": 100.0,
@@ -133,17 +133,6 @@
     "juntos_por_el_peru": 64.158,
     "fuerza_popular_votos": 140904,
     "juntos_por_el_peru_votos": 252225
-  },
-  "ICA": {
-    "actasContabilizadas": 100.0,
-    "participacionCiudadana": 80.718,
-    "fechaActualizacion": 1782763826249,
-    "totalActas": 2443,
-    "contabilizadas": 2443,
-    "fuerza_popular": 51.938,
-    "juntos_por_el_peru": 48.062,
-    "fuerza_popular_votos": 282464,
-    "juntos_por_el_peru_votos": 261387
   },
   "JUNIN": {
     "actasContabilizadas": 100.0,
