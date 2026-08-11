@@ -17,51 +17,20 @@ jobs:
     - name: 1. Clonar el repositorio
       uses: actions/checkout@v4
 
-    - name: 1b. Verificar si el conteo ya finalizó al 100%
-      id: check-finalizado
-      run: |
-        FINALIZADO=$(python -c "
-import json, os
-if os.path.exists('totales_nacionales.json'):
-    try:
-        with open('totales_nacionales.json') as f:
-            d = json.load(f)
-        totales = d.get('totales', {})
-        pct = float(totales.get('actasContabilizadas', 0))
-        cont = int(totales.get('contabilizadas', 0))
-        total = int(totales.get('totalActas', 0))
-        if pct >= 100.0 or (total > 0 and cont >= total):
-            print('true')
-        else:
-            print('false')
-    except:
-        print('false')
-else:
-    print('false')
-")
-        echo "FINALIZADO=$FINALIZADO" >> $GITHUB_ENV
-        if [ "$FINALIZADO" = "true" ]; then
-          echo "🏁 El conteo electoral ya está al 100% completado. No se requieren más ejecuciones."
-        fi
-
     - name: 2. Configurar entorno Python
-      if: env.FINALIZADO != 'true'
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
 
     - name: 3. Instalar librerías
-      if: env.FINALIZADO != 'true'
       run: |
         python -m pip install --upgrade pip
         pip install requests pandas
 
     - name: 4. Extraer datos de la ONPE (Fase 1)
-      if: env.FINALIZADO != 'true'
       run: python fase1_onpe_regiones.py
 
     - name: 5. Verificar que se extrajeron datos
-      if: env.FINALIZADO != 'true'
       run: |
         if [ ! -f resultados_onpe.csv ]; then
           echo "❌ ERROR: resultados_onpe.csv no fue generado. Abortando."
@@ -75,15 +44,12 @@ else:
         fi
 
     - name: 6. Procesar ETL y generar JSON (Fase 2)
-      if: env.FINALIZADO != 'true'
       run: python fase2_etl_ligero.py
 
     - name: 6b. Calcular proyecciones electorales (Fase 3)
-      if: env.FINALIZADO != 'true'
       run: python fase3_proyecciones.py
 
     - name: 7. Guardar cambios y publicar
-      if: env.FINALIZADO != 'true'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -110,24 +76,13 @@ else:
         fi
 
     - name: 8. Control de siguiente ejecución (Parada al 100% o auto-disparo)
-      if: env.FINALIZADO != 'true'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # Evaluar porcentaje de actas y estado final
-        PCT_ACTAS=$(python -c "
-import json, os
-try:
-    with open('totales_nacionales.json') as f:
-        d = json.load(f)
-    print(d.get('totales', {}).get('actasContabilizadas', 0))
-except:
-    print(0)
-")
-        echo "📊 Actas contabilizadas a nivel nacional: $PCT_ACTAS%"
+        if [ "$HUBO_CAMBIOS" = "true" ]; then
+          python -c "
+import json, os, urllib.request
 
-        ES_100_PCT=$(python -c "
-import json
 try:
     with open('totales_nacionales.json') as f:
         d = json.load(f)
@@ -135,35 +90,43 @@ try:
     pct = float(totales.get('actasContabilizadas', 0))
     cont = int(totales.get('contabilizadas', 0))
     total = int(totales.get('totalActas', 0))
-    print('true' if pct >= 100.0 or (total > 0 and cont >= total) else 'false')
-except:
-    print('false')
-")
+    es_100 = (pct >= 100.0) or (total > 0 and cont >= total)
+except Exception:
+    pct, es_100 = 0.0, False
 
-        if [ "$ES_100_PCT" = "true" ]; then
-          echo "🏁 ¡100% DE ACTAS ALCANZADO! Todos los departamentos llegaron a su tope."
-          echo "🛑 Desactivando el workflow en GitHub Actions para congelar los resultados finales..."
-          
-          # Desactivar el workflow via GitHub API para apagar el cron y auto-disparos
-          curl -s -X PUT \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/actualizador.yml/disable || true
-          
-          echo "✅ Workflow desactivado exitosamente. El geovisor continuará mostrando los resultados finales definitivos."
-        elif [ "$HUBO_CAMBIOS" = "true" ]; then
-          if python -c "import sys; sys.exit(0 if float('$PCT_ACTAS') < 99.5 else 1)"; then
-            echo "🔄 Disparando siguiente ejecución via API..."
-            sleep 60
-            curl -s -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              https://api.github.com/repos/${{ github.repository }}/actions/workflows/actualizador.yml/dispatches \
-              -d '{"ref":"main"}'
-            echo "✅ Siguiente ejecución programada."
-          else
-            echo "⏳ Actas al $PCT_ACTAS%. Conteo muy avanzado — se detiene el auto-disparo. El cron de respaldo cada 15m seguirá verificando el 100% final."
-          fi
+print(f'Actas contabilizadas: {pct}%')
+
+token = os.environ.get('GITHUB_TOKEN', '')
+repo = '${{ github.repository }}'
+
+if es_100:
+    print('100% de actas alcanzado. Desactivando workflow...')
+    req = urllib.request.Request(
+        f'https://api.github.com/repos/{repo}/actions/workflows/actualizador.yml/disable',
+        headers={'Authorization': f'token {token}', 'Accept': 'application/vnd.github.v3+json'},
+        method='PUT'
+    )
+    try:
+        urllib.request.urlopen(req)
+        print('Workflow desactivado exitosamente.')
+    except Exception as e:
+        print(f'Aviso al desactivar: {e}')
+elif pct < 99.5:
+    print('Disparando siguiente ejecucion...')
+    req = urllib.request.Request(
+        f'https://api.github.com/repos/{repo}/actions/workflows/actualizador.yml/dispatches',
+        data=b'{\"ref\":\"main\"}',
+        headers={'Authorization': f'token {token}', 'Accept': 'application/vnd.github.v3+json'},
+        method='POST'
+    )
+    try:
+        urllib.request.urlopen(req)
+        print('Siguiente ejecucion programada.')
+    except Exception as e:
+        print(f'Aviso al disparar: {e}')
+else:
+    print(f'Conteo al {pct}%. El cron de respaldo continuara verificando.')
+"
         else
-          echo "⏹️ Sin cambios en esta iteración. Esperando al siguiente ciclo de cron."
+          echo "⏹️ Sin cambios en los datos en esta iteración."
         fi
