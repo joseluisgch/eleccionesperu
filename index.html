@@ -224,10 +224,13 @@
             font-weight: 800;
             cursor: pointer;
             letter-spacing: 0.3px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: background .2s;
         }
-        #btn-serie:hover { background: #7c3aed; }
+
+        #btn-serie:hover {
+            background: #7c3aed;
+        }
 
         #panel-serie {
             position: absolute;
@@ -235,15 +238,18 @@
             right: 10px;
             bottom: 10px;
             width: 560px;
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             border-radius: 10px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
             z-index: 999;
             display: none;
             flex-direction: column;
             overflow: hidden;
         }
-        #panel-serie.visible { display: flex; }
+
+        #panel-serie.visible {
+            display: flex;
+        }
 
         .serie-header {
             background: #5b21b6;
@@ -254,12 +260,29 @@
             align-items: center;
             flex-shrink: 0;
         }
-        .serie-header h3 { margin: 0; font-size: 14px; }
-        .serie-header small { font-size: 11px; opacity: 0.8; }
-        .panel-movil-cerrar button { display: none; }
+
+        .serie-header h3 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .serie-header small {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .panel-movil-cerrar button {
+            display: none;
+        }
+
         @media (max-width:768px) {
-            .panel-movil-cerrar button { display: flex; }
-            .panel-movil-cerrar { width: 100%; }
+            .panel-movil-cerrar button {
+                display: flex;
+            }
+
+            .panel-movil-cerrar {
+                width: 100%;
+            }
         }
 
         #serie-chart {
@@ -277,17 +300,25 @@
         }
 
         @media (max-width:768px) {
-            #btn-serie { display: none; }
+            #btn-serie {
+                display: none;
+            }
+
             #panel-serie {
                 display: none;
                 position: fixed !important;
-                top: 0 !important; left: 0 !important;
-                right: 0 !important; bottom: 0 !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
                 width: 100% !important;
                 border-radius: 0 !important;
                 z-index: 2000;
             }
-            #panel-serie.visible { display: flex !important; }
+
+            #panel-serie.visible {
+                display: flex !important;
+            }
         }
 
         /* ── PANEL DE PROYECCIÓN ──────────────────────────────────────── */
@@ -507,35 +538,47 @@
         }
 
         @media (max-width:768px) {
-            #btn-proyeccion { display: none; }
+            #btn-proyeccion {
+                display: none;
+            }
+
             #panel-proyeccion {
                 display: none;
                 position: fixed !important;
-                top: 0 !important; left: 0 !important;
-                right: 0 !important; bottom: 0 !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
                 width: 100% !important;
                 border-radius: 0 !important;
                 z-index: 2000;
             }
-            #panel-proyeccion.visible { display: flex !important; }
+
+            #panel-proyeccion.visible {
+                display: flex !important;
+            }
         }
 
         /* ── BARRA MÓVIL INFERIOR ─────────────────────────────────────── */
         #barra-movil {
             display: none;
         }
+
         @media (max-width:768px) {
             #barra-movil {
                 display: flex;
                 position: fixed;
-                bottom: 0; left: 0; right: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 z-index: 1500;
-                background: rgba(15,30,60,0.96);
+                background: rgba(15, 30, 60, 0.96);
                 backdrop-filter: blur(8px);
                 padding: 10px 12px;
                 gap: 10px;
-                box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+                box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
             }
+
             #barra-movil button {
                 flex: 1;
                 padding: 11px 8px;
@@ -546,20 +589,31 @@
                 cursor: pointer;
                 letter-spacing: 0.2px;
             }
-            #bm-serie    { background: #5b21b6; color: white; }
-            #bm-proyecc  { background: #0f3b5e; color: white; }
+
+            #bm-serie {
+                background: #5b21b6;
+                color: white;
+            }
+
+            #bm-proyecc {
+                background: #0f3b5e;
+                color: white;
+            }
+
             .panel-movil-cerrar {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 4px 16px 4px 0;
             }
+
             .panel-movil-cerrar button {
-                background: rgba(255,255,255,0.2);
+                background: rgba(255, 255, 255, 0.2);
                 border: none;
                 color: white;
                 font-size: 20px;
-                width: 36px; height: 36px;
+                width: 36px;
+                height: 36px;
                 border-radius: 50%;
                 cursor: pointer;
                 line-height: 1;
@@ -601,7 +655,11 @@
             justify-content: space-between;
             gap: 6px;
         }
-        .ranking-title span { flex: 1; }
+
+        .ranking-title span {
+            flex: 1;
+        }
+
         #btn-orden {
             font-size: 9px;
             font-weight: 700;
@@ -614,7 +672,10 @@
             white-space: nowrap;
             text-transform: none;
         }
-        #btn-orden:hover { background: #1e5a8a; }
+
+        #btn-orden:hover {
+            background: #1e5a8a;
+        }
 
         #rankingChart {
             flex: 1;
@@ -856,7 +917,7 @@
 
     <!-- BARRA INFERIOR MÓVIL -->
     <div id="barra-movil">
-        <button id="bm-serie"   onclick="toggleSerie()">📈 EVOLUCIÓN DEL CONTEO</button>
+        <button id="bm-serie" onclick="toggleSerie()">📈 EVOLUCIÓN DEL CONTEO</button>
         <button id="bm-proyecc" onclick="toggleProyeccion()">📊 PROYECCIÓN FINAL</button>
     </div>
 
@@ -969,7 +1030,7 @@
                 <div class="nombre">ROBERTO HELBERT<br>SANCHEZ PALOMINO</div>
                 <div class="partido-info">
                     <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000010.png"
-                        alt="JPP">
+                        onerror="this.style.display='none'" alt="JPP">
                     <span>JUNTOS POR EL<br>PERÚ</span>
                 </div>
                 <div class="votos" id="global-votos-jpp">-- votos</div>
@@ -983,7 +1044,7 @@
                 <div class="nombre">KEIKO SOFIA<br>FUJIMORI HIGUCHI</div>
                 <div class="partido-info">
                     <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000008.png"
-                        alt="FP">
+                        onerror="this.style.display='none'" alt="FP">
                     <span>FUERZA<br>POPULAR</span>
                 </div>
                 <div class="votos" id="global-votos-fp">-- votos</div>
@@ -1030,25 +1091,90 @@
             return 0.35;
         }
 
+        function normalizarTexto(str) {
+            if (!str) return "";
+            return str.toString()
+                .toUpperCase()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Quita tildes
+                .replace(/[^A-Z0-9\s]/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+        const UBIGEO_TO_DEP = {
+            "01": "AMAZONAS", "02": "ANCASH", "03": "APURIMAC",
+            "04": "AREQUIPA", "05": "AYACUCHO", "06": "CAJAMARCA",
+            "07": "CUSCO", "08": "HUANCAVELICA", "09": "HUANUCO",
+            "10": "ICA", "11": "JUNIN", "12": "LA LIBERTAD",
+            "13": "LAMBAYEQUE", "14": "LIMA", "15": "LORETO",
+            "16": "MADRE DE DIOS", "17": "MOQUEGUA", "18": "PASCO",
+            "19": "PIURA", "20": "PUNO", "21": "SAN MARTIN",
+            "22": "TACNA", "23": "TUMBES", "24": "CALLAO",
+            "25": "UCAYALI"
+        };
+
+        const LISTA_DEPARTAMENTOS = Object.values(UBIGEO_TO_DEP);
+
+        function resolverNombreDepartamento(props) {
+            if (!props) return null;
+
+            // 1. Buscar en atributos comunes de texto (con y sin tildes)
+            const candidatosTexto = [
+                props.nom_dep, props.NOMBDEP, props.nombdep, props.departamento,
+                props.DEPARTAMENTO, props.NOMB_DEP, props.nomb_dep, props.NOMBDPT,
+                props.DEPARTAMEN, props.dpto_nom, props.name, props.NAME_1,
+                props.NOMBRE, props.DPTO, props.region, props.REGION
+            ];
+
+            for (let raw of candidatosTexto) {
+                if (!raw) continue;
+                let n = normalizarTexto(raw);
+                if (n.includes("LIMA")) return "LIMA";
+                if (n.includes("CALLAO")) return "CALLAO";
+                if (n.includes("MADRE DE DIOS")) return "MADRE DE DIOS";
+                if (n.includes("LA LIBERTAD") || n === "LIBERTAD") return "LA LIBERTAD";
+                if (n.includes("SAN MARTIN")) return "SAN MARTIN";
+                if (LISTA_DEPARTAMENTOS.includes(n)) return n;
+            }
+
+            // 2. Buscar por código Ubigeo
+            const candidatosCodigo = [
+                props.id_dpto, props.IDDPTO, props.iddpto, props.CCDD,
+                props.ccdd, props.CODDEP, props.coddep, props.UBIGEO,
+                props.ubigeo, props.FIRST_IDDP, props.idUbigeo
+            ];
+
+            for (let rawCode of candidatosCodigo) {
+                if (rawCode === undefined || rawCode === null) continue;
+                let c = String(rawCode).trim().padStart(2, '0').substring(0, 2);
+                if (UBIGEO_TO_DEP[c]) return UBIGEO_TO_DEP[c];
+            }
+
+            return null;
+        }
+
         const urlVivienda = "limites_departamentos.geojson";
         const urlResultados = "resultados_pivot.json";
-        const CACHE_KEY = "geojson_limites_peru";
+        const CACHE_KEY = "geojson_limites_peru_v4";
 
         async function obtenerLimitesGeo() {
-            // 1. Intentamos leer de LocalStorage si existe
+            // 1. Intentamos leer de LocalStorage si existe y es válido
             try {
                 const cacheLocal = localStorage.getItem(CACHE_KEY);
                 if (cacheLocal) {
-                    return JSON.parse(cacheLocal);
+                    const parsed = JSON.parse(cacheLocal);
+                    if (parsed && parsed.features && parsed.features.length >= 24) {
+                        return parsed;
+                    }
                 }
             } catch (e) {
                 console.warn("No se pudo leer la caché local.");
             }
 
-            // 2. Si no hay caché, descargamos los datos
+            // 2. Si no hay caché válida, descargamos el archivo local con cache-busting
             let dataGeo;
             try {
-                const respuesta = await fetch(urlVivienda);
+                const respuesta = await fetch(urlVivienda + '?v=' + Date.now());
                 dataGeo = await respuesta.json();
             } catch (err) {
                 console.warn("Fallo ruta local, intentando ruta remota de Vivienda...");
@@ -1056,12 +1182,11 @@
                 dataGeo = await respuestaRemota.json();
             }
 
-            // 3. Intentamos guardarlo en LocalStorage (Manejo seguro del QuotaExceededError)
+            // 3. Guardar en LocalStorage si cabe
             try {
                 localStorage.setItem(CACHE_KEY, JSON.stringify(dataGeo));
             } catch (err) {
-                console.warn("El mapa es muy grande para LocalStorage (Quota Exceeded). El navegador usará su caché HTTP nativa.");
-                // El error muere aquí, no rompe la aplicación.
+                console.warn("El mapa es muy grande para LocalStorage. El navegador usará caché HTTP nativa.");
             }
 
             return dataGeo;
@@ -1089,17 +1214,15 @@
             let layersByDept = {};  // nombre → layer de Leaflet para vinculación con el gráfico
 
             geoData.features.forEach(feature => {
-                // 1. Identificamos el nombre del departamento desde el GeoJSON (Asegúrate de que coincida con tus nombres en el JSON)
-                let nombreDep = feature.properties.nom_dep || feature.properties.NOMBDEP || feature.properties.nombdep || feature.properties.departamento;
-                if (!nombreDep) return;
+                // 1. Identificamos el nombre del departamento de forma infalible (con o sin tildes)
+                let nombreKey = resolverNombreDepartamento(feature.properties);
+                if (!nombreKey) return;
 
-                // Normalizamos el nombre igual que en el ETL para asegurar el match
-                let nombreKey = nombreDep.toUpperCase().trim();
-                if (nombreKey === "LIMA METROPOLITANA" || nombreKey === "LIMA PROVINCIAS") nombreKey = "LIMA";
+                feature.properties._depKey = nombreKey;
 
                 // 2. Buscamos en onpeData usando el nombreKey
-                if (onpeData[nombreKey]) {
-                    let datos = onpeData[nombreKey];
+                let datos = onpeData[nombreKey];
+                if (datos) {
                     Object.assign(feature.properties, datos);
 
                     if (datos.fechaActualizacion > maxTimestamp) {
@@ -1119,13 +1242,13 @@
                     // 4. Llenamos el ranking (con datos de actas para el tooltip)
                     let actasPct = parseFloat(datos.actasContabilizadas) || 0;
                     if (!rankingDepartamentos.some(d => d.name === nombreKey)) {
-                        let keyFPr  = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                        let keyFPr = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
                         let keyJPPr = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
-                        let keyFPv  = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
+                        let keyFPv = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
                         let keyJPPv = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
-                        let pctFPr  = keyFPr  ? (parseFloat(datos[keyFPr])  || 0) : 0;
+                        let pctFPr = keyFPr ? (parseFloat(datos[keyFPr]) || 0) : 0;
                         let pctJPPr = keyJPPr ? (parseFloat(datos[keyJPPr]) || 0) : 0;
-                        let vFP  = keyFPv  ? (parseFloat(datos[keyFPv])  || 0) : 0;
+                        let vFP = keyFPv ? (parseFloat(datos[keyFPv]) || 0) : 0;
                         let vJPP = keyJPPv ? (parseFloat(datos[keyJPPv]) || 0) : 0;
                         let contab = parseInt(datos.contabilizadas) || 0;
                         let vpaR = contab > 0 ? (vFP + vJPP) / contab : 0;
@@ -1187,7 +1310,7 @@
             let diferencia = Math.abs(votosFP - votosJPP);
             let lider = votosFP > votosJPP ? "Fuerza Popular" : (votosJPP > votosFP ? "Juntos por el Perú" : "Empate");
             let colorLider = votosFP > votosJPP ? "#FF6600" : "#009933";
-            let actasPendientes = actasTotal - actasCont;
+            let actasPendientes = Math.max(0, actasTotal - actasCont);
             // Tasa real nacional: votos válidos nacionales / actas contabilizadas
             let votosValidosNac = totalesNac ? (totalesNac.totalVotosValidos || (votosJPP + votosFP)) : (votosJPP + votosFP);
             let vpaNac = actasCont > 0 ? votosValidosNac / actasCont : 0;
@@ -1222,9 +1345,9 @@
                     axisPointer: { type: 'none' },
                     formatter: function (params) {
                         let d = rankingDepartamentos[params[0].dataIndex];
-                        let acPend = d.totalActas - d.contabilizadas;
+                        let acPend = Math.max(0, d.totalActas - d.contabilizadas);
                         let liderColor = d.lider === 'JPP' ? '#009933' : '#FF6600';
-                        let liderNom   = d.lider === 'JPP' ? 'Juntos por el Perú' : 'Fuerza Popular';
+                        let liderNom = d.lider === 'JPP' ? 'Juntos por el Perú' : 'Fuerza Popular';
                         return `<b>${d.name}</b><br/>
                                 Avance: <b>${d.value.toFixed(3)}%</b><br/>
                                 Actas: ${d.contabilizadas.toLocaleString('es-PE')} de ${d.totalActas.toLocaleString('es-PE')}<br/>
@@ -1258,7 +1381,6 @@
                     type: 'bar',
                     cursor: 'pointer',
                     data: rankingDepartamentos.map(d => {
-                        // Opacidad logarítmica — reduce el impacto del outlier Lima
                         const opacity = 0.3 + 0.7 * ((logActas(d) - minLogActas) / rangoLogActas);
                         const colorBase = d.lider === 'JPP'
                             ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
@@ -1289,26 +1411,21 @@
             window._myChart = myChart;
             window._minLogActas = minLogActas;
             window._rangoLogActas = rangoLogActas;
-            // Posición actual del scroll (índice startValue) — se rastrea aquí para no
-            // depender de getOption() que devuelve start/end en %, no índices.
             window._rankingScrollPos = zoomStart;
 
-            // Scroll manual con rueda del mouse — garantiza que ECharts reciba el evento
-            chartDom.addEventListener('wheel', function(e) {
+            chartDom.addEventListener('wheel', function (e) {
                 e.preventDefault();
                 const total = rankingDepartamentos.length;
                 const visible = ITEMS_VISIBLES;
-                const delta = e.deltaY > 0 ? -1 : 1;  // scroll abajo → ver dptos menores
+                const delta = e.deltaY > 0 ? -1 : 1;
                 window._rankingScrollPos = Math.max(0, Math.min(total - visible, window._rankingScrollPos + delta));
                 myChart.setOption({ dataZoom: [{ startValue: window._rankingScrollPos, endValue: window._rankingScrollPos + visible - 1 }] });
             }, { passive: false });
 
-            // Click en barra → resaltar departamento en el mapa y abrir popup
             myChart.on('click', function (params) {
                 let dept = rankingDepartamentos[params.dataIndex];
                 if (!dept || !layersByDept[dept.name]) return;
 
-                // Quitar resaltado anterior y aplicar el nuevo
                 geojsonLayer.eachLayer(l => geojsonLayer.resetStyle(l));
                 let layer = layersByDept[dept.name];
                 layer.setStyle({ weight: 4, color: '#f59e0b', fillOpacity: 0.95 });
@@ -1322,7 +1439,6 @@
             // 3. FECHA DE ACTUALIZACIÓN (usa timestamp del pipeline, no de la ONPE)
             let tsActualizacion = onpeData._meta ? onpeData._meta.ultima_actualizacion_ts : maxTimestamp;
             if (tsActualizacion > 0) {
-                // Convertir UTC a hora de Lima (UTC-5)
                 let d = new Date(tsActualizacion);
                 let fechaStr = d.toLocaleDateString("es-PE", { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'America/Lima' });
                 let horaStr = d.toLocaleTimeString("es-PE", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true, timeZone: 'America/Lima' });
@@ -1334,11 +1450,14 @@
             geojsonLayer = L.geoJson(geoData, {
                 style: function (feature) {
                     let props = feature.properties;
-                    let actas = parseFloat(props.actasContabilizadas) || 0;
-                    let keyFP = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
-                    let keyJPP = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
-                    let fp = keyFP ? parseFloat(props[keyFP]) : 0;
-                    let jpp = keyJPP ? parseFloat(props[keyJPP]) : 0;
+                    let depKey = props._depKey || resolverNombreDepartamento(props);
+                    let datos = (depKey && onpeData[depKey]) ? onpeData[depKey] : props;
+
+                    let actas = parseFloat(datos.actasContabilizadas) || 0;
+                    let keyFP = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                    let keyJPP = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
+                    let fp = keyFP ? parseFloat(datos[keyFP]) : 0;
+                    let jpp = keyJPP ? parseFloat(datos[keyJPP]) : 0;
                     let pctGanador = Math.max(fp, jpp);
                     let colorBase = '#A9A9A9';
                     if (fp > 0 || jpp > 0) { colorBase = fp > jpp ? '#FF6600' : '#009933'; }
@@ -1347,21 +1466,24 @@
                 },
                 onEachFeature: function (feature, layer) {
                     let props = feature.properties;
-                    let nombreDep = props.nom_dep || props.NOMBDEP || props.nombdep || props.departamento || "Departamento Desconocido";
-                    let keyFP = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
-                    let keyJPP = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
-                    let fp = keyFP ? parseFloat(props[keyFP]) : 0;
-                    let jpp = keyJPP ? parseFloat(props[keyJPP]) : 0;
-                    let actasPct = parseFloat(props.actasContabilizadas) || 0;
-                    let partCiudadana = parseFloat(props.participacionCiudadana) || 0;
-                    let actasTotal = parseInt(props.totalActas) || 0;
-                    let actasCont = parseInt(props.contabilizadas) || 0;
-                    let actasPend = actasTotal - actasCont;
-                    // Tasa real: votos válidos / actas contabilizadas del departamento
-                    let keyFPv = Object.keys(props).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
-                    let keyJPPv = Object.keys(props).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
-                    let votosFPDep  = keyFPv  ? (parseFloat(props[keyFPv])  || 0) : 0;
-                    let votosJPPDep = keyJPPv ? (parseFloat(props[keyJPPv]) || 0) : 0;
+                    let depKey = props._depKey || resolverNombreDepartamento(props) || "Departamento Desconocido";
+                    let datos = (depKey && onpeData[depKey]) ? onpeData[depKey] : props;
+                    let nombreDep = depKey;
+
+                    let keyFP = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && !k.includes('_votos'));
+                    let keyJPP = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && !k.includes('_votos'));
+                    let fp = keyFP ? parseFloat(datos[keyFP]) : 0;
+                    let jpp = keyJPP ? parseFloat(datos[keyJPP]) : 0;
+                    let actasPct = parseFloat(datos.actasContabilizadas) || 0;
+                    let partCiudadana = parseFloat(datos.participacionCiudadana) || 0;
+                    let actasTotal = parseInt(datos.totalActas) || 0;
+                    let actasCont = parseInt(datos.contabilizadas) || 0;
+                    let actasPend = Math.max(0, actasTotal - actasCont);
+
+                    let keyFPv = Object.keys(datos).find(k => k.toLowerCase().includes('fuerza') && k.includes('_votos'));
+                    let keyJPPv = Object.keys(datos).find(k => k.toLowerCase().includes('juntos') && k.includes('_votos'));
+                    let votosFPDep = keyFPv ? (parseFloat(datos[keyFPv]) || 0) : 0;
+                    let votosJPPDep = keyJPPv ? (parseFloat(datos[keyJPPv]) || 0) : 0;
                     let votosValidosDep = votosFPDep + votosJPPDep;
                     let vpa = actasCont > 0 ? votosValidosDep / actasCont : 0;
                     let votosEst = Math.round(actasPend * vpa);
@@ -1382,19 +1504,16 @@
                                 <strong>👥 Participación:</strong> ${partCiudadana.toFixed(3)}%
                             </div>
                             <div class="partido fp">
-                                <span>Fuerza Popular</span><br>${fp.toFixed(3)}% Votos Válidos
+                                <span>Fuerza Popular</span><br>${fp.toFixed(3)}% Votos Válidos (${Math.round(votosFPDep).toLocaleString('es-PE')} votos)
                             </div>
                             <div class="partido jpp">
-                                <span>Juntos por el Perú</span><br>${jpp.toFixed(3)}% Votos Válidos
+                                <span>Juntos por el Perú</span><br>${jpp.toFixed(3)}% Votos Válidos (${Math.round(votosJPPDep).toLocaleString('es-PE')} votos)
                             </div>
                         </div>
                     `;
                     layer.bindPopup(popupContent);
 
-                    // Guardar referencia para vinculación con el gráfico ECharts
-                    let nombreKey2 = nombreDep.toUpperCase().trim();
-                    if (nombreKey2 === "LIMA METROPOLITANA" || nombreKey2 === "LIMA PROVINCIAS") nombreKey2 = "LIMA";
-                    layersByDept[nombreKey2] = layer;
+                    layersByDept[depKey] = layer;
 
                     layer.on({
                         mouseover: function (e) {
@@ -1410,14 +1529,11 @@
             // 5. AJUSTE DE ENCUADRE (ZOOM MÁXIMO FRACCIONARIO)
             let isMobile = window.innerWidth <= 768;
             if (isMobile) {
-                // En celular centramos el mapa dejando espacio abajo para el panel de totales
                 map.fitBounds(geojsonLayer.getBounds(), {
                     paddingTopLeft: [0, 20],
                     paddingBottomRight: [0, 350]
                 });
             } else {
-                // En PC: Leaflet calculará el zoom exacto (ej. 5.8) empujando el mapa 380px a la derecha 
-                // para que encaje perfectamente al costado de tu ranking departamental.
                 map.fitBounds(geojsonLayer.getBounds(), {
                     paddingTopLeft: [380, 0],
                     paddingBottomRight: [200, 0]
@@ -1448,15 +1564,19 @@
             window._rankingScrollPos = sv;
             window._myChart.setOption({
                 yAxis: { data: rankingDepartamentos.map(d => d.name) },
-                series: [{ data: rankingDepartamentos.map(d => {
-                    const op = 0.3 + 0.7 * ((Math.log1p(d.totalActas) - window._minLogActas) / window._rangoLogActas);
-                    const cb = d.lider === 'JPP'
-                        ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
-                        : (d.value >= 100 ? '#b34400' : d.value >= 80 ? '#FF6600' : '#ffb380');
-                    return { value: d.value,
-                             itemStyle: { color: cb, opacity: op, borderRadius: [0,3,3,0] },
-                             emphasis: { itemStyle: { color: d.lider==='JPP'?'#005c1a':'#b34400', opacity:1 } } };
-                })}],
+                series: [{
+                    data: rankingDepartamentos.map(d => {
+                        const op = 0.3 + 0.7 * ((Math.log1p(d.totalActas) - window._minLogActas) / window._rangoLogActas);
+                        const cb = d.lider === 'JPP'
+                            ? (d.value >= 100 ? '#005c1a' : d.value >= 80 ? '#009933' : '#6ee7a0')
+                            : (d.value >= 100 ? '#b34400' : d.value >= 80 ? '#FF6600' : '#ffb380');
+                        return {
+                            value: d.value,
+                            itemStyle: { color: cb, opacity: op, borderRadius: [0, 3, 3, 0] },
+                            emphasis: { itemStyle: { color: d.lider === 'JPP' ? '#005c1a' : '#b34400', opacity: 1 } }
+                        };
+                    })
+                }],
                 dataZoom: [{ startValue: sv, endValue: sv + 11 }]
             });
         }
@@ -1467,17 +1587,17 @@
             const panelSerie = document.getElementById('panel-serie');
             const panelProyeccion = document.getElementById('panel-proyeccion');
             const legend = document.querySelector('.info.legend');
-            
+
             const isVisible = panelSerie.classList.toggle('visible');
             if (isVisible) {
                 panelProyeccion.classList.remove('visible');
             }
-            
+
             if (legend) {
                 const anyVisible = panelSerie.classList.contains('visible') || panelProyeccion.classList.contains('visible');
                 legend.style.display = anyVisible ? 'none' : '';
             }
-            
+
             if (isVisible && !serieChartInstance) {
                 cargarSerie();
             }
@@ -1496,11 +1616,11 @@
                     document.getElementById('serie-puntos').innerText =
                         `${serie.length} actualizaciones registradas`;
 
-                    const xData   = serie.map(p => p.pct_actas.toFixed(1) + '%');
-                    const yJPP    = serie.map(p => p.votos_jpp);
-                    const yFP     = serie.map(p => p.votos_fp);
-                    const pctJPP  = serie.map(p => p.pct_jpp);
-                    const pctFP   = serie.map(p => p.pct_fp);
+                    const xData = serie.map(p => p.pct_actas.toFixed(1) + '%');
+                    const yJPP = serie.map(p => p.votos_jpp);
+                    const yFP = serie.map(p => p.votos_fp);
+                    const pctJPP = serie.map(p => p.pct_jpp);
+                    const pctFP = serie.map(p => p.pct_fp);
 
                     const dom = document.getElementById('serie-chart');
                     serieChartInstance = echarts.init(dom);
@@ -1591,12 +1711,12 @@
             const panelSerie = document.getElementById('panel-serie');
             const panelProyeccion = document.getElementById('panel-proyeccion');
             const legend = document.querySelector('.info.legend');
-            
+
             const isVisible = panelProyeccion.classList.toggle('visible');
             if (isVisible) {
                 panelSerie.classList.remove('visible');
             }
-            
+
             if (legend) {
                 const anyVisible = panelSerie.classList.contains('visible') || panelProyeccion.classList.contains('visible');
                 legend.style.display = anyVisible ? 'none' : '';
@@ -1698,7 +1818,7 @@
             div.innerHTML += `
                 <div class="legend-section">
                     <div class="legend-header">
-                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000008.png" class="party-logo" alt="FP"> Fuerza Popular
+                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000008.png" onerror="this.style.display='none'" class="party-logo" alt="FP"> Fuerza Popular
                     </div>
                     <div class="legend-row"><i style="background: #FF6600; opacity: 0.9"></i> > 65%</div>
                     <div class="legend-row"><i style="background: #FF6600; opacity: 0.6"></i> 55% - 65%</div>
@@ -1707,7 +1827,7 @@
                 <hr style="margin:8px 0; border:0; border-top:1px solid #D6D6D6;">
                 <div class="legend-section">
                     <div class="legend-header">
-                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000010.png" class="party-logo" alt="JPP"> Juntos por el Perú
+                        <img src="https://resultadosegundavuelta.onpe.gob.pe/assets/img-reales/partidos/00000010.png" onerror="this.style.display='none'" class="party-logo" alt="JPP"> Juntos por el Perú
                     </div>
                     <div class="legend-row"><i style="background: #009933; opacity: 0.9"></i> > 65%</div>
                     <div class="legend-row"><i style="background: #009933; opacity: 0.6"></i> 55% - 65%</div>
